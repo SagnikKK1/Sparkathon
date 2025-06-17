@@ -1,0 +1,66 @@
+/* src/styles/loginButton.css */
+
+.login-button {
+  background-color: transparent; /* Initial background */
+  color: var(--accent-color); /* Initial text color and border */
+  border: 1px solid var(--accent-color);
+}
+
+.login-button:hover {
+  background-color: var(--accent-color); /* Hover background */
+  color: var(--card-background); /* Hover text color */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Animation positioning for Login button text */
+.login-button .login-text-original,
+.login-button .login-text-hover {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.login-button .login-text-original span,
+.login-button .login-text-hover span {
+  opacity: 0; /* Default hidden state for individual letters */
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  transform: translateY(20px); /* Initial offset for incoming letters */
+}
+
+/* Styles for the original text on the Login button */
+.login-button .login-text-original span {
+  transform: translateY(0); /* Original text starts visible and in place */
+  opacity: 1;
+}
+
+.login-button .login-text-original {
+  opacity: 1;
+  color: var(--accent-color); /* Original text color matches initial button text color */
+}
+
+/* Styles for the hover text on the Login button */
+.login-button .login-text-hover {
+  color: var(--card-background); /* Hover text color matches hover button text color */
+}
+
+/* Animation on hover for the Login button */
+.login-button:hover .login-text-original span {
+  transform: translateY(-40px); /* Original text slides up and out */
+  opacity: 0;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+.login-button:hover .login-text-hover span {
+  transform: translateY(0); /* Hover text slides into center and becomes visible */
+  opacity: 1;
+  transition-delay: calc(var(--index) * 0.05s);
+}

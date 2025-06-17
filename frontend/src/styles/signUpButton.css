@@ -1,0 +1,64 @@
+/* src/styles/signUpButton.css */
+
+.signup-button {
+  background-color: var(--accent-color);
+  color: var(--card-background);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.signup-button .signup-text-original,
+.signup-button .signup-text-hover {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.signup-button .signup-text-original span,
+.signup-button .signup-text-hover span {
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  transform: translateY(20px);
+}
+
+.signup-button .signup-text-original span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.signup-button .signup-text-original {
+  opacity: 1;
+  color: var(--card-background);
+}
+
+.signup-button .signup-text-hover {
+  color: var(--accent-color);
+}
+
+.signup-button:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.signup-button:hover .signup-text-original span {
+  transform: translateY(-40px);
+  opacity: 0;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+.signup-button:hover .signup-text-hover span {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: calc(var(--index) * 0.05s);
+}
