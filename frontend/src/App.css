@@ -2,9 +2,27 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch; /* changed from center to stretch to avoid centering */
   background-color: var(--background-color);
   color: var(--text-color-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   padding-top: 30px;
+  font-family: 'Inter', sans-serif; /* clean, modern font */
+  font-size: 16px; /* base font size for uniformity */
+  line-height: 1.5;
+}
+
+/* Optional: limit max width and center content horizontally with padding */
+.App > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Reset margin and padding for body and html to avoid unexpected spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
