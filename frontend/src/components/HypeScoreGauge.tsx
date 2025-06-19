@@ -5,10 +5,10 @@ interface HypeScoreGaugeProps {
 }
 
 const getColor = (score: number) => {
-  if (score > 75) return "text-positive";
-  if (score > 50) return "text-yellowish";
-  if (score > 25) return "text-blue";
-  return "text-negative";
+  if (score > 75) return "#23F0C7";
+  if (score > 50) return "#f7b32b";
+  if (score > 25) return "#78c3fb";
+  return "#f72c25";
 };
 
 export default function HypeScoreGauge({ score = 68 }: HypeScoreGaugeProps) {
@@ -28,7 +28,7 @@ export default function HypeScoreGauge({ score = 68 }: HypeScoreGaugeProps) {
         <path
           d="M 20 100 A 80 80 0 0 1 160 100"
           fill="none"
-          stroke="#23F0C7"
+          stroke={getColor(clamped)}
           strokeWidth="16"
           strokeDasharray="251.2"
           strokeDashoffset={251.2 - (251.2 * clamped) / 100}
@@ -39,7 +39,10 @@ export default function HypeScoreGauge({ score = 68 }: HypeScoreGaugeProps) {
         </g>
         <circle cx="90" cy="100" r="10" fill="#78c3fb" />
       </svg>
-      <div className={`mt-2 text-3xl font-bold ${getColor(clamped)}`}>
+      <div
+        className="mt-2 text-3xl font-bold"
+        style={{ color: getColor(clamped) }}
+      >
         {clamped}
       </div>
       <div className="text-xs text-blue">/ 100</div>
