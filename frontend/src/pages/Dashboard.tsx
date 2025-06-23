@@ -14,53 +14,47 @@ import DownloadReport from "../components/DownloadReport";
 
 export default function Dashboard() {
   return (
-    <div className="bg-background min-h-screen px-6 py-10 text-blue">
-      {/* Header */}
-      <div className="mb-10">
-        <h1 className="text-yellowish text-4xl font-bold mb-1">Product Hype Dashboard</h1>
+    <div className="bg-background min-h-screen px-4 py-8 text-blue">
+      {/* HEADER */}
+      <div className="mb-8">
+        <h1 className="text-yellowish text-3xl font-bold mb-2">Product Hype Dashboard</h1>
         <p className="text-blue text-lg">
           Real-time NLP-powered insights for your product launch.
         </p>
       </div>
 
-      {/* Top KPIs: Hype Score & Risk Alert */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
         <div className="flex flex-col gap-4">
           <HypeScoreGauge />
           <RiskAlert />
         </div>
-        <div className="md:col-span-2">
+        <div className="lg:col-span-2">
           <SentimentTimelineChart />
         </div>
       </div>
 
-      {/* Aspect Analysis: Heatmap, Bar, Frequency */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
         <Heatmap />
         <Bar />
         <FrequencyBar />
       </div>
 
-      {/* Topic & Competitor Analysis */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <TopicEvolution />
         <Competitors />
       </div>
 
-      {/* Keywords & Emotion */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <Keywords />
         <Emotion />
       </div>
 
-      {/* Metrics Table & Explainability */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <MetricsTables />
         <ExplainabilityPanel />
       </div>
 
-      {/* Download Button */}
-      <div className="flex justify-end mt-8">
+      <div className="flex justify-end mt-4">
         <DownloadReport />
       </div>
     </div>
