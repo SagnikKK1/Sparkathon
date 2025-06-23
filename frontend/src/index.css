@@ -1,3 +1,4 @@
+/* Reset and base styles */
 *,
 *::before,
 *::after {
@@ -19,47 +20,23 @@ button {
   appearance: none;
 }
 
-:root {
-  --background-color: #f0fdf4;
-  --card-background: #ffffff;
-  --text-color-primary: #14532d;
-  --text-color-secondary: #36a362;
-  --accent-color: #059669;
-  --border-color: #a7f3d0;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-
+html, body {
+  min-height: 100vh;
   font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Remove these if you want Tailwind to control background and color */
+  /* background-color: var(--background-color); */
+  /* color: var(--text-color-primary); */
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
-body.dark-theme {
-  --background-color: #0e111a;
-  --card-background: #181d2b;
-  --text-color-primary: #eaf1f8;
-  --text-color-secondary: #8c9bb7;
-  --accent-color: #8a6de6;
-  --border-color: #2b3040;
-  --shadow-color: rgba(0, 0, 0, 0.65);
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: var(--background-color);
-  color: var(--text-color-primary);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
+/* Remove or comment out .card class to avoid conflict with DashboardCard */
+/*
 .card {
   background-color: var(--card-background);
   border-radius: 12px;
@@ -67,3 +44,4 @@ body {
   box-shadow: 0 4px 10px var(--shadow-color);
   border: 1px solid var(--border-color);
 }
+*/
