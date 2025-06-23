@@ -1,4 +1,3 @@
-/* Reset and base styles */
 *,
 *::before,
 *::after {
@@ -29,13 +28,11 @@ html, body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Remove these if you want Tailwind to control background and color */
-  /* background-color: var(--background-color); */
-  /* color: var(--text-color-primary); */
-  /* transition: background-color 0.3s ease, color 0.3s ease; */
 }
 
-/* Remove or comment out .card class to avoid conflict with DashboardCard */
+/* Remove background and color from body to let Tailwind handle it */
+
+/* Comment out .card class if exists to avoid conflict with DashboardCard */
 /*
 .card {
   background-color: var(--card-background);
