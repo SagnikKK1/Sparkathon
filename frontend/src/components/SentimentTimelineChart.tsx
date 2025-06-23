@@ -1,4 +1,4 @@
-import React from "react";
+import DashboardCard from "./DashboardCard";
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 
@@ -58,11 +58,17 @@ const options = {
 
 export default function SentimentTimelineChart() {
   return (
-    <div className="bg-background rounded-xl shadow p-6 border border-blue">
+    <DashboardCard
+      className="flex flex-col"
+      style={{ height: "220px", minWidth: 0 }}
+    >
+          <div className="bg-background rounded-xl shadow p-6 border border-blue">
       <div className="text-yellowish text-lg font-semibold mb-2">
         Sentiment Over Time
       </div>
       <Line data={data} options={options} />
     </div>
+    </DashboardCard>
+
   );
 }
