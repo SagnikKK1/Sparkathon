@@ -1,4 +1,4 @@
-import React from "react";
+import DashboardCard from "./DashboardCard";
 
 interface HypeScoreGaugeProps {
   score?: number; // 0 to 100
@@ -16,7 +16,10 @@ export default function HypeScoreGauge({ score = 68 }: HypeScoreGaugeProps) {
   const angle = (clamped / 100) * 180;
 
   return (
-    <div className="bg-background rounded-xl shadow p-6 flex flex-col items-center border border-blue">
+    <DashboardCard
+      className="flex flex-col items-center justify-center"
+      style={{ aspectRatio: "4/3", height: "220px", minWidth: 0 }}
+    >
       <div className="text-yellowish text-lg font-semibold mb-2">Hype Score</div>
       <svg width="180" height="100" viewBox="0 0 180 100">
         <path
@@ -46,6 +49,6 @@ export default function HypeScoreGauge({ score = 68 }: HypeScoreGaugeProps) {
         {clamped}
       </div>
       <div className="text-xs text-blue">/ 100</div>
-    </div>
+    </DashboardCard>
   );
 }
