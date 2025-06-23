@@ -1,4 +1,3 @@
-// src/pages/Dashboard.tsx
 import HypeScoreGauge from "../components/HypeScoreGauge";
 import SentimentTimelineChart from "../components/SentimentTimelineChart";
 import Heatmap from "../components/Heatmap";
@@ -15,11 +14,11 @@ import DownloadReport from "../components/DownloadReport";
 
 export default function Dashboard() {
   return (
-    <div className="bg-background min-h-screen px-4 py-8 text-blue">
+    <div className="bg-background dark:bg-background-dark min-h-screen px-4 py-8 text-blue">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-yellowish text-3xl font-bold mb-2">Product Hype Dashboard</h1>
-        <p className="text-blue text-lg">
+        <h1 className="text-yellowish dark:text-yellowish text-3xl font-bold mb-2">Product Hype Dashboard</h1>
+        <p className="text-blue dark:text-blue text-lg">
           Real-time NLP-powered insights for your product launch.
         </p>
       </div>
