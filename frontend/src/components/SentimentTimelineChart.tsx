@@ -62,13 +62,10 @@ export default function SentimentTimelineChart() {
       className="flex flex-col"
       style={{ height: "220px", minWidth: 0 }}
     >
-          <div className="bg-background rounded-xl shadow p-6 border border-blue">
       <div className="text-yellowish text-lg font-semibold mb-2">
         Sentiment Over Time
       </div>
       <Line data={data} options={options} />
-    </div>
     </DashboardCard>
-
   );
 }
