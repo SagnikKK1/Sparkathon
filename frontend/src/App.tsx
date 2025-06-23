@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./index.css";
 import Header from "./components/header";
 import Dashboard from "./pages/Dashboard";
 
@@ -10,7 +10,11 @@ function App() {
     });
 
     useEffect(() => {
-        document.body.classList.toggle("dark-theme", theme === "dark");
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
         localStorage.setItem("theme", theme);
     }, [theme]);
 
