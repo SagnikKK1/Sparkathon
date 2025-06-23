@@ -1,3 +1,4 @@
+// src/pages/Dashboard.tsx
 import HypeScoreGauge from "../components/HypeScoreGauge";
 import SentimentTimelineChart from "../components/SentimentTimelineChart";
 import Heatmap from "../components/Heatmap";
@@ -15,7 +16,7 @@ import DownloadReport from "../components/DownloadReport";
 export default function Dashboard() {
   return (
     <div className="bg-background min-h-screen px-4 py-8 text-blue">
-      {/* HEADER */}
+      {/* Header */}
       <div className="mb-8">
         <h1 className="text-yellowish text-3xl font-bold mb-2">Product Hype Dashboard</h1>
         <p className="text-blue text-lg">
@@ -23,33 +24,36 @@ export default function Dashboard() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
-        <div className="flex flex-col gap-4">
+      {/* Main Dashboard Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+        {/* Left column: Hype Score & Risk Alert */}
+        <div className="md:col-span-2 flex flex-col gap-4">
           <HypeScoreGauge />
           <RiskAlert />
         </div>
-        <div className="lg:col-span-2">
+        {/* Main charts: Sentiment Timeline */}
+        <div className="md:col-span-4">
           <SentimentTimelineChart />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
         <Heatmap />
         <Bar />
         <FrequencyBar />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <TopicEvolution />
         <Competitors />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <Keywords />
         <Emotion />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <MetricsTables />
         <ExplainabilityPanel />
       </div>
