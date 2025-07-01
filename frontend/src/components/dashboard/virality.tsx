@@ -2,15 +2,30 @@ import React from 'react';
 import '../../components_css/dashboard_css/virality.css';
 
 export const DashboardViralityScore: React.FC = () => {
-  // Example data
-  const viralityScore = 86;
-  const searches = 1243;
-
   return (
-    <div className="virality-score-tile">
-      <div className="virality-score-number">{viralityScore}</div>
-      <div className="virality-score-label">Virality Score</div>
-      <div className="virality-score-searches">{searches} searches</div>
+    <div className="virality-card">
+      {/* Indigo glowing vertical divider */}
+      <div className="virality-divider" />
+      {/* Left half */}
+      <div className="virality-left">
+        <div className="virality-score">86</div>
+        <div className="virality-label">Virality Score</div>
+      </div>
+      {/* Right half */}
+      <div className="virality-right">
+        <div className="virality-metric">
+          <span className="virality-metric-label">Comments:</span>
+          <span className="virality-metric-value">350</span>
+        </div>
+        <div className="virality-metric">
+          <span className="virality-metric-label">Searches:</span>
+          <span className="virality-metric-value">1200</span>
+        </div>
+        <div className="virality-metric">
+          <span className="virality-metric-label">YouTube Videos:</span>
+          <span className="virality-metric-value">16</span>
+        </div>
+      </div>
     </div>
   );
 };
