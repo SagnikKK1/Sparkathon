@@ -1,6 +1,6 @@
 .login-card {
   background-color: rgba(4, 1, 40, 0.8);
-  border: 1px solid rgba(151, 125, 255, 0.2);
+  border: 1px solid rgba(151, 125, 255, 0.3); /* Changed border color to tropical-indigo with 30% opacity */
   border-radius: 15px;
   width: 445px;
   height: 642px;
@@ -58,7 +58,7 @@
   width: 100%;
   padding: 15px 20px;
   background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(155, 155, 189, 0.4); /* Changed border color to cool-gray with 30% opacity */
   border-radius: 8px;
   color: var(--white);
   font-family: "Montserrat-Regular", Helvetica;
