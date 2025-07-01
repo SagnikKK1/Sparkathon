@@ -12,7 +12,7 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({ onBack, onLogo
     <button className="premium-btn back-btn" onClick={onBack}>←</button>
     <div className="header-center">
       <img src={WalmartLogo} alt="Walmart Logo" className="walmart-logo" />
-      <span className="header-title">Walmart Sparkathon: Dashboard</span>
+      <span className="header-title">Sparkathon: Dashboard</span>
     </div>
     <button className="premium-btn logout-btn" onClick={onLogout}>Logout</button>
   </div>
