@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../components_css/dashboard_css/virality_score.css';
+import '../../components_css/dashboard_css/virality.css';
 
 export const DashboardViralityScore: React.FC = () => {
   // Example data
