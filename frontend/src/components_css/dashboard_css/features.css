@@ -1,55 +1,83 @@
-.feature-bar-chart-tile {
+.feature-bar-chart-premium {
   width: 100%;
   height: 100%;
-  padding: 24px;
+  padding: 28px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  border-radius: 22px;
+  background: rgba(34,34,34,0.92);
+  box-shadow: 0 0 24px 4px rgba(151,125,255,0.12);
+  border: 2px solid rgba(151,125,255,0.3);
+  position: relative;
 }
 
 .feature-bar-chart-title {
-  font-size: 28px;
+  font-size: 2rem;
   color: var(--white);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   font-weight: bold;
-}
-
-.feature-bars {
-  width: 100%;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 8px rgba(151,125,255,0.16);
 }
 
 .feature-bar-row {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 
 .feature-name {
-  width: 90px;
-  font-size: 18px;
+  width: 110px;
+  font-size: 1.1rem;
   color: var(--cool-gray);
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(151,125,255,0.10);
 }
 
-.feature-bar {
+.feature-bar-outer {
   flex: 1;
-  height: 18px;
-  background: rgba(151, 125, 255, 0.12);
-  border-radius: 9px;
-  margin: 0 14px;
+  height: 20px;
+  background: rgba(151,125,255,0.10);
+  border-radius: 12px;
+  margin: 0 16px;
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(151,125,255,0.13);
+  position: relative;
 }
 
 .feature-bar-inner {
   height: 100%;
-  background: linear-gradient(90deg, var(--tropical-indigo), var(--cool-gray));
-  border-radius: 9px;
-  transition: width 0.6s;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #977dff 0%, #b8aaff 100%);
+  box-shadow: 0 0 16px 2px rgba(151,125,255,0.32), 0 0 6px 0 rgba(151,125,255,0.18);
+  transition: width 0.7s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+
+.feature-bar-inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 18px;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.23) 0%, rgba(151,125,255,0.0) 100%);
+  pointer-events: none;
 }
 
 .feature-score {
-  font-size: 16px;
-  color: var(--tropical-indigo);
-  min-width: 42px;
+  font-size: 1.1rem;
+  color: #b8aaff;
+  min-width: 48px;
   text-align: right;
+  font-weight: 600;
+  text-shadow: 0 1px 6px rgba(151,125,255,0.16);
+}
+
+.feature-bar-row:last-child {
+  margin-bottom: 0;
 }
