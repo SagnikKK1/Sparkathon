@@ -11,4 +11,15 @@ body {
   font-family: "Montserrat-Regular", Helvetica, sans-serif;
   background-color: var(--oxford-blue);
   color: var(--white);
+  overflow-x: hidden;
 }
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* The .blurred-ellipse CSS rule has been moved to HomePage.css */
+
+/* If you had other global styles, keep them here. */

@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import "../../components_css/home_page/sign_up_button.css";
+import "../../components_css/auth_buttons_css/sign_up_button.css";
 
 interface Props {
   property1: "hover" | "default";

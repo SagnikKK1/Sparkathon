@@ -1,0 +1,34 @@
+.text-carousel-wrapper {
+  position: relative;
+  height: 60px; /* Increased height to provide more vertical space */
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-text {
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  color: var(--tropical-indigo);
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-text.is-active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.carousel-text.is-above {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.carousel-text.is-below {
+  transform: translateY(100%);
+  opacity: 0;
+}

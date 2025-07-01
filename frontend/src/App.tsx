@@ -1,10 +1,10 @@
-import { Header } from './components/home_page/header_box';
-import './App.css';
+import { HomePage } from './components/home_page/home_page'; // Import the new HomePage component
+import './App.css'; // Keep your global CSS for body/root styles and ellipse
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <HomePage />
     </div>
   );
 }

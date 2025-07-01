@@ -19,12 +19,13 @@
 .header-container {
   width: 90%;
   max-width: 1200px;
-  background-color: rgba(4, 1, 40, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 25px;
-  padding: 10px 30px;
+  max-height: 80px;
+  background-color: transparent; /* Made header box transparent */
+  border: 1px solid rgba(151, 125, 255, 0.2); /* Tropical indigo border with 20% opacity */
+  border-radius: 15px;
+  padding: 15px 30px;
   display: flex;
-  justify-content: space-between; /* This keeps logo on left, nav on right */
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -38,14 +39,13 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  /* Add margin-left: auto to push this nav to the right */
   margin-left: auto;
 }
 
 .about-us-link {
   color: var(--white);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   transition: color 0.3s ease;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Login } from '../home_page/login_button';
-import { SignUp } from '../home_page/sign_up_button';
-import '../../components_css/home_page/header_box.css';
+import { Login } from '../auth_buttons/login_button';
+import { SignUp } from '../auth_buttons/sign_up_button';
+import '../../components_css/home_page_css/header_box.css';
 
 interface HeaderProps {
 }
