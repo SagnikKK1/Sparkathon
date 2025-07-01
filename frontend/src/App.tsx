@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { HomePage } from './pages/home_page';
 import { LoginPage } from './pages/login_page';
 import { DashboardPage } from './pages/dashboard';
+import { Loading } from './pages/loading';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/loading" element={< Loading/>}/>
           <Route path="/" element={<Navigate to="/home" replace />} />
         </Routes>
       </Router>
