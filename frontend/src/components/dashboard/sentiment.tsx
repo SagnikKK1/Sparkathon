@@ -24,7 +24,7 @@ function getY(score: number) {
   return PADDING + chartH - ((score - minScore) / (maxScore - minScore)) * chartH;
 }
 
-export const Sentiment: React.FC = () => {
+export const DashboardSentimentLineChart: React.FC = () => {
   // For line animation
   const pathRef = useRef<SVGPathElement>(null);
 
