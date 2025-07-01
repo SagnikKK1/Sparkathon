@@ -1,20 +1,20 @@
 import React from 'react';
-import { Login } from '../auth_buttons/login_button';
-import { SignUp } from '../auth_buttons/sign_up_button';
-import '../../components_css/home_page_css/header_box.css';
+import '../../components_css/home_page_css/home_header.css';
+import { Login } from '../home_auth_buttons/login_button';
+import { Link } from 'react-router-dom';
+import { SignUp } from '../home_auth_buttons/sign_up_button';
 
-interface HeaderProps {
-}
+interface HeaderProps { }
 
 export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="app-header-wrapper">
       <div className="header-container">
         <nav className="header-nav">
-          <a href="#" className="about-us-link">About Us</a>
+          <Link to="/about" className="about-us-link">About Us</Link>
           <div className="button-group-box">
-            <Login property1="default" />
-            <SignUp property1="default" />
+            <Login />
+            <SignUp />
           </div>
         </nav>
       </div>

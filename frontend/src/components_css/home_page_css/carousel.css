@@ -1,6 +1,6 @@
 .text-carousel-wrapper {
   position: relative;
-  height: 60px; /* Increased height to provide more vertical space */
+  height: 60px;
   overflow: hidden;
   width: 100%;
 }

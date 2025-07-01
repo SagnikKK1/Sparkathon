@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: flex-start;
   
-  width: 92%;
-  max-width: 1250px;
+  width: 100%;
+  max-width: 1260px;
   margin: 0 auto; 
   
   padding: 40px 0;
@@ -30,7 +30,7 @@
 .right-content-section {
   height: 700px;
   border: 1px solid rgba(151, 125, 255, 0.2);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .workflow-text {
@@ -58,7 +58,6 @@
   font-size: 14px;
 }
 
-/* Moved .blurred-ellipse here from App.css */
 .blurred-ellipse {
   position: absolute;
   width: 180vw;
@@ -66,9 +65,8 @@
   left: 50%;
   transform: translateX(-50%);
   top: -177px;
-  /* Adjusted background gradient for less intensity and smoother fade */
   background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
   border-radius: 50%;
-  filter: blur(400px); /* Decreased blur value from 600px to 400px */
+  filter: blur(400px);
   z-index: -1;
 }

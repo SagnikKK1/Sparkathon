@@ -1,0 +1,119 @@
+.login-card {
+  background-color: rgba(4, 1, 40, 0.8);
+  border: 1px solid rgba(151, 125, 255, 0.2);
+  border-radius: 15px;
+  width: 445px;
+  height: 642px;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.login-card-title {
+  color: var(--white);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.login-card-subtitle {
+  color: var(--tropical-indigo);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label-wrapper {
+  width: 100%;
+  text-align: left;
+}
+
+.input-label {
+  color: var(--white);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  display: block;
+}
+
+.input-box-wrapper {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 18px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.login-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-input:focus {
+  border-color: var(--tropical-indigo);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.forgot-password-link {
+  color: var(--cool-gray);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 16px;
+  text-decoration: none;
+  align-self: flex-end;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: var(--white);
+}
+
+.login-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.no-account-text {
+  color: var(--cool-gray);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 16px;
+  margin: 0;
+}
+
+.signup-link {
+  color: var(--tropical-indigo);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+  color: var(--white);
+}

@@ -1,4 +1,4 @@
-.login {
+.login-home-button {
   height: 50px;
   width: 110px;
   background-color: var(--cool-gray);
@@ -9,10 +9,12 @@
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
+  text-decoration: none;
+
   transition:
-    border-radius 0.3s ease-in-out,
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+    transform 0.2s ease,
+    box-shadow 0.3s ease,
+    border-radius 0.3s ease;
 }
 
 .login-text-content {
@@ -25,18 +27,15 @@
   text-align: center;
   white-space: nowrap;
   transition:
-    font-size 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+    font-size 0.3s ease;
 }
 
-.login.hover {
-  background-color: var(--cool-gray);
-  border-radius: 18px;
-  transform: none;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.login-home-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
 }
 
-.login.hover .login-text-content {
+.login-home-button:hover .login-text-content {
   font-size: 26px;
-  color: var(--eerie-black);
 }

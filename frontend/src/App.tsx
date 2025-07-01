@@ -1,10 +1,18 @@
-import { HomePage } from './components/home_page/home_page'; // Import the new HomePage component
-import './App.css'; // Keep your global CSS for body/root styles and ellipse
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HomePage } from './pages/home_page';
+import { LoginPage } from './pages/login_page';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Router>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

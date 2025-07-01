@@ -1,0 +1,21 @@
+.login-page-container {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.blurred-ellipse {
+  position: absolute;
+  width: 180vw;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -177px;
+  background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
+  border-radius: 50%;
+  filter: blur(400px);
+  z-index: -1;
+}

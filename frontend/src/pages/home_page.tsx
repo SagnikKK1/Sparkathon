@@ -1,14 +1,13 @@
 import React from 'react';
-import { Header } from './home_header';
-import { TextCarousel } from './carousel';
-import '../../components_css/home_page_css/home_page.css'; // This will now contain ellipse styles
+import { Header } from '../components/home_page/home_header';
+import { TextCarousel } from '../components/home_page/carousel';
+import '.././pages_css/home_page.css';
 
 interface HomePageProps {}
 
 export const HomePage: React.FC<HomePageProps> = () => {
   return (
     <>
-      {/* The blurred-ellipse div is now part of HomePage */}
       <div className="blurred-ellipse"></div> 
       <Header />
 
@@ -21,7 +20,6 @@ export const HomePage: React.FC<HomePageProps> = () => {
           </p>
         </div>
         <div className="right-content-section">
-          {/* Content for the right section will go here */}
         </div>
       </div>
 
