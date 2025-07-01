@@ -25,7 +25,6 @@ function getY(score: number) {
 }
 
 export const DashboardSentimentLineChart: React.FC = () => {
-  // For line animation
   const pathRef = useRef<SVGPathElement>(null);
 
   useEffect(() => {
@@ -34,13 +33,14 @@ export const DashboardSentimentLineChart: React.FC = () => {
       pathRef.current.style.strokeDasharray = `${length}`;
       pathRef.current.style.strokeDashoffset = `${length}`;
       setTimeout(() => {
-        pathRef.current!.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)';
-        pathRef.current!.style.strokeDashoffset = '0';
+        if (pathRef.current) {
+          pathRef.current.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)';
+          pathRef.current.style.strokeDashoffset = '0';
+        }
       }, 100);
     }
   }, []);
 
-  // Smooth curve path
   const pathD = data.reduce((acc, point, i, arr) => {
     const x = getX(i);
     const y = getY(point.score);
@@ -135,7 +135,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
             filter="url(#point-glow)"
           />
         ))}
-        {/* Glow filter */}
         <defs>
           <linearGradient id="line-gradient" x1="0" y1="0" x2={WIDTH} y2="0" gradientUnits="userSpaceOnUse">
             <stop stopColor="#977dff" />
