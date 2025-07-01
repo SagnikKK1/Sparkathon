@@ -63,6 +63,7 @@
   justify-content: center;
   gap: 18px;
   z-index: 1;
+  padding-left: 36px;
 }
 
 .virality-metric {
