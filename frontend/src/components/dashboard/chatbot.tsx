@@ -1,18 +1,19 @@
 import React from 'react';
+import ChatbotImage from '../../components/dashboard/chatBot.png'; // Adjust path if needed
 import '../../components_css/dashboard_css/chatbot.css';
 
 export const DashboardChatbotTile: React.FC = () => {
   const handleChatClick = () => {
-    window.location.href = '/chatbot'; // Will navigate to chatbot page (to be created)
+    window.location.href = '/chatbot';
   };
 
   return (
-    <div className="chatbot-tile">
-      <div className="chatbot-favicon">
-        <span role="img" aria-label="Chatbot">🤖</span>
+    <div className="chatbot-card">
+      <div className="chatbot-image-wrapper">
+        <img src={ChatbotImage} alt="Chatbot" className="chatbot-image" />
       </div>
       <div className="chatbot-title">Talk to our Chatbot</div>
-      <button className="chatbot-button" onClick={handleChatClick}>
+      <button className="chatbot-btn" onClick={handleChatClick}>
         Chat Now
       </button>
     </div>
