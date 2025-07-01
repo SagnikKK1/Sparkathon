@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../components_css/dashboard_css/chatbot_tile.css';
+import '../../components_css/dashboard_css/chatbot.css';
 
 export const DashboardChatbotTile: React.FC = () => {
   const handleChatClick = () => {
