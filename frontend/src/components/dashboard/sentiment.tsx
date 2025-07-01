@@ -41,6 +41,7 @@ export const DashboardSentimentLineChart: React.FC = () => {
     }
   }, []);
 
+  // Main smooth line path
   const pathD = data.reduce((acc, point, i, arr) => {
     const x = getX(i);
     const y = getY(point.score);
@@ -50,6 +51,22 @@ export const DashboardSentimentLineChart: React.FC = () => {
     const midX = (prevX + x) / 2;
     return `${acc} C ${midX} ${prevY}, ${midX} ${y}, ${x} ${y}`;
   }, '');
+
+  // Area path under the line
+  const areaD = (() => {
+    let d = data.reduce((acc, point, i) => {
+      const x = getX(i);
+      const y = getY(point.score);
+      if (i === 0) return `M ${x} ${y}`;
+      const prevX = getX(i - 1);
+      const prevY = getY(data[i - 1].score);
+      const midX = (prevX + x) / 2;
+      return `${acc} C ${midX} ${prevY}, ${midX} ${y}, ${x} ${y}`;
+    }, '');
+    d += ` L ${getX(data.length - 1)} ${HEIGHT - PADDING}`;
+    d += ` L ${getX(0)} ${HEIGHT - PADDING} Z`;
+    return d;
+  })();
 
   return (
     <div className="sentiment-chart-premium">
@@ -113,6 +130,12 @@ export const DashboardSentimentLineChart: React.FC = () => {
             {d.time}
           </text>
         ))}
+        {/* Area fill under the line */}
+        <path
+          d={areaD}
+          fill="url(#area-gradient)"
+          opacity="1"
+        />
         {/* Line path (with glow) */}
         <path
           ref={pathRef}
@@ -122,13 +145,13 @@ export const DashboardSentimentLineChart: React.FC = () => {
           strokeWidth={4}
           filter="url(#glow)"
         />
-        {/* Data points */}
+        {/* Data points (smaller) */}
         {data.map((d, i) => (
           <circle
             key={i}
             cx={getX(i)}
             cy={getY(d.score)}
-            r={8}
+            r={4}
             fill="var(--tropical-indigo)"
             stroke="#fff"
             strokeWidth={2}
@@ -139,6 +162,10 @@ export const DashboardSentimentLineChart: React.FC = () => {
           <linearGradient id="line-gradient" x1="0" y1="0" x2={WIDTH} y2="0" gradientUnits="userSpaceOnUse">
             <stop stopColor="#977dff" />
             <stop offset="1" stopColor="#b8aaff" />
+          </linearGradient>
+          <linearGradient id="area-gradient" x1="0" y1="0" x2={WIDTH} y2="0" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#977dff" stopOpacity="0.2" />
+            <stop offset="1" stopColor="#b8aaff" stopOpacity="0.2" />
           </linearGradient>
           <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
