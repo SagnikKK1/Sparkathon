@@ -1,5 +1,5 @@
 import React from 'react';
-import './sentiment.css';
+import '../../components_css/dashboard_css/sentiment.css';
 
 const data = [
   { time: 'Jan', score: 8 },
