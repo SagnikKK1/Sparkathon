@@ -11,7 +11,7 @@ export const DashboardPage: React.FC = () => {
   const handleLogout = () => window.location.href = '/login';
 
   return (
-    <div className="dashboard-page">
+    <div className="dashboard-outer">
       <DashboardHeader onBack={handleBack} onLogout={handleLogout} />
       <div className="dashboard-grid">
         <div className="dashboard-tile"><DashboardViralityScore /></div>
