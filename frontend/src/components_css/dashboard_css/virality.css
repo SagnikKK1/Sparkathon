@@ -1,0 +1,26 @@
+.virality-score-tile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.virality-score-number {
+  font-size: 92px;
+  font-weight: bold;
+  color: var(--tropical-indigo);
+}
+
+.virality-score-label {
+  font-size: 32px;
+  color: var(--white);
+  margin-top: 8px;
+}
+
+.virality-score-searches {
+  font-size: 18px;
+  color: var(--cool-gray);
+  margin-top: 12px;
+}
