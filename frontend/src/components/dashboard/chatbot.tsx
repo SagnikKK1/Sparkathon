@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatbotImage from '../../components/dashboard/chatBot.png'; // Adjust path if needed
+import ChatbotImage from '../dashboard/chatBot.png'; // Adjust path if needed
 import '../../components_css/dashboard_css/chatbot.css';
 
 export const DashboardChatbotTile: React.FC = () => {
