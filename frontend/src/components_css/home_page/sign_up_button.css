@@ -1,0 +1,42 @@
+.sign-up {
+  height: 50px;
+  width: 130px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    border-radius 0.3s ease-in-out,
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.sign-up-text-content {
+  color: var(--eerie-black);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    font-size 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.sign-up.hover {
+  background-color: #d9d9d9;
+  border-radius: 18px;
+  transform: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-up.hover .sign-up-text-content {
+  color: var(--eerie-black);
+  font-size: 26px;
+} 

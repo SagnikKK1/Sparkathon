@@ -1,0 +1,14 @@
+:root {
+  --cool-gray: rgba(155, 155, 189, 1);
+  --eerie-black: rgba(34, 34, 34, 1);
+  --oxford-blue: rgba(4, 1, 40, 1);
+  --tropical-indigo: rgba(151, 125, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat-Regular", Helvetica, sans-serif;
+  background-color: var(--oxford-blue);
+  color: var(--white);
+}

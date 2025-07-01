@@ -1,0 +1,66 @@
+/* Header.css */
+
+:root {
+  --cool-gray: rgba(155, 155, 189, 1);
+  --eerie-black: rgba(34, 34, 34, 1);
+  --oxford-blue: rgba(4, 1, 40, 1);
+  --tropical-indigo: rgba(151, 125, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
+.app-header-wrapper {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgba(4, 1, 40, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between; /* This keeps logo on left, nav on right */
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.walmart-logo {
+  height: 50px;
+  width: auto;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /* Add margin-left: auto to push this nav to the right */
+  margin-left: auto;
+}
+
+.about-us-link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.about-us-link:hover {
+  color: var(--tropical-indigo);
+}
+
+.button-group-box {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: none;
+}
