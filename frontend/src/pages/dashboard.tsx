@@ -3,7 +3,7 @@ import { DashboardViralityScore } from '../components/dashboard/virality';
 import { DashboardFeatureSentimentBarChart } from '../components/dashboard/features';
 import { DashboardSentimentLineChart } from '../components/dashboard/sentiment';
 import { DashboardChatbotTile } from '../components/dashboard/chatbot';
-import '../pages_css/dashboard_page.css';
+import '../pages_css/dashboard.css';
 
 export const DashboardPage: React.FC = () => {
   const handleBack = () => {
