@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DashboardHeader } from '../comps/dashboard/Header'; // adjust path if needed
+import { DashboardHeader } from '../components/dashboard/header'; // adjust path if needed
 import '../pages_css/loading.css';
 
 const pipelineSteps = [
