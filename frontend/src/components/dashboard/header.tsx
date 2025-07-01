@@ -1,6 +1,6 @@
 import React from 'react';
 import WalmartLogo from '../home_page/Walmart_logo.svg.png'; // Adjust path if needed
-import '../../components/dashboard/header'; // Create this CSS file if not present
+import '../../components_css/dashboard_css/header.css'; // Create this CSS file if not present
 
 interface DashboardHeaderProps {
   onBack: () => void;
