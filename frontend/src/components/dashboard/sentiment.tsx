@@ -10,13 +10,13 @@ const data = [
 ];
 
 // Card and chart dimensions
-const CARD_WIDTH = 560;
+const CARD_WIDTH = 580;
 const CARD_HEIGHT = 370;
 const SVG_WIDTH = 520;
 const SVG_HEIGHT = 240;
 const PADDING = 40;
 const chartW = SVG_WIDTH - PADDING * 2;
-const chartH = SVG_HEIGHT - PADDING * 2;
+const chartH = SVG_HEIGHT - PADDING;
 const minScore = 0;
 const maxScore = 10;
 
