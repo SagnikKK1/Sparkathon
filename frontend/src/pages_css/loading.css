@@ -156,14 +156,14 @@
 
 .blurred-ellipse {
   position: absolute !important;
-  width: 120vw !important;
-  height: 300px !important;
+  width: 350vw !important;
+  height: 400px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   top: -150px !important;
   background: radial-gradient(circle, rgba(151, 125, 255, 0.4) 0%, rgba(151, 125, 255, 0.1) 40%, transparent 70%) !important;
   border-radius: 50% !important;
-  filter: blur(120px) !important;
+  filter: blur(400px) !important;
   z-index: 0 !important;
   display: block !important;
   pointer-events: none !important;
