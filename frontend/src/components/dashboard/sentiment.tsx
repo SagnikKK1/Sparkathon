@@ -9,11 +9,14 @@ const data = [
   { time: 'May', score: 8 }
 ];
 
-const WIDTH = 560;
-const HEIGHT = 320;
-const PADDING = 48;
-const chartW = WIDTH - PADDING * 2;
-const chartH = HEIGHT - PADDING * 2;
+// Card and chart dimensions
+const CARD_WIDTH = 560;
+const CARD_HEIGHT = 370;
+const SVG_WIDTH = 520;
+const SVG_HEIGHT = 240;
+const PADDING = 40;
+const chartW = SVG_WIDTH - PADDING * 2;
+const chartH = SVG_HEIGHT - PADDING * 2;
 const minScore = 0;
 const maxScore = 10;
 
@@ -41,6 +44,7 @@ export const DashboardSentimentLineChart: React.FC = () => {
     }
   }, []);
 
+  // Main smooth line path
   const pathD = data.reduce((acc, point, i, arr) => {
     const x = getX(i);
     const y = getY(point.score);
@@ -51,6 +55,7 @@ export const DashboardSentimentLineChart: React.FC = () => {
     return `${acc} C ${midX} ${prevY}, ${midX} ${y}, ${x} ${y}`;
   }, '');
 
+  // Area path under the line
   const areaD = (() => {
     let d = data.reduce((acc, point, i) => {
       const x = getX(i);
@@ -61,128 +66,148 @@ export const DashboardSentimentLineChart: React.FC = () => {
       const midX = (prevX + x) / 2;
       return `${acc} C ${midX} ${prevY}, ${midX} ${y}, ${x} ${y}`;
     }, '');
-    d += ` L ${getX(data.length - 1)} ${HEIGHT - PADDING}`;
-    d += ` L ${getX(0)} ${HEIGHT - PADDING} Z`;
+    d += ` L ${getX(data.length - 1)} ${SVG_HEIGHT - PADDING}`;
+    d += ` L ${getX(0)} ${SVG_HEIGHT - PADDING} Z`;
     return d;
   })();
 
   return (
-    <div className="sentiment-chart-premium" style={{ paddingTop: '2.5rem', position: 'relative' }}>
-      <div className="sentiment-title" style={{ position: 'relative', zIndex: 10 }}>
+    <div
+      className="sentiment-card"
+      style={{
+        width: `${CARD_WIDTH}px`,
+        height: `${CARD_HEIGHT}px`,
+        boxSizing: 'border-box',
+        padding: '32px 24px 24px 24px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
+        overflow: 'hidden',
+      }}
+    >
+      <div className="sentiment-title">
         Sentiment Vs. Time Analysis
       </div>
-      <svg width={WIDTH} height={HEIGHT} className="sentiment-svg" style={{ position: 'relative', zIndex: 1 }}>
-        {/* Grid lines */}
-        {[0, 0.25, 0.5, 0.75, 1].map((t, idx) => (
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <svg
+          width={SVG_WIDTH}
+          height={SVG_HEIGHT}
+          className="sentiment-svg"
+          style={{ display: 'block' }}
+        >
+          {/* Grid lines */}
+          {[0, 0.25, 0.5, 0.75, 1].map((t, idx) => (
+            <line
+              key={idx}
+              x1={PADDING}
+              x2={SVG_WIDTH - PADDING}
+              y1={PADDING + chartH * t}
+              y2={PADDING + chartH * t}
+              stroke="rgba(151,125,255,0.08)"
+              strokeWidth={1}
+            />
+          ))}
+          {/* Y axis */}
           <line
-            key={idx}
             x1={PADDING}
-            x2={WIDTH - PADDING}
-            y1={PADDING + chartH * t}
-            y2={PADDING + chartH * t}
-            stroke="rgba(151,125,255,0.08)"
-            strokeWidth={1}
-          />
-        ))}
-        {/* Y axis */}
-        <line
-          x1={PADDING}
-          x2={PADDING}
-          y1={PADDING}
-          y2={HEIGHT - PADDING}
-          stroke="rgba(151,125,255,0.25)"
-          strokeWidth={2}
-        />
-        {/* X axis */}
-        <line
-          x1={PADDING}
-          x2={WIDTH - PADDING}
-          y1={HEIGHT - PADDING}
-          y2={HEIGHT - PADDING}
-          stroke="rgba(151,125,255,0.25)"
-          strokeWidth={2}
-        />
-        {/* Y labels */}
-        {[minScore, 5, maxScore].map((v, i) => (
-          <text
-            key={i}
-            x={PADDING - 12}
-            y={getY(v) + 6}
-            fontSize="13"
-            fill="var(--cool-gray)"
-            textAnchor="end"
-            fontWeight="bold"
-          >
-            {v}
-          </text>
-        ))}
-        {/* X labels */}
-        {data.map((d, i) => (
-          <text
-            key={i}
-            x={getX(i)}
-            y={HEIGHT - PADDING + 28}
-            fontSize="15"
-            fill="var(--cool-gray)"
-            textAnchor="middle"
-            fontWeight="bold"
-          >
-            {d.time}
-          </text>
-        ))}
-        {/* Area fill under the line */}
-        <path
-          d={areaD}
-          fill="url(#area-gradient)"
-          opacity="1"
-        />
-        {/* Line path (with glow) */}
-        <path
-          ref={pathRef}
-          d={pathD}
-          fill="none"
-          stroke="url(#line-gradient)"
-          strokeWidth={4}
-          filter="url(#glow)"
-        />
-        {/* Data points (smaller) */}
-        {data.map((d, i) => (
-          <circle
-            key={i}
-            cx={getX(i)}
-            cy={getY(d.score)}
-            r={4}
-            fill="var(--tropical-indigo)"
-            stroke="#fff"
+            x2={PADDING}
+            y1={PADDING}
+            y2={SVG_HEIGHT - PADDING}
+            stroke="rgba(151,125,255,0.25)"
             strokeWidth={2}
-            filter="url(#point-glow)"
           />
-        ))}
-        <defs>
-          <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#977dff" />
-            <stop offset="1" stopColor="#b8aaff" />
-          </linearGradient>
-          <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
-            <stop offset="5%" stopColor="#977dff" stopOpacity="0.2" />
-            <stop offset="95%" stopColor="#b8aaff" stopOpacity="0.2" />
-          </linearGradient>
-          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-          <filter id="point-glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
-      </svg>
+          {/* X axis */}
+          <line
+            x1={PADDING}
+            x2={SVG_WIDTH - PADDING}
+            y1={SVG_HEIGHT - PADDING}
+            y2={SVG_HEIGHT - PADDING}
+            stroke="rgba(151,125,255,0.25)"
+            strokeWidth={2}
+          />
+          {/* Y labels */}
+          {[minScore, 5, maxScore].map((v, i) => (
+            <text
+              key={i}
+              x={PADDING - 12}
+              y={getY(v) + 6}
+              fontSize="13"
+              fill="var(--cool-gray)"
+              textAnchor="end"
+              fontWeight="bold"
+            >
+              {v}
+            </text>
+          ))}
+          {/* X labels */}
+          {data.map((d, i) => (
+            <text
+              key={i}
+              x={getX(i)}
+              y={SVG_HEIGHT - PADDING + 28}
+              fontSize="15"
+              fill="var(--cool-gray)"
+              textAnchor="middle"
+              fontWeight="bold"
+            >
+              {d.time}
+            </text>
+          ))}
+          {/* Area fill under the line */}
+          <path
+            d={areaD}
+            fill="url(#area-gradient)"
+            opacity="1"
+          />
+          {/* Line path (with glow) */}
+          <path
+            ref={pathRef}
+            d={pathD}
+            fill="none"
+            stroke="url(#line-gradient)"
+            strokeWidth={4}
+            filter="url(#glow)"
+          />
+          {/* Data points (smaller) */}
+          {data.map((d, i) => (
+            <circle
+              key={i}
+              cx={getX(i)}
+              cy={getY(d.score)}
+              r={4}
+              fill="var(--tropical-indigo)"
+              stroke="#fff"
+              strokeWidth={2}
+              filter="url(#point-glow)"
+            />
+          ))}
+          <defs>
+            <linearGradient id="line-gradient" x1="0" y1="0" x2={SVG_WIDTH} y2="0" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#977dff" />
+              <stop offset="1" stopColor="#b8aaff" />
+            </linearGradient>
+            <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2={SVG_HEIGHT} gradientUnits="userSpaceOnUse">
+              <stop offset="5%" stopColor="#977dff" stopOpacity="0.25" />
+              <stop offset="95%" stopColor="#b8aaff" stopOpacity="0.13" />
+            </linearGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <filter id="point-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+        </svg>
+      </div>
     </div>
   );
 };
