@@ -67,9 +67,11 @@ export const DashboardSentimentLineChart: React.FC = () => {
   })();
 
   return (
-    <div className="sentiment-chart-premium">
-      <div className="sentiment-title">Sentiment Vs. Time Analysis</div>
-      <svg width={WIDTH} height={HEIGHT} className="sentiment-svg">
+    <div className="sentiment-chart-premium" style={{ paddingTop: '2.5rem', position: 'relative' }}>
+      <div className="sentiment-title" style={{ position: 'relative', zIndex: 10 }}>
+        Sentiment Vs. Time Analysis
+      </div>
+      <svg width={WIDTH} height={HEIGHT} className="sentiment-svg" style={{ position: 'relative', zIndex: 1 }}>
         {/* Grid lines */}
         {[0, 0.25, 0.5, 0.75, 1].map((t, idx) => (
           <line
