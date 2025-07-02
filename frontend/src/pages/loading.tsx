@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { DashboardHeader } from '../components/dashboard/header'; // adjust path if needed
-import '../pages_css/loading.css';
+import { DashboardHeader } from '.././components/dashboard/header'; // adjust path if needed
+import '.././pages_css/loading.css';
 
 const pipelineSteps = [
   { label: "Scraping comments", icon: "📝" },
@@ -40,7 +40,10 @@ export const Loading: React.FC = () => {
 
   return (
     <div className="loading-page">
-      <DashboardHeader onBack={() => {}} onLogout={() => window.location.href = '/login'} />
+      {/* New wrapper div for the header */}
+      <div className="loading-header-wrapper">
+        <DashboardHeader onBack={() => {}} onLogout={() => window.location.href = '/login'} />
+      </div>
       <div className="loading-content">
         <h1 className="loading-title">Preparing Your Dashboard</h1>
         <div className="pipeline-container">

@@ -1,3 +1,5 @@
+/* src/pages_css/dashboard.css */
+
 :root {
   --cool-gray: rgba(155, 155, 189, 1);
   --eerie-black: rgba(34, 34, 34, 1);
@@ -18,8 +20,8 @@
 /* Outer container to center and constrain content width */
 .dashboard-outer {
   max-width: 1260px;
-  margin: 48px auto 0 auto;  /* Top margin, centered horizontally */
-  padding: 0 32px;           /* Left/right padding for breathing room */
+  margin: 48px auto 0 auto;
+  padding: 0 32px;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -40,7 +42,7 @@
   height: 70px;
   border-radius: 18px;
   background: rgba(4, 1, 40, 0.97);
-  border: 2.5px solid rgba(151, 125, 255, 0.3); /* tropical indigo, 30% opacity */
+  border: 2px solid rgba(151, 125, 255, 0.4);
   box-shadow: 0 0 32px 8px rgba(151,125,255,0.25);
   z-index: 10;
   overflow: visible;
@@ -50,9 +52,9 @@
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 18px;
+  border-radius: 15px;
   pointer-events: none;
-  box-shadow: 0 0 32px 8px rgba(151,125,255,0.35);
+  box-shadow: 0 0 32px 8px rgba(151,125,255,0.1);
   opacity: 0.7;
   z-index: -1;
 }
@@ -95,7 +97,7 @@
   cursor: pointer;
   padding: 9px 22px;
   box-shadow: 0 0 12px 2px rgba(151,125,255,0.18);
-  transition: 
+  transition:
     background 0.2s,
     box-shadow 0.2s,
     transform 0.15s;
@@ -132,9 +134,9 @@
 /* Dashboard card styles */
 .dashboard-tile {
   background: rgba(34, 34, 34, 0.85);
-  border-radius: 24px;
-  box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08);
-  border: 2px solid rgba(151, 125, 255, 0.3); /* Tropical Indigo, 30% opacity */
+  border-radius: 15px; /* Set border-radius to 15px */
+  box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08); /* Keep initial subtle shadow */
+  border: 2px solid rgba(151, 125, 255, 0.3); /* Initial border: tropical indigo with 30% opacity */
   transition:
     box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
     border-color 0.3s cubic-bezier(0.4,0,0.2,1),
@@ -149,10 +151,9 @@
 
 .dashboard-tile:hover {
   transform: scale(1.02); /* Subtle pop effect */
-  border-color: var(--tropical-indigo);
-  box-shadow:
-    0 0 16px 4px rgba(151,125,255,0.45),
-    0 8px 40px rgba(151,125,255,0.16);
+  border-color: var(--tropical-indigo); /* Hover border: tropical indigo (100% opacity) */
+  /* Adjusted box-shadow to be a more uniform glow, removing the "inner border" effect */
+  box-shadow: 0 0 25px 5px rgba(151,125,255,0.35);
   z-index: 2;
 }
 

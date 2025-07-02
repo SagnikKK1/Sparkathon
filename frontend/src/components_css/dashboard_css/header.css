@@ -1,5 +1,5 @@
 .dashboard-header-glow {
-  width: 100vw;
+  width: 100%;
   min-width: 0;
   box-sizing: border-box;
   position: relative;
@@ -9,9 +9,9 @@
   padding: 0 36px;
   margin: 0 0 38px 0;
   height: 70px;
-  border-radius: 18px;
+  border-radius: 15px;
   background: rgba(4, 1, 40, 0.97);
-  border: 2.5px solid rgba(151, 125, 255, 0.3);
+  border: 2px solid rgba(151, 125, 255, 0.3);
   box-shadow: 0 0 32px 8px rgba(151,125,255,0.25);
   z-index: 10;
   overflow: visible;

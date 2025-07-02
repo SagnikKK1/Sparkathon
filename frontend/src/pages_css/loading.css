@@ -6,12 +6,21 @@
   flex-direction: column;
 }
 
+/* New CSS for the header wrapper on the loading page */
+.loading-header-wrapper {
+  max-width: 1260px; /* Same max-width as dashboard-outer */
+  margin: 48px auto 0 auto; /* Top margin and horizontal centering */
+  padding: 0 32px; /* Horizontal padding */
+  box-sizing: border-box;
+  width: 100%; /* Take full width of its parent (which is now constrained) */
+}
+
 .loading-content {
   max-width: 650px;
   margin: 60px auto 0 auto;
   padding: 44px 32px 32px 32px;
   background: rgba(34, 34, 34, 0.92);
-  border-radius: 28px;
+  border-radius: 15px;
   box-shadow: 0 6px 36px rgba(151,125,255,0.13);
   border: 2.5px solid rgba(151, 125, 255, 0.3);
   display: flex;

@@ -1,9 +1,9 @@
 .chatbot-card {
   position: relative;
   background: linear-gradient(135deg, rgba(20, 18, 38, 0.98) 60%, rgba(151,125,255,0.10) 100%);
-  border-radius: 28px;
+  border-radius: 15px;
   box-shadow: 0 0 0 2px rgba(151,125,255,0.22), 0 6px 36px rgba(151,125,255,0.12);
-  border: 2.5px solid rgba(151, 125, 255, 0.3);
+  border: 1px solid rgba(151, 125, 255, 0.3);
   transition: box-shadow 0.25s, border-color 0.25s, transform 0.18s;
   padding: 36px 24px 32px 24px;
   display: flex;
