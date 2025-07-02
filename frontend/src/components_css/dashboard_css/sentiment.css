@@ -1,24 +1,32 @@
-.sentiment-card {
+.sentiment-card,
+.sentiment-chart-premium {
   background: #181820;
   border-radius: 18px;
   box-shadow: 0 0 0 1.5px #353545, 0 4px 32px rgba(0,0,0,0.18);
-  padding: 24px 18px 0 18px;
+  padding: 2.5rem 18px 0 18px; /* Add enough top padding for the heading */
   width: 100%;
   max-width: 560px;
   margin: 0 auto;
-  min-height: 320px;
+  min-height: 370px; /* Increased to fit heading + chart */
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents overflow of heading or chart */
+  display: flex;
+  flex-direction: column;
 }
 
 .sentiment-title {
-  font-size: 1.5rem; /* slightly larger for visibility */
-  color: var(--tropical-indigo); /* bright indigo color */
+  font-size: 1.5rem;
+  color: var(--tropical-indigo);
   font-weight: 600;
   margin-bottom: 1rem;
   margin-left: 8px;
   display: block;
   text-align: left;
   user-select: none;
+  z-index: 2;
+  position: relative;
+  background: transparent;
 }
 
 .sentiment-svg {
@@ -27,4 +35,7 @@
   width: 100%;
   height: auto;
   background: none;
+  z-index: 1;
+  position: relative;
+  /* No negative margin or absolute positioning! */
 }
