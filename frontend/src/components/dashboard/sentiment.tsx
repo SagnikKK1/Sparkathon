@@ -9,7 +9,6 @@ const data = [
   { time: 'May', score: 8 }
 ];
 
-// Card and chart dimensions
 const CARD_WIDTH = 580;
 const CARD_HEIGHT = 370;
 const SVG_WIDTH = 520;
@@ -44,7 +43,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
     }
   }, []);
 
-  // Main smooth line path
   const pathD = data.reduce((acc, point, i, arr) => {
     const x = getX(i);
     const y = getY(point.score);
@@ -55,7 +53,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
     return `${acc} C ${midX} ${prevY}, ${midX} ${y}, ${x} ${y}`;
   }, '');
 
-  // Area path under the line
   const areaD = (() => {
     let d = data.reduce((acc, point, i) => {
       const x = getX(i);
@@ -96,7 +93,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
           className="sentiment-svg"
           style={{ display: 'block' }}
         >
-          {/* Grid lines */}
           {[0, 0.25, 0.5, 0.75, 1].map((t, idx) => (
             <line
               key={idx}
@@ -108,7 +104,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
               strokeWidth={1}
             />
           ))}
-          {/* Y axis */}
           <line
             x1={PADDING}
             x2={PADDING}
@@ -117,7 +112,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
             stroke="rgba(151,125,255,0.25)"
             strokeWidth={2}
           />
-          {/* X axis */}
           <line
             x1={PADDING}
             x2={SVG_WIDTH - PADDING}
@@ -126,7 +120,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
             stroke="rgba(151,125,255,0.25)"
             strokeWidth={2}
           />
-          {/* Y labels */}
           {[minScore, 5, maxScore].map((v, i) => (
             <text
               key={i}
@@ -140,7 +133,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
               {v}
             </text>
           ))}
-          {/* X labels */}
           {data.map((d, i) => (
             <text
               key={i}
@@ -154,13 +146,11 @@ export const DashboardSentimentLineChart: React.FC = () => {
               {d.time}
             </text>
           ))}
-          {/* Area fill under the line */}
           <path
             d={areaD}
             fill="url(#area-gradient)"
             opacity="1"
           />
-          {/* Line path (with glow) */}
           <path
             ref={pathRef}
             d={pathD}
@@ -169,7 +159,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
             strokeWidth={4}
             filter="url(#glow)"
           />
-          {/* Data points (smaller) */}
           {data.map((d, i) => (
             <circle
               key={i}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DashboardHeader } from '.././components/dashboard/header'; // adjust path if needed
+import { DashboardHeader } from '.././components/dashboard/header';
 import '.././pages_css/loading.css';
 
 const pipelineSteps = [
@@ -15,14 +15,12 @@ export const Loading: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
-    // Simulate progress
     if (progress < 100) {
       const timeout = setTimeout(() => {
         setProgress(p => Math.min(p + Math.random() * 12 + 6, 100));
       }, 650);
       return () => clearTimeout(timeout);
     } else {
-      // Redirect to dashboard after a short delay
       setTimeout(() => {
         window.location.href = '/dashboard';
       }, 1200);
@@ -30,7 +28,6 @@ export const Loading: React.FC = () => {
   }, [progress]);
 
   useEffect(() => {
-    // Update current pipeline step based on progress
     const step = Math.min(
       Math.floor((progress / 100) * pipelineSteps.length),
       pipelineSteps.length - 1
@@ -40,7 +37,8 @@ export const Loading: React.FC = () => {
 
   return (
     <div className="loading-page">
-      {/* New wrapper div for the header */}
+      <div className="blurred-ellipse"></div> 
+
       <div className="loading-header-wrapper">
         <DashboardHeader onBack={() => {}} onLogout={() => window.location.href = '/login'} />
       </div>

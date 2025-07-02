@@ -1,18 +1,29 @@
+:root {
+  --cool-gray: rgba(155, 155, 189, 1);
+  --eerie-black: rgba(34, 34, 34, 1);
+  --oxford-blue: rgba(4, 1, 40, 1);
+  --tropical-indigo: rgba(151, 125, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
 .loading-page {
   min-height: 100vh;
   background: var(--oxford-blue);
   color: var(--white);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
-/* New CSS for the header wrapper on the loading page */
 .loading-header-wrapper {
-  max-width: 1260px; /* Same max-width as dashboard-outer */
-  margin: 48px auto 0 auto; /* Top margin and horizontal centering */
-  padding: 0 32px; /* Horizontal padding */
+  max-width: 1260px;
+  margin: 48px auto 0 auto;
+  padding: 0 32px;
   box-sizing: border-box;
-  width: 100%; /* Take full width of its parent (which is now constrained) */
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .loading-content {
@@ -26,6 +37,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .loading-title {
@@ -86,10 +99,12 @@
   color: var(--tropical-indigo);
   animation: pulse 1.2s infinite alternate;
 }
+
 .pipeline-step.done .pipeline-icon {
   filter: drop-shadow(0 0 8px #b8aaff);
   color: #b8aaff;
 }
+
 @keyframes pulse {
   0% { filter: drop-shadow(0 0 6px var(--tropical-indigo)); }
   100% { filter: drop-shadow(0 0 18px var(--tropical-indigo)); }
@@ -137,4 +152,32 @@
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.02em;
+}
+
+.blurred-ellipse {
+  position: absolute !important;
+  width: 120vw !important;
+  height: 300px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: -150px !important;
+  background: radial-gradient(circle, rgba(151, 125, 255, 0.4) 0%, rgba(151, 125, 255, 0.1) 40%, transparent 70%) !important;
+  border-radius: 50% !important;
+  filter: blur(120px) !important;
+  z-index: 0 !important;
+  display: block !important;
+  pointer-events: none !important;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .blurred-ellipse {
+    width: 150vw !important;
+    height: 250px !important;
+    top: -120px !important;
+    filter: blur(80px) !important;
+  }
 }

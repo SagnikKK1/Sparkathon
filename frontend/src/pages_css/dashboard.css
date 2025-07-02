@@ -1,5 +1,3 @@
-/* src/pages_css/dashboard.css */
-
 :root {
   --cool-gray: rgba(155, 155, 189, 1);
   --eerie-black: rgba(34, 34, 34, 1);
@@ -8,7 +6,6 @@
   --white: rgba(255, 255, 255, 1);
 }
 
-/* Main page background and color */
 .dashboard-page {
   min-height: 100vh;
   background-color: var(--oxford-blue);
@@ -17,7 +14,6 @@
   flex-direction: column;
 }
 
-/* Outer container to center and constrain content width */
 .dashboard-outer {
   max-width: 1260px;
   margin: 48px auto 0 auto;
@@ -29,7 +25,6 @@
   align-items: stretch;
 }
 
-/* Premium header with glow and border */
 .dashboard-header-glow {
   width: 100%;
   box-sizing: border-box;
@@ -86,7 +81,6 @@
   white-space: nowrap;
 }
 
-/* Premium buttons for back and logout */
 .premium-btn {
   background: linear-gradient(90deg, rgba(151,125,255,0.8), rgba(151,125,255,0.5));
   color: #fff;
@@ -120,23 +114,21 @@
   margin-left: auto;
 }
 
-/* Dashboard grid: matches header width and is centered */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 32px;
   width: 100%;
-  height: calc(100vh - 210px); /* header + margin + padding */
+  height: calc(100vh - 210px);
   box-sizing: border-box;
 }
 
-/* Dashboard card styles */
 .dashboard-tile {
   background: rgba(34, 34, 34, 0.85);
-  border-radius: 15px; /* Set border-radius to 15px */
-  box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08); /* Keep initial subtle shadow */
-  border: 2px solid rgba(151, 125, 255, 0.3); /* Initial border: tropical indigo with 30% opacity */
+  border-radius: 15px;
+  box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08);
+  border: 2px solid rgba(151, 125, 255, 0.3);
   transition:
     box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
     border-color 0.3s cubic-bezier(0.4,0,0.2,1),
@@ -150,14 +142,13 @@
 }
 
 .dashboard-tile:hover {
-  transform: scale(1.02); /* Subtle pop effect */
-  border-color: var(--tropical-indigo); /* Hover border: tropical indigo (100% opacity) */
-  /* Adjusted box-shadow to be a more uniform glow, removing the "inner border" effect */
-  box-shadow: 0 0 25px 5px rgba(151,125,255,0.35);
+  transform: scale(1.02);
+  border-color: var(--tropical-indigo);
+  box-shadow:
+    0 0 25px 5px rgba(151,125,255,0.35);
   z-index: 2;
 }
 
-/* Responsive adjustments */
 @media (max-width: 900px) {
   .dashboard-outer {
     padding: 0 8px;
@@ -171,4 +162,17 @@
     gap: 24px;
     height: auto;
   }
+}
+
+.blurred-ellipse {
+  position: absolute;
+  width: 180vw;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -177px;
+  background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
+  border-radius: 50%;
+  filter: blur(400px);
+  z-index: -1;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import WalmartLogo from '../home_page/Walmart_logo.svg.png'; // adjust path as needed
+import WalmartLogo from '../home_page/Walmart_logo.svg.png';
 import '../../components_css/dashboard_css/header.css';
 
 interface DashboardHeaderProps {

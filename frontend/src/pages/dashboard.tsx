@@ -12,6 +12,7 @@ export const DashboardPage: React.FC = () => {
 
   return (
     <div className="dashboard-outer">
+      <div className="blurred-ellipse"></div>
       <DashboardHeader onBack={handleBack} onLogout={handleLogout} />
       <div className="dashboard-grid">
         <div className="dashboard-tile"><DashboardViralityScore /></div>
