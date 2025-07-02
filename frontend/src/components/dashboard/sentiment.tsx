@@ -9,8 +9,9 @@ const data = [
   { time: 'May', score: 8 }
 ];
 
-const WIDTH = 420;
-const HEIGHT = 220;
+// Enlarged chart dimensions
+const WIDTH = 560;
+const HEIGHT = 320;
 const PADDING = 48;
 const chartW = WIDTH - PADDING * 2;
 const chartH = HEIGHT - PADDING * 2;
