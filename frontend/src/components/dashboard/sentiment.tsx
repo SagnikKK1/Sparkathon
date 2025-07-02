@@ -9,7 +9,6 @@ const data = [
   { time: 'May', score: 8 }
 ];
 
-// Enlarged chart dimensions
 const WIDTH = 560;
 const HEIGHT = 320;
 const PADDING = 48;
@@ -42,7 +41,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
     }
   }, []);
 
-  // Main smooth line path
   const pathD = data.reduce((acc, point, i, arr) => {
     const x = getX(i);
     const y = getY(point.score);
@@ -53,7 +51,6 @@ export const DashboardSentimentLineChart: React.FC = () => {
     return `${acc} C ${midX} ${prevY}, ${midX} ${y}, ${x} ${y}`;
   }, '');
 
-  // Area path under the line
   const areaD = (() => {
     let d = data.reduce((acc, point, i) => {
       const x = getX(i);
@@ -71,7 +68,7 @@ export const DashboardSentimentLineChart: React.FC = () => {
 
   return (
     <div className="sentiment-chart-premium">
-      <div className="sentiment-title">Sentiment Over Time</div>
+      <div className="sentiment-title">Sentiment Vs. Time Analysis</div>
       <svg width={WIDTH} height={HEIGHT} className="sentiment-svg">
         {/* Grid lines */}
         {[0, 0.25, 0.5, 0.75, 1].map((t, idx) => (
@@ -160,13 +157,13 @@ export const DashboardSentimentLineChart: React.FC = () => {
           />
         ))}
         <defs>
-          <linearGradient id="line-gradient" x1="0" y1="0" x2={WIDTH} y2="0" gradientUnits="userSpaceOnUse">
+          <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse">
             <stop stopColor="#977dff" />
             <stop offset="1" stopColor="#b8aaff" />
           </linearGradient>
-          <linearGradient id="area-gradient" x1="0" y1="0" x2={WIDTH} y2="0" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#977dff" stopOpacity="0.2" />
-            <stop offset="1" stopColor="#b8aaff" stopOpacity="0.2" />
+          <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+            <stop offset="5%" stopColor="#977dff" stopOpacity="0.2" />
+            <stop offset="95%" stopColor="#b8aaff" stopOpacity="0.2" />
           </linearGradient>
           <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
