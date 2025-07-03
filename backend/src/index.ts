@@ -17,13 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.json({ 
     message: 'Welcome to Sparkathon Backend API',
-    version: '1.0.0',
-    endpoints: {
-      auth: '/api/auth',
-      user: '/api/user',
-      activity: '/api/activity',
-      health: '/health'
-    }
+    version: '1.0.0'
   });
 });
 
@@ -44,26 +38,7 @@ app.use((req, res) => {
   res.status(404).json({ 
     error: 'Route not found',
     path: req.originalUrl,
-    method: req.method,
-    availableEndpoints: {
-      auth: [
-        'POST /api/auth/signup',
-        'POST /api/auth/login',
-        'POST /api/auth/logout'
-      ],
-      user: [
-        'GET /api/user/profile',
-        'GET /api/user/all',
-        'GET /api/user/online'
-      ],
-      activity: [
-        'POST /api/activity/heartbeat'
-      ],
-      general: [
-        'GET /',
-        'GET /health'
-      ]
-    }
+    method: req.method
   });
 });
 
