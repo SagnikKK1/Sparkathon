@@ -13,7 +13,7 @@ export const FeatureContributionPieChart: React.FC = () => {
 
   // Pie chart rendering (SVG)
   const radius = 60;
-  const cx = 80, cy = 80;
+  const cx = 75, cy = 75;
   let cumulative = 0;
   const colors = ["#977dff", "#b8aaff", "#4be04b", "#ff5c5c"];
 
@@ -42,7 +42,7 @@ export const FeatureContributionPieChart: React.FC = () => {
   return (
     <div className="feature-pie-card">
       <div className="feature-pie-title">Feature Contribution Chart</div>
-      <svg width={160} height={160} className="feature-pie-svg">
+      <svg width={150} height={150} className="feature-pie-svg">
         {arcs}
       </svg>
       <div className="feature-pie-legend">
