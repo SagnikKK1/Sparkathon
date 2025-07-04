@@ -3,9 +3,7 @@ import { Header } from '../components/home_page/home_header';
 import { TextCarousel } from '../components/home_page/carousel';
 import '.././pages_css/home_page.css';
 import { useNavigate } from 'react-router-dom';
-
-// Placeholder import: replace with your actual image path
-import DashboardIllustration from '../path/to/your/dashboard_illustration.png';
+import DashboardIllustration from '../components/home_page/homepage.png';
 
 interface HomePageProps {}
 
