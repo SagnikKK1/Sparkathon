@@ -1,106 +1,106 @@
-:root {
-  --cool-gray: rgba(155, 155, 189, 1);
-  --eerie-black: rgba(34, 34, 34, 1);
-  --oxford-blue: rgba(4, 1, 40, 1);
-  --tropical-indigo: rgba(151, 125, 255, 1);
-  --white: rgba(255, 255, 255, 1);
-}
-
-.dashboard-outer {
-  max-width: 1400px;
-  margin: 48px auto 0 auto;
-  padding: 0 12px;
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: relative;
-}
-
-.dashboard-grid-6 {
-  display: grid;
-  grid-template-columns: 1.4fr 0.8fr 1.2fr;
-  grid-template-rows: 0.85fr 1fr;
-  gap: 32px;
-  width: 100%;
-  min-height: 700px;
-  box-sizing: border-box;
-  grid-template-areas:
-    "virality pie feature"
-    "sentiment heatmap chatbot";
-}
-
-.dashboard-tile {
-  background: rgba(34, 34, 34, 0.85);
-  border-radius: 18px;
-  box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08);
-  border: 2px solid rgba(151, 125, 255, 0.3);
-  transition:
-    box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
-    border-color 0.3s cubic-bezier(0.4,0,0.2,1),
-    transform 0.3s cubic-bezier(0.4,0,0.2,1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
-  padding: 0;
-}
-
-.dashboard-tile:hover {
-  transform: scale(1.02);
-  border-color: var(--tropical-indigo);
-  box-shadow: 0 0 25px 5px rgba(151,125,255,0.35);
-  z-index: 2;
-}
-
-.dashboard-tile-virality,
-.dashboard-tile-pie,
-.dashboard-tile-feature-sentiment {
-  min-height: 220px;
-  max-height: 270px;
-  height: 100%;
-}
-
-.dashboard-tile-pie {
-  min-width: 0;
-  max-width: 320px;
-  padding: 0 8px;
-}
-
-@media (max-width: 1200px) {
-  .dashboard-grid-6 {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas:
-      "virality"
-      "pie"
-      "feature"
-      "sentiment"
-      "heatmap"
-      "chatbot";
-    gap: 24px;
+  :root {
+    --cool-gray: rgba(155, 155, 189, 1);
+    --eerie-black: rgba(34, 34, 34, 1);
+    --oxford-blue: rgba(4, 1, 40, 1);
+    --tropical-indigo: rgba(151, 125, 255, 1);
+    --white: rgba(255, 255, 255, 1);
   }
+
+  .dashboard-outer {
+    max-width: 1400px;
+    margin: 48px auto 0 auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .dashboard-grid-6 {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1.2fr;
+    grid-template-rows: 0.85fr 1fr;
+    gap: 32px;
+    width: 100%;
+    min-height: 700px;
+    box-sizing: border-box;
+    grid-template-areas:
+      "virality pie feature"
+      "sentiment heatmap chatbot";
+  }
+
+  .dashboard-tile {
+    background: rgba(34, 34, 34, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08);
+    border: 2px solid rgba(151, 125, 255, 0.3);
+    transition:
+      box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
+      border-color 0.3s cubic-bezier(0.4,0,0.2,1),
+      transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .dashboard-tile:hover {
+    transform: scale(1.02);
+    border-color: var(--tropical-indigo);
+    box-shadow: 0 0 25px 5px rgba(151,125,255,0.35);
+    z-index: 2;
+  }
+
   .dashboard-tile-virality,
   .dashboard-tile-pie,
   .dashboard-tile-feature-sentiment {
-    min-height: unset;
-    max-height: unset;
-    height: auto;
+    min-height: 220px;
+    max-height: 300px;
+    height: 100%;
   }
-}
 
-.blurred-ellipse {
-  position: absolute;
-  width: 180vw;
-  height: 400px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -177px;
-  background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
-  border-radius: 50%;
-  filter: blur(400px);
-  z-index: -1;
-}
+  .dashboard-tile-pie {
+    min-width: 0;
+    max-width: 320px;
+    padding: 0 8px;
+  }
+
+  @media (max-width: 1200px) {
+    .dashboard-grid-6 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+      grid-template-areas:
+        "virality"
+        "pie"
+        "feature"
+        "sentiment"
+        "heatmap"
+        "chatbot";
+      gap: 24px;
+    }
+    .dashboard-tile-virality,
+    .dashboard-tile-pie,
+    .dashboard-tile-feature-sentiment {
+      min-height: unset;
+      max-height: unset;
+      height: auto;
+    }
+  }
+
+  .blurred-ellipse {
+    position: absolute;
+    width: 180vw;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -177px;
+    background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
+    border-radius: 50%;
+    filter: blur(400px);
+    z-index: -1;
+  }
