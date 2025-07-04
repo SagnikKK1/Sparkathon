@@ -37,7 +37,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
             Our platform intelligently scrapes user-generated reviews from Reddit and YouTube to uncover what real people are saying about your product. Using advanced natural language processing, machine learning, and AI, we transform scattered feedback into clean visual dashboards, in-depth reports, and an interactive RAG-powered chatbot — giving you powerful insights, fast decisions, and a clear competitive edge.
           </p>
 
-          {/* --- New Form Section Starts Here --- */}
+          {/* --- Add the form here, do not wrap or move anything else --- */}
           <div className="homepage-form-section">
             <div className="homepage-form-row">
               <label htmlFor="category" className="homepage-form-label">Product Category</label>
@@ -90,7 +90,6 @@ export const HomePage: React.FC<HomePageProps> = () => {
               Generate Result
             </button>
           </div>
-          {/* --- New Form Section Ends Here --- */}
         </div>
         <div className="right-content-section"></div>
       </div>
