@@ -1,54 +1,71 @@
 .virality-card {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  width: 100%;
+  justify-content: center;
   height: 100%;
+  width: 100%;
   background: rgba(34, 34, 34, 0.85);
   border-radius: 24px;
   box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08);
   border: 2px solid rgba(151, 125, 255, 0.3);
   overflow: hidden;
-  padding: 0;
 }
 
 .virality-left {
-  width: 32%; /* Reduced width */
+  width: 32%;
   min-width: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 28px 8px 28px 18px;
+  padding: 32px 8px 32px 18px;
   background: transparent;
+  z-index: 1;
 }
 
 .virality-score {
   font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 3.2rem;
+  font-size: 4.5rem;
   font-weight: 400;
   color: var(--tropical-indigo);
   line-height: 1;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 16px rgba(151,125,255,0.35),
+    0 2px 8px rgba(151,125,255,0.13);
 }
 
 .virality-label {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--white);
   font-weight: 500;
   margin-top: 0;
   letter-spacing: 0.01em;
 }
 
+.virality-divider {
+  width: 2.5px;
+  margin: 24px 0;
+  border-radius: 2px;
+  background: var(--tropical-indigo);
+  box-shadow: 0 0 18px 4px rgba(151,125,255,0.35);
+  opacity: 0.7;
+  align-self: stretch;
+  z-index: 2;
+}
+
 .virality-right {
-  width: 68%; /* Increased width */
+  width: 68%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 16px;
   padding: 24px 24px 24px 18px;
   background: transparent;
+  z-index: 1;
 }
 
 .virality-metric {
@@ -73,4 +90,21 @@
   color: var(--tropical-indigo);
   font-weight: 600;
   word-break: break-all;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 600px) {
+  .virality-card {
+    flex-direction: column;
+    min-height: 280px;
+  }
+  .virality-left, .virality-right {
+    width: 100%;
+    padding: 18px 8px;
+    align-items: center;
+  }
+  .virality-divider {
+    display: none;
+  }
 }
