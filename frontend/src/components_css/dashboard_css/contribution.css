@@ -40,3 +40,13 @@
   border-radius: 4px;
   display: inline-block;
 }
+
+.dashboard-tile-pie {
+  min-width: 0;
+  max-width: 320px;
+  padding: 0 8px;
+}
+.feature-pie-card {
+  padding: 18px 8px;
+}
+
