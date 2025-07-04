@@ -12,21 +12,21 @@ export const DashboardFeatureSentimentBarChart: React.FC = () => {
   const avg = features.reduce((a, b) => a + b.score, 0) / features.length;
 
   return (
-    <div className="feature-sentiment-card">
-      <div className="feature-sentiment-title">Feature Sentiment</div>
-      <div className="feature-sentiment-bars">
-        <div className="feature-bar avg-bar">
-          <span className="feature-label">Avg. Product Sentiment</span>
-          <div className="feature-bar-bg">
-            <div className="feature-bar-fill avg" style={{ width: `${(avg/10)*100}%` }} />
+    <div className="feature-bar-chart-premium">
+      <div className="feature-bar-chart-title">Feature Sentiment</div>
+      <div>
+        <div className="feature-bar-row avg-bar">
+          <span className="feature-name avg">Avg. Product</span>
+          <div className="feature-bar-outer">
+            <div className="feature-bar-inner avg" style={{ width: `${(avg/10)*100}%` }} />
           </div>
-          <span className="feature-score">{avg.toFixed(1)}</span>
+          <span className="feature-score avg">{avg.toFixed(1)}</span>
         </div>
         {features.map((f, i) => (
-          <div className="feature-bar" key={f.name}>
-            <span className="feature-label">{f.name}</span>
-            <div className="feature-bar-bg">
-              <div className="feature-bar-fill" style={{ width: `${(f.score/10)*100}%` }} />
+          <div className="feature-bar-row" key={f.name}>
+            <span className="feature-name">{f.name}</span>
+            <div className="feature-bar-outer">
+              <div className="feature-bar-inner" style={{ width: `${(f.score/10)*100}%` }} />
             </div>
             <span className="feature-score">{f.score}</span>
           </div>

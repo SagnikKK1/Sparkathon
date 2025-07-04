@@ -28,6 +28,10 @@
   margin-bottom: 22px;
 }
 
+.feature-bar-row:last-child {
+  margin-bottom: 0;
+}
+
 .feature-name {
   width: 110px;
   font-size: 1.1rem;
@@ -51,7 +55,9 @@
   height: 100%;
   border-radius: 12px;
   background: linear-gradient(90deg, #977dff 0%, #b8aaff 100%);
-  box-shadow: 0 0 16px 2px rgba(151,125,255,0.32), 0 0 6px 0 rgba(151,125,255,0.18);
+  box-shadow:
+    0 0 16px 2px rgba(151,125,255,0.32),
+    0 0 6px 0 rgba(151,125,255,0.18);
   transition: width 0.7s cubic-bezier(.4,0,.2,1);
   position: relative;
 }
@@ -69,6 +75,22 @@
   pointer-events: none;
 }
 
+/* --- Avg Bar Special Styling --- */
+.feature-bar-row.avg-bar .feature-bar-inner,
+.feature-bar-inner.avg {
+  background: linear-gradient(90deg, #4be04b 0%, #b8aaff 100%);
+  box-shadow:
+    0 0 16px 2px rgba(76,224,75,0.32),
+    0 0 6px 0 rgba(151,125,255,0.18);
+}
+
+.feature-bar-row.avg-bar .feature-name,
+.feature-name.avg {
+  color: #4be04b;
+  font-weight: bold;
+  text-shadow: 0 1px 8px rgba(76,224,75,0.18);
+}
+
 .feature-score {
   font-size: 1.1rem;
   color: #b8aaff;
@@ -78,6 +100,8 @@
   text-shadow: 0 1px 6px rgba(151,125,255,0.16);
 }
 
-.feature-bar-row:last-child {
-  margin-bottom: 0;
+.feature-bar-row.avg-bar .feature-score,
+.feature-score.avg {
+  color: #4be04b;
+  text-shadow: 0 1px 8px rgba(76,224,75,0.18);
 }
