@@ -2,14 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  
   width: 100%;
   max-width: 1260px;
-  margin: 0 auto; 
-  
+  margin: 0 auto;
   padding: 40px 0;
   box-sizing: border-box;
-
   min-height: 60vh;
 }
 
@@ -68,16 +65,19 @@
   z-index: -1;
 }
 
+/* --- FORM SECTION --- */
 .homepage-form-section {
   margin-top: 40px;
-  background: rgba(34, 34, 34, 0.85);
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(151,125,255,0.08);
-  padding: 28px 22px 22px 22px;
+  /* background: rgba(34, 34, 34, 0.85); */ /* REMOVED */
+  /* border-radius: 18px; */                /* REMOVED */
+  /* box-shadow: 0 2px 16px rgba(151,125,255,0.08); */ /* REMOVED */
+  padding: 0;
+  width: 100%;
   max-width: 420px;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  box-sizing: border-box;
 }
 
 .homepage-form-row {
@@ -93,19 +93,50 @@
   margin-bottom: 2px;
 }
 
+/* --- GLOWING INPUTS --- */
 .homepage-form-input {
   padding: 10px 14px;
   border-radius: 8px;
-  border: 1.5px solid rgba(151,125,255,0.18);
+  border: 2px solid rgba(255,255,255,0.3); /* White border, 30% opacity */
   background: #181820;
   color: var(--white);
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
 }
 
 .homepage-form-input:focus {
-  border-color: var(--tropical-indigo);
+  border-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.35);
+}
+
+/* --- GLOWING CHECKBOXES --- */
+.homepage-form-checkboxes input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 5px;
+  background: #181820;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  margin-right: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.homepage-form-checkboxes input[type="checkbox"]:focus,
+.homepage-form-checkboxes input[type="checkbox"]:hover {
+  border-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.35);
+}
+
+.homepage-form-checkboxes input[type="checkbox"]:checked {
+  background: var(--tropical-indigo);
+  border-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.35);
 }
 
 .homepage-form-checkboxes {
@@ -124,6 +155,7 @@
   cursor: pointer;
 }
 
+/* --- GENERATE BUTTON --- */
 .homepage-generate-btn {
   margin-top: 18px;
   padding: 12px 0;
