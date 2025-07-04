@@ -1,0 +1,42 @@
+.feature-pie-card {
+  width: 100%;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.feature-pie-title {
+  font-size: 1.2rem;
+  color: var(--tropical-indigo);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.feature-pie-svg {
+  display: block;
+  margin: 0 auto 18px auto;
+}
+
+.feature-pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.feature-pie-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cool-gray);
+  font-size: 1rem;
+}
+
+.feature-pie-legend-color {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+}
