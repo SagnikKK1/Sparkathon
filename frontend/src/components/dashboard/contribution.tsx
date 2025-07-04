@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../components_css/dashboard_css/feature_contribution_pie.css';
+import '../../components_css/dashboard_css/contribution.css';
 
 export const FeatureContributionPieChart: React.FC = () => {
   // Example data
