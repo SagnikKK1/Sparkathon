@@ -2,7 +2,6 @@ import React from 'react';
 import '../../components_css/dashboard_css/virality.css';
 
 export const DashboardViralityScore: React.FC = () => {
-  // Example data
   const metrics = [
     { label: "Reddit Comments", value: "220 (180 / 40)" },
     { label: "YouTube Comments", value: "130 (100 / 30)" },
