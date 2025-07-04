@@ -4,6 +4,9 @@ import { TextCarousel } from '../components/home_page/carousel';
 import '.././pages_css/home_page.css';
 import { useNavigate } from 'react-router-dom';
 
+// Placeholder import: replace with your actual image path
+import DashboardIllustration from '../path/to/your/dashboard_illustration.png';
+
 interface HomePageProps {}
 
 export const HomePage: React.FC<HomePageProps> = () => {
@@ -91,7 +94,19 @@ export const HomePage: React.FC<HomePageProps> = () => {
             </button>
           </div>
         </div>
-        <div className="right-content-section"></div>
+        <div className="right-content-section">
+          <img
+            src={DashboardIllustration}
+            alt="Dashboard Illustration"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              borderRadius: '15px',
+              display: 'block',
+            }}
+          />
+        </div>
       </div>
 
       <footer className="home-page-footer">
