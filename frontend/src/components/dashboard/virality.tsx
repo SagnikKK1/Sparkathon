@@ -16,6 +16,7 @@ export const DashboardViralityScore: React.FC = () => {
         <div className="virality-score">86</div>
         <div className="virality-label">Virality Score</div>
       </div>
+      <div className="virality-divider"></div>
       <div className="virality-right">
         {metrics.map((m, i) => (
           <div className="virality-metric" key={i}>
