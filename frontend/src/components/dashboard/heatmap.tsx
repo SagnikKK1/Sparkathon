@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../components_css/dashboard_css/buzz_heatmap.css';
+import '../../components_css/dashboard_css/heatmap.css';
 
 export const BuzzHeatmap: React.FC = () => {
   // Example: 13 weeks x 4 rows (months)
