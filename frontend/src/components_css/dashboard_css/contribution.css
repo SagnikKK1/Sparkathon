@@ -1,50 +1,52 @@
 .feature-pie-card {
   width: 100%;
-  padding: 32px 24px;
+  max-height: 300px;
+  padding: 18px 8px 12px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: transparent;
+  box-sizing: border-box;
+  justify-content: flex-start;
 }
 
 .feature-pie-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--tropical-indigo);
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .feature-pie-svg {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   display: block;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 8px auto;
 }
 
 .feature-pie-legend {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: 0.98rem;
+  max-height: 96px;
+  overflow-y: auto;
 }
 
 .feature-pie-legend-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: var(--cool-gray);
-  font-size: 1rem;
+  font-size: 0.98rem;
+  line-height: 1.2;
 }
 
 .feature-pie-legend-color {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 4px;
   display: inline-block;
-}
-
-.dashboard-tile-pie {
-  min-width: 0;
-  max-width: 320px;
-  padding: 0 8px;
 }
