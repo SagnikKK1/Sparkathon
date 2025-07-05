@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import '../../components_css/dashboard_css/heatmap.css';
 
 const MONTHS = [
-  "July", "Aug", "Sep", "Oct", "Nov", "Dec",
-  "Jan", "Feb", "Mar", "Apr", "May", "June"
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun"
 ];
 
 export const BuzzHeatmap: React.FC = () => {
