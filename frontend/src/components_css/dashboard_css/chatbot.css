@@ -1,6 +1,7 @@
 .chatbot-card {
   width: 100%;
-  padding: 24px 18px;
+  max-width: 320px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -11,31 +12,32 @@
 }
 
 .chatbot-title {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   color: var(--tropical-indigo);
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
   text-align: center;
   letter-spacing: 0.01em;
   font-family: 'Gotham', Arial, sans-serif;
+  line-height: 1.2;
 }
 
 .chatbot-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 72px;
+  min-height: 96px;
   cursor: pointer;
   transition: box-shadow 0.18s, background 0.18s;
-  border-radius: 12px;
+  border-radius: 14px;
   position: relative;
   outline: none;
 }
 
 .chatbot-section-hover:hover,
 .chatbot-section-hover:focus {
-  box-shadow: 0 0 18px 2px rgba(151,125,255,0.22), 0 2px 12px 1px rgba(151,125,255,0.13);
-  background: rgba(151,125,255,0.08);
+  box-shadow: 0 0 22px 4px rgba(151,125,255,0.22), 0 2px 16px 2px rgba(151,125,255,0.13);
+  background: rgba(151,125,255,0.10);
 }
 
 .chatbot-section-content {
@@ -43,7 +45,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  gap: 18px;
+  gap: 28px;
 }
 
 .chatbot-section-content.reverse {
@@ -51,24 +53,25 @@
 }
 
 .chatbot-section-img {
-  width: 48px;
-  height: 48px;
+  width: 62px;
+  height: 62px;
   object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px 1px rgba(151,125,255,0.10);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px 2px rgba(151,125,255,0.13);
   background: #181820;
-  padding: 4px;
+  padding: 6px;
 }
 
 .chatbot-section-text {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--white);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.01em;
-  text-shadow: 0 1px 6px rgba(151,125,255,0.10);
+  text-shadow: 0 1px 8px rgba(151,125,255,0.13);
   flex: 1;
   text-align: left;
   font-family: 'Commerce', Arial, sans-serif;
+  line-height: 1.35;
 }
 
 .chatbot-divider {
@@ -76,7 +79,7 @@
   height: 2.5px;
   background: var(--tropical-indigo);
   border-radius: 2px;
-  box-shadow: 0 0 12px 2px rgba(151,125,255,0.22);
+  box-shadow: 0 0 14px 3px rgba(151,125,255,0.22);
   opacity: 0.7;
-  margin: 0 0 0 0;
+  margin: 0;
 }
