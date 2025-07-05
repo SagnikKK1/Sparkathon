@@ -8,23 +8,47 @@
 
 body {
   font-family: 'Commerce', Arial, sans-serif;
-  font-size: 15px;
   color: var(--white);
-  background: var(--oxford-blue);
+  background-color: var(--oxford-blue);
 }
 
-h1, h2, h3, .dashboard-title, .card-title, .feature-bar-chart-title,
-.virality-label, .feature-pie-title, .buzz-heatmap-title, .chatbot-title {
+/* Headings and Titles use Gotham */
+.dashboard-title,
+.card-title,
+h1, h2, h3,
+.dashboard-header-glow,
+.feature-bar-chart-title,
+.feature-pie-title,
+.buzz-heatmap-title,
+.chatbot-title,
+.virality-score,
+.virality-label {
   font-family: 'Gotham', Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 0.01em;
 }
 
-.card-label, .legend, .axis-label, .feature-name, .feature-score,
-.virality-metric-label, .virality-metric-value, .buzz-heatmap-month-label {
+/* Labels, legends, body text use Commerce */
+.dashboard-tile,
+.feature-name,
+.feature-score,
+.feature-bar-row,
+.feature-pie-legend-item,
+.buzz-heatmap-month-label,
+.buzz-heatmap-legend,
+.chatbot-section-text,
+.virality-metric-label,
+.virality-metric-value {
   font-family: 'Commerce', Arial, sans-serif;
   font-weight: 500;
   color: var(--cool-gray);
+}
+
+/* Specific overrides for virality metric values */
+.virality-metric-value {
+  color: var(--tropical-indigo);
+  font-weight: 600;
+  font-family: 'Commerce', Arial, sans-serif;
 }
 
 .dashboard-outer {
