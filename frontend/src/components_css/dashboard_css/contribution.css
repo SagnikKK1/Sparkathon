@@ -8,6 +8,7 @@
   background: transparent;
   box-sizing: border-box;
   justify-content: flex-start;
+  font-family: 'Commerce', Arial, sans-serif;
 }
 
 .feature-pie-title {
@@ -16,6 +17,7 @@
   font-weight: 600;
   margin-bottom: 0px;
   text-align: center;
+  font-family: 'Gotham', Arial, sans-serif;
 }
 
 .feature-pie-svg {
@@ -42,6 +44,7 @@
   color: var(--cool-gray);
   font-size: 0.98rem;
   line-height: 1.2;
+  font-family: 'Commerce', Arial, sans-serif;
 }
 
 .feature-pie-legend-color {
