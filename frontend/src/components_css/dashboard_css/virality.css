@@ -26,7 +26,7 @@
 }
 
 .virality-score {
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Gotham', Arial, sans-serif;
   font-size: 4.5rem;
   font-weight: 400;
   color: var(--tropical-indigo);
@@ -39,6 +39,7 @@
 }
 
 .virality-label {
+  font-family: 'Gotham', Arial, sans-serif;
   font-size: 1.25rem;
   color: var(--white);
   font-weight: 500;
@@ -82,12 +83,14 @@
 }
 
 .virality-metric-label {
+  font-family: 'Commerce', Arial, sans-serif;
   min-width: 140px;
   color: var(--cool-gray);
   font-weight: 500;
 }
 
 .virality-metric-value {
+  font-family: 'Commerce', Arial, sans-serif;
   color: var(--tropical-indigo);
   font-weight: 600;
   word-break: break-all;
