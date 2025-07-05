@@ -1,106 +1,214 @@
-  :root {
-    --cool-gray: rgba(155, 155, 189, 1);
-    --eerie-black: rgba(34, 34, 34, 1);
-    --oxford-blue: rgba(4, 1, 40, 1);
-    --tropical-indigo: rgba(151, 125, 255, 1);
-    --white: rgba(255, 255, 255, 1);
-  }
+:root {
+  --cool-gray: rgba(155, 155, 189, 1);
+  --eerie-black: rgba(34, 34, 34, 1);
+  --oxford-blue: rgba(4, 1, 40, 1);
+  --tropical-indigo: rgba(151, 125, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}
 
-  .dashboard-outer {
-    max-width: 1400px;
-    margin: 48px auto 0 auto;
-    padding: 0 12px;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: relative;
-  }
+.dashboard-outer {
+  max-width: 1400px;
+  margin: 48px auto 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
 
+.dashboard-grid-6 {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1.2fr;
+  grid-template-rows: 1.1fr 1fr; /* Increased top row height for better fit */
+  gap: 0px 32px; /* 18px row gap (reduced), 32px column gap */
+  width: 100%;
+  min-height: 700px;
+  box-sizing: border-box;
+  grid-template-areas:
+    "virality pie feature"
+    "sentiment heatmap chatbot";
+}
+
+.dashboard-tile {
+  background: rgba(34, 34, 34, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08);
+  border: 2px solid rgba(151, 125, 255, 0.3);
+  transition:
+    box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
+    border-color 0.3s cubic-bezier(0.4,0,0.2,1),
+    transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.dashboard-tile:hover {
+  transform: scale(1.02);
+  border-color: var(--tropical-indigo);
+  box-shadow: 0 0 25px 5px rgba(151,125,255,0.35);
+  z-index: 2;
+}
+
+.dashboard-tile-virality,
+.dashboard-tile-pie,
+.dashboard-tile-feature-sentiment {
+  min-height: 220px;
+  max-height: 300px;
+  height: 100%;
+}
+
+.dashboard-tile-pie {
+  min-width: 0;
+  max-width: 320px;
+  padding: 0 8px;
+}
+
+@media (max-width: 1200px) {
   .dashboard-grid-6 {
-    display: grid;
-    grid-template-columns: 1.4fr 0.8fr 1.2fr;
-    grid-template-rows: 0.85fr 1fr;
-    gap: 32px;
-    width: 100%;
-    min-height: 700px;
-    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
     grid-template-areas:
-      "virality pie feature"
-      "sentiment heatmap chatbot";
+      "virality"
+      "pie"
+      "feature"
+      "sentiment"
+      "heatmap"
+      "chatbot";
+    gap: 18px;
   }
-
-  .dashboard-tile {
-    background: rgba(34, 34, 34, 0.85);
-    border-radius: 18px;
-    box-shadow: 0 4px 32px rgba(151, 125, 255, 0.08);
-    border: 2px solid rgba(151, 125, 255, 0.3);
-    transition:
-      box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
-      border-color 0.3s cubic-bezier(0.4,0,0.2,1),
-      transform 0.3s cubic-bezier(0.4,0,0.2,1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-    min-height: 0;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .dashboard-tile:hover {
-    transform: scale(1.02);
-    border-color: var(--tropical-indigo);
-    box-shadow: 0 0 25px 5px rgba(151,125,255,0.35);
-    z-index: 2;
-  }
-
   .dashboard-tile-virality,
   .dashboard-tile-pie,
   .dashboard-tile-feature-sentiment {
-    min-height: 220px;
-    max-height: 300px;
-    height: 100%;
+    min-height: unset;
+    max-height: unset;
+    height: auto;
   }
+}
 
-  .dashboard-tile-pie {
-    min-width: 0;
-    max-width: 320px;
-    padding: 0 8px;
-  }
+.blurred-ellipse {
+  position: absolute;
+  width: 180vw;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -177px;
+  background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
+  border-radius: 50%;
+  filter: blur(400px);
+  z-index: -1;
+}
 
-  @media (max-width: 1200px) {
-    .dashboard-grid-6 {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(6, auto);
-      grid-template-areas:
-        "virality"
-        "pie"
-        "feature"
-        "sentiment"
-        "heatmap"
-        "chatbot";
-      gap: 24px;
-    }
-    .dashboard-tile-virality,
-    .dashboard-tile-pie,
-    .dashboard-tile-feature-sentiment {
-      min-height: unset;
-      max-height: unset;
-      height: auto;
-    }
-  }
+/* --- Buzz Heatmap Card --- */
+.buzz-heatmap-card {
+  width: 100%;
+  padding: 18px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  box-sizing: border-box;
+  position: relative;
+}
 
-  .blurred-ellipse {
-    position: absolute;
-    width: 180vw;
-    height: 400px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -177px;
-    background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
-    border-radius: 50%;
-    filter: blur(400px);
-    z-index: -1;
+.buzz-heatmap-title {
+  font-size: 1.2rem;
+  color: var(--tropical-indigo);
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.buzz-heatmap-grid-4x13 {
+  display: grid;
+  grid-template-columns: 60px repeat(4, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  gap: 5px 0; /* 5px row gap, 0px column gap for tight columns */
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 10px auto;
+  align-items: center;
+}
+
+.buzz-heatmap-month-label {
+  font-size: 0.98rem;
+  color: var(--cool-gray);
+  font-weight: 500;
+  text-align: right;
+  align-self: center;
+  padding-right: 6px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.buzz-heatmap-cell {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  position: relative;
+  transition: border 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  background: rgba(151,125,255,0.15);
+  box-sizing: border-box;
+}
+
+.buzz-heatmap-cell:hover {
+  box-shadow: 0 0 8px 2px rgba(151,125,255,0.25);
+  z-index: 2;
+}
+
+.buzz-heatmap-tooltip {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #23234a;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(151,125,255,0.18);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.buzz-heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  color: var(--cool-gray);
+  font-size: 1rem;
+}
+
+.buzz-heatmap-legend-bar {
+  width: 80px;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(151,125,255,0.15) 0%, rgba(151,125,255,0.9) 100%);
+}
+
+@media (max-width: 700px) {
+  .buzz-heatmap-card {
+    padding: 10px 2px 10px 2px;
   }
+  .buzz-heatmap-grid-4x13 {
+    max-width: 98vw;
+    gap: 3px 0;
+  }
+  .buzz-heatmap-cell {
+    width: 15px;
+    height: 15px;
+  }
+  .buzz-heatmap-month-label {
+    font-size: 0.8rem;
+  }
+}
