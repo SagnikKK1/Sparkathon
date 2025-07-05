@@ -1,6 +1,7 @@
 import React from 'react';
 import WalmartLogo from '../home_page/Walmart_logo.svg.png';
 import '../../components_css/dashboard_css/header.css';
+import { LogoutLink } from '../dashboard/logout_button'; // Adjust the import path
 
 interface DashboardHeaderProps {
   onBack: () => void;
@@ -14,6 +15,6 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({ onBack, onLogo
       <img src={WalmartLogo} alt="Walmart Logo" className="walmart-logo" />
       <span className="header-title">Sparkathon: Dashboard</span>
     </div>
-    <button className="premium-btn logout-btn" onClick={onLogout}>Logout</button>
+    <LogoutLink onLogout={onLogout} />
   </div>
 );

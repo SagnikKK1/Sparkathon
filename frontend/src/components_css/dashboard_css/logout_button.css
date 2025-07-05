@@ -1,0 +1,43 @@
+.logout-home-button {
+  height: 50px;
+  width: 110px;
+  background-color: var(--tropical-indigo);
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
+  box-sizing: border-box;
+  border: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease,
+    border-radius 0.3s ease,
+    background 0.2s;
+}
+
+.logout-home-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(151, 125, 255, 0.28);
+  background: linear-gradient(90deg, #977dff 0%, #b8aaff 100%);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logout-text-content {
+  color: var(--white);
+  font-family: "Montserrat-Regular", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  transition: font-size 0.3s ease;
+}
+
+.logout-home-button:hover .logout-text-content {
+  font-size: 26px;
+  color: var(--white);
+}

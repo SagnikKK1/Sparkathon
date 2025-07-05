@@ -57,36 +57,6 @@
   font-family: 'Gotham', Arial, sans-serif;
 }
 
-.premium-btn {
-  background: linear-gradient(90deg, rgba(151,125,255,0.8), rgba(151,125,255,0.5));
-  color: #fff;
-  border: 2px solid var(--tropical-indigo);
-  border-radius: 12px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 9px 22px;
-  box-shadow: 0 0 12px 2px rgba(151,125,255,0.18);
-  transition: 
-    background 0.2s,
-    box-shadow 0.2s,
-    transform 0.15s;
-  position: relative;
-  z-index: 2;
-  font-family: 'Gotham', Arial, sans-serif;
-}
-
-.premium-btn:hover {
-  background: linear-gradient(90deg, #977dff 0%, #b8aaff 100%);
-  color: #fff;
-  box-shadow: 0 0 18px 4px rgba(151,125,255,0.32);
-  transform: scale(1.06);
-}
-
 .back-btn {
   margin-right: auto;
-}
-
-.logout-btn {
-  margin-left: auto;
 }
