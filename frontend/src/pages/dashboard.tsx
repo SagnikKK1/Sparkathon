@@ -29,11 +29,12 @@ export const DashboardPage: React.FC = () => {
         <div className="dashboard-tile dashboard-tile-sentiment-time">
           <DashboardSentimentLineChart />
         </div>
-        <div className="dashboard-tile dashboard-tile-heatmap">
-          <BuzzHeatmap />
-        </div>
+        {/* SWAPPED: Chatbot is now in the middle bottom, Heatmap is on the right */}
         <div className="dashboard-tile dashboard-tile-chatbot">
           <DashboardChatbotTile />
+        </div>
+        <div className="dashboard-tile dashboard-tile-heatmap">
+          <BuzzHeatmap />
         </div>
       </div>
     </div>
