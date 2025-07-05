@@ -24,19 +24,19 @@ body {
 
 @font-face {
   font-family: 'Gotham';
-  src: url('/frontend/src/assets/fonts/Gotham-Bold.otf') format('opentype');
+  src: url('./assets/fonts/Gotham-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('/frontend/src/assets/fonts/Gotham-Book.otf') format('opentype');
+  src: url('./assets/fonts/Gotham-Book.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Commerce';
-  src: url('/frontend/src/assets/fonts/Commerce-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/Commerce-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
