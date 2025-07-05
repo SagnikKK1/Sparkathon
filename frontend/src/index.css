@@ -30,7 +30,7 @@ body {
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/Gotham-Book.woff2') format('opentype');
+  src: url('/frontend/src/assets/fonts/Gotham-Book.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
