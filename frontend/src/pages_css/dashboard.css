@@ -6,6 +6,52 @@
   --white: rgba(255, 255, 255, 1);
 }
 
+/* --- Font Imports (add to your index.html or main CSS) --- */
+/* 
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Bold.woff2') format('woff2'),
+       url('/fonts/Gotham-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Book.woff2') format('woff2'),
+       url('/fonts/Gotham-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Commerce';
+  src: url('/fonts/Commerce-Regular.woff2') format('woff2'),
+       url('/fonts/Commerce-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+body {
+  font-family: 'Commerce', Arial, sans-serif;
+  font-size: 15px;
+  color: var(--white);
+  background: var(--oxford-blue);
+}
+
+h1, h2, h3, .dashboard-title, .card-title, .feature-bar-chart-title,
+.virality-label, .feature-pie-title, .buzz-heatmap-title, .chatbot-title {
+  font-family: 'Gotham', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+
+.card-label, .legend, .axis-label, .feature-name, .feature-score,
+.virality-metric-label, .virality-metric-value, .buzz-heatmap-month-label {
+  font-family: 'Commerce', Arial, sans-serif;
+  font-weight: 500;
+  color: var(--cool-gray);
+}
+
 .dashboard-outer {
   max-width: 1400px;
   margin: 48px auto 0 auto;
@@ -21,8 +67,8 @@
 .dashboard-grid-6 {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 1.2fr;
-  grid-template-rows: 0.9fr 1.1fr; /* Top row height increased for better fit */
-  gap: 0px 32px; /* No row gap, 32px column gap */
+  grid-template-rows: 0.9fr 1.1fr;
+  gap: 0px 32px;
   width: 100%;
   min-height: 700px;
   box-sizing: border-box;
