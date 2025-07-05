@@ -27,42 +27,7 @@ export const LoginCard: React.FC<LoginCardProps> = ({ onLoginSuccess }) => {
       ...prev,
       [name]: value
     }));
-    // Clear error when user starts typing
     if (error) setError('');
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError('');
-    setSuccess('');
-
-    try {
-      const response = await authService.login(formData.email, formData.password);
-      
-      // Store authentication data
-      authService.setAuth(response.token, response.user);
-      
-      setSuccess('Login successful! Redirecting...');
-      
-      // Call the success callback if provided
-      if (onLoginSuccess) {
-        setTimeout(() => {
-          onLoginSuccess();
-        }, 1000);
-      } else {
-        // Default redirect behavior
-        setTimeout(() => {
-          window.location.href = '/dashboard';
-        }, 1000);
-      }
-      
-    } catch (error) {
-      setError(error instanceof Error ? error.message : 'Login failed');
-      console.error('Login error:', error);
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   const validateForm = (): boolean => {
@@ -81,15 +46,44 @@ export const LoginCard: React.FC<LoginCardProps> = ({ onLoginSuccess }) => {
     return true;
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateForm()) {
-      handleSubmit(e);
+    if (!validateForm()) return;
+
+    setIsLoading(true);
+    setError('');
+    setSuccess('');
+
+    try {
+      // Backend integration: login API call
+      const response = await authService.login(formData.email, formData.password);
+
+      // Store authentication data (token & user) in localStorage
+      authService.setAuth(response.token, response.user);
+
+      setSuccess('Login successful! Redirecting...');
+
+      // Call the success callback if provided
+      if (onLoginSuccess) {
+        setTimeout(() => {
+          onLoginSuccess();
+        }, 1000);
+      } else {
+        // Default redirect behavior: Redirect to home page
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 1000);
+      }
+    } catch (error) {
+      setError(error instanceof Error ? error.message : 'Login failed');
+      console.error('Login error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleFormSubmit} className="login-card">
+    <form onSubmit={handleSubmit} className="login-card">
       <h2 className="login-card-title">Login</h2>
       <p className="login-card-subtitle">Sign in to an existing account</p>
       

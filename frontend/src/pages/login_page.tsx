@@ -7,29 +7,21 @@ interface LoginPageProps {}
 
 export const LoginPage: React.FC<LoginPageProps> = () => {
   useEffect(() => {
-    // Check if user is already authenticated
+    // Redirect to home if already logged in
     if (authService.isAuthenticated()) {
-      // Redirect to dashboard if already logged in
-      window.location.href = '/dashboard';
+      window.location.href = '/';
     }
   }, []);
 
   const handleLoginSuccess = () => {
     // You can add any post-login logic here
-    console.log('Login successful, redirecting to dashboard...');
-    
-    // Example: If using React Router, you would use navigate
-    // const navigate = useNavigate();
-    // navigate('/dashboard');
-    
-    // For now, using window.location
-    window.location.href = '/dashboard';
+    console.log('Login successful, redirecting to home...');
+    window.location.href = '/';
   };
 
   const handleLogout = async () => {
     try {
       await authService.logout();
-      // Page will refresh after logout
       window.location.reload();
     } catch (error) {
       console.error('Logout error:', error);
@@ -56,10 +48,10 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
             
             <div className="login-actions">
               <button 
-                onClick={() => window.location.href = '/dashboard'}
+                onClick={() => window.location.href = '/'}
                 className="login-button"
               >
-                Go to Dashboard
+                Go to Home
               </button>
               <button 
                 onClick={handleLogout}
