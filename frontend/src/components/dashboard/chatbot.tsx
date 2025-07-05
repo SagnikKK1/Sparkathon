@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../components_css/dashboard_css/chatbot.css';
-import ChatbotImage from '../../assets/chatbot_illustration.png';
-import PdfImage from '../../assets/pdf_icon.png';
-import RawDataImage from '../../assets/json_icon.png';
+import ChatbotImage from '../dashboard/chatBot.png';
+import PdfImage from '../dashboard/report.png';
+import RawDataImage from '../dashboard/rawdata.png';
 
 export const DashboardChatbotTile: React.FC = () => {
   const handleChat = () => window.location.href = '/chatbot';
