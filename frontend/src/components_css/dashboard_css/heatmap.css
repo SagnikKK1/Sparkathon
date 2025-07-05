@@ -1,7 +1,8 @@
 .buzz-heatmap-card {
   width: 100%;
-  max-height: 340px;
-  padding: 12px 12px 12px 12px;
+  max-width: 320px;
+  max-height: 300px;
+  padding: 12px 8px 12px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,10 +23,10 @@
   font-family: 'Gotham', Arial, sans-serif;
 }
 
-.buzz-heatmap-grid-4x12 {
+.buzz-heatmap-grid-12x4 {
   display: grid;
-  grid-template-columns: 60px repeat(4, 22px);
-  grid-template-rows: repeat(12, 22px);
+  grid-template-columns: 60px repeat(12, 18px);
+  grid-template-rows: repeat(4, 18px);
   gap: 3px 3px;
   width: auto;
   max-width: none;
@@ -43,15 +44,15 @@
   padding-right: 6px;
   user-select: none;
   white-space: nowrap;
-  height: 22px;
-  line-height: 22px;
+  height: 18px;
+  line-height: 18px;
   font-family: 'Commerce', Arial, sans-serif;
 }
 
 .buzz-heatmap-cell {
-  width: 22px;
-  height: 22px;
-  border-radius: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
   position: relative;
   transition: border 0.2s, box-shadow 0.2s;
   cursor: pointer;
@@ -99,21 +100,22 @@
 
 @media (max-width: 700px) {
   .buzz-heatmap-card {
-    padding: 10px 2px 10px 2px;
-    max-height: 220px;
+    padding: 8px 2px 8px 2px;
+    max-height: 180px;
+    max-width: 98vw;
   }
-  .buzz-heatmap-grid-4x12 {
-    grid-template-columns: 40px repeat(4, 13px);
-    grid-template-rows: repeat(12, 13px);
+  .buzz-heatmap-grid-12x4 {
+    grid-template-columns: 40px repeat(12, 11px);
+    grid-template-rows: repeat(4, 11px);
     gap: 2px 2px;
   }
   .buzz-heatmap-cell {
-    width: 13px;
-    height: 13px;
+    width: 11px;
+    height: 11px;
   }
   .buzz-heatmap-month-label {
     font-size: 0.8rem;
-    height: 13px;
-    line-height: 13px;
+    height: 11px;
+    line-height: 11px;
   }
 }
