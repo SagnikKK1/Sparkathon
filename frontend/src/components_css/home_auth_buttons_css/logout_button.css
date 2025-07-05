@@ -1,4 +1,4 @@
-.login-home-button {
+.logout-home-button {
   height: 50px;
   width: 110px;
   background-color: var(--cool-gray);
@@ -17,7 +17,7 @@
     border-radius 0.3s ease;
 }
 
-.login-text-content {
+.logout-text-content {
   color: var(--oxford-blue);
   font-family: "Montserrat-Regular", Helvetica;
   font-size: 24px;
@@ -27,11 +27,11 @@
   transition: font-size 0.3s ease;
 }
 
-.login-home-button:hover {
+.logout-home-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.login-home-button:hover .login-text-content {
+.logout-home-button:hover .logout-text-content {
   font-size: 26px;
 }
