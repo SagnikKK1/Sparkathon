@@ -1,3 +1,5 @@
+// virality.tsx
+
 import React from 'react';
 import '../../components_css/dashboard_css/virality.css';
 
