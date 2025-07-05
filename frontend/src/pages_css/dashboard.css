@@ -66,7 +66,7 @@ h1, h2, h3,
 .dashboard-grid-6 {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 1.2fr;
-  grid-template-rows: 0.9fr 1.1fr;
+  grid-template-rows: 1fr 1.1fr;
   gap: 0px 32px;
   width: 100%;
   min-height: 700px;
