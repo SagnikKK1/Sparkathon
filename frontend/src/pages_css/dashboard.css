@@ -6,31 +6,6 @@
   --white: rgba(255, 255, 255, 1);
 }
 
-/* --- Font Imports (add to your index.html or main CSS) --- */
-/* 
-@font-face {
-  font-family: 'Gotham';
-  src: url('/fonts/Gotham-Bold.woff2') format('woff2'),
-       url('/fonts/Gotham-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Gotham';
-  src: url('/fonts/Gotham-Book.woff2') format('woff2'),
-       url('/fonts/Gotham-Book.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Commerce';
-  src: url('/fonts/Commerce-Regular.woff2') format('woff2'),
-       url('/fonts/Commerce-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-*/
-
 body {
   font-family: 'Commerce', Arial, sans-serif;
   font-size: 15px;
