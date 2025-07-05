@@ -9,6 +9,7 @@
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  font-family: 'Commerce', Arial, sans-serif;
 }
 
 .buzz-heatmap-title {
@@ -18,13 +19,14 @@
   margin-bottom: 6px;
   margin-top: 0;
   text-align: center;
+  font-family: 'Gotham', Arial, sans-serif;
 }
 
 .buzz-heatmap-grid-4x12 {
   display: grid;
   grid-template-columns: 60px repeat(4, 22px);
   grid-template-rows: repeat(12, 22px);
-  gap: 3px 3px; /* 3px row gap, 0px column gap for tight columns */
+  gap: 3px 3px;
   width: auto;
   max-width: none;
   margin: 0 auto 10px auto;
@@ -43,6 +45,7 @@
   white-space: nowrap;
   height: 22px;
   line-height: 22px;
+  font-family: 'Commerce', Arial, sans-serif;
 }
 
 .buzz-heatmap-cell {
@@ -84,6 +87,7 @@
   margin-top: 6px;
   color: var(--cool-gray);
   font-size: 1rem;
+  font-family: 'Commerce', Arial, sans-serif;
 }
 
 .buzz-heatmap-legend-bar {
