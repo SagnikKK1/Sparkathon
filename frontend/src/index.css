@@ -24,15 +24,13 @@ body {
 
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/Gotham-Bold.woff2') format('woff2'),
-       url('/fonts/Gotham-Bold.woff') format('woff');
+  src: url('/frontend//src/assets/fonts/Gotham-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/Gotham-Book.woff2') format('woff2'),
-       url('/fonts/Gotham-Book.woff') format('woff');
+  src: url('/fonts/Gotham-Book.woff2') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
