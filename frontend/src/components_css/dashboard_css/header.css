@@ -15,6 +15,7 @@
   box-shadow: 0 0 32px 8px rgba(151,125,255,0.25);
   z-index: 10;
   overflow: visible;
+  font-family: 'Gotham', Arial, sans-serif;
 }
 
 .dashboard-header-glow::before {
@@ -53,6 +54,7 @@
   letter-spacing: 0.01em;
   text-shadow: 0 2px 8px rgba(151,125,255,0.13);
   white-space: nowrap;
+  font-family: 'Gotham', Arial, sans-serif;
 }
 
 .premium-btn {
@@ -71,6 +73,7 @@
     transform 0.15s;
   position: relative;
   z-index: 2;
+  font-family: 'Gotham', Arial, sans-serif;
 }
 
 .premium-btn:hover {
