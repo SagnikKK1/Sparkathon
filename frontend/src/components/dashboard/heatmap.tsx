@@ -7,9 +7,8 @@ const MONTHS = [
 ];
 
 export const BuzzHeatmap: React.FC = () => {
-  // 4 rows (months per row), 12 columns (weeks per column)
+  // 4 rows, 12 columns
   const rows = 4, cols = 12;
-  // Example data: random values between 0 and 1
   const data = React.useMemo(
     () => Array.from({ length: rows }, () =>
       Array.from({ length: cols }, () => Math.random())
@@ -18,7 +17,7 @@ export const BuzzHeatmap: React.FC = () => {
   );
   const [hover, setHover] = useState<{ row: number, col: number } | null>(null);
 
-  // Assign months to each row
+  // Assign months to each row (3 months per row)
   const monthsPerRow = 3;
   const rowMonthLabels = [
     MONTHS.slice(0, 3).join(' / '),
