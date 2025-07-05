@@ -21,7 +21,7 @@
 .dashboard-grid-6 {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 1.2fr;
-  grid-template-rows: 1.1fr 1fr; /* Top row height increased for better fit */
+  grid-template-rows: 0.9fr 1fr; /* Top row height increased for better fit */
   gap: 0px 32px; /* No row gap, 32px column gap */
   width: 100%;
   min-height: 700px;
