@@ -26,7 +26,7 @@ body {
 
 .dashboard-grid-6 {
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 1.2fr;
+  grid-template-columns: 1.4fr 0.8fr 1.6fr; /* Increased last column for heatmap */
   grid-template-rows: 0.9fr 1.1fr;
   gap: 0px 32px;
   width: 100%;
@@ -71,10 +71,19 @@ body {
 }
 
 .dashboard-tile-pie,
-.dashboard-tile-chatbot,
-.dashboard-tile-heatmap {
+.dashboard-tile-chatbot {
   min-width: 0;
   max-width: 320px;
+  padding: 0 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-tile-heatmap {
+  min-width: 0;
+  max-width: 520px; /* Increased width for heatmap */
   padding: 0 8px;
   height: 100%;
   display: flex;
