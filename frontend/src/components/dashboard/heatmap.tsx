@@ -1,3 +1,5 @@
+// heatmap.tsx
+
 import React, { useState } from 'react';
 import '../../components_css/dashboard_css/heatmap.css';
 
@@ -17,28 +19,18 @@ export const BuzzHeatmap: React.FC = () => {
   );
   const [hover, setHover] = useState<{ row: number, col: number } | null>(null);
 
-  // Assign months to each row (3 months per row)
-  const monthsPerRow = 3;
-  const rowMonthLabels = [
-    MONTHS.slice(0, 3).join(' / '),
-    MONTHS.slice(3, 6).join(' / '),
-    MONTHS.slice(6, 9).join(' / '),
-    MONTHS.slice(9, 12).join(' / ')
-  ];
-
   return (
     <div className="buzz-heatmap-card">
       <div className="buzz-heatmap-title">Buzz Heatmap</div>
       <div className="buzz-heatmap-grid-12x4">
-        {data.map((row, i) => (
+        {Array.from({ length: rows }).map((_, i) => (
           <React.Fragment key={i}>
-            <div className="buzz-heatmap-month-label">{rowMonthLabels[i]}</div>
-            {row.map((val, j) => (
+            {Array.from({ length: cols }).map((_, j) => (
               <div
                 key={`${i}-${j}`}
                 className="buzz-heatmap-cell"
                 style={{
-                  background: `rgba(151,125,255,${0.15 + 0.75 * val})`,
+                  background: `rgba(151,125,255,${0.15 + 0.75 * data[i][j]})`,
                   border: hover && hover.row === i && hover.col === j ? '2px solid #fff' : '1px solid rgba(151,125,255,0.18)'
                 }}
                 onMouseEnter={() => setHover({ row: i, col: j })}
@@ -46,12 +38,17 @@ export const BuzzHeatmap: React.FC = () => {
               >
                 {hover && hover.row === i && hover.col === j && (
                   <div className="buzz-heatmap-tooltip">
-                    {Math.round(val * 100)} comments
+                    {Math.round(data[i][j] * 100)} comments
                   </div>
                 )}
               </div>
             ))}
           </React.Fragment>
+        ))}
+      </div>
+      <div className="buzz-heatmap-months-row">
+        {MONTHS.map((month, idx) => (
+          <span className="buzz-heatmap-month-col-label" key={month}>{month}</span>
         ))}
       </div>
       <div className="buzz-heatmap-legend">
