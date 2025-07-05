@@ -12,45 +12,6 @@ body {
   background-color: var(--oxford-blue);
 }
 
-/* Headings and Titles use Gotham */
-.dashboard-title,
-.card-title,
-h1, h2, h3,
-.dashboard-header-glow,
-.feature-bar-chart-title,
-.feature-pie-title,
-.buzz-heatmap-title,
-.chatbot-title,
-.virality-score,
-.virality-label {
-  font-family: 'Gotham', Arial, sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.01em;
-}
-
-/* Labels, legends, body text use Commerce */
-.dashboard-tile,
-.feature-name,
-.feature-score,
-.feature-bar-row,
-.feature-pie-legend-item,
-.buzz-heatmap-month-label,
-.buzz-heatmap-legend,
-.chatbot-section-text,
-.virality-metric-label,
-.virality-metric-value {
-  font-family: 'Commerce', Arial, sans-serif;
-  font-weight: 500;
-  color: var(--cool-gray);
-}
-
-/* Specific overrides for virality metric values */
-.virality-metric-value {
-  color: var(--tropical-indigo);
-  font-weight: 600;
-  font-family: 'Commerce', Arial, sans-serif;
-}
-
 .dashboard-outer {
   max-width: 1400px;
   margin: 48px auto 0 auto;
@@ -66,14 +27,14 @@ h1, h2, h3,
 .dashboard-grid-6 {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 1.2fr;
-  grid-template-rows: 1fr 1.1fr;
+  grid-template-rows: 0.9fr 1.1fr;
   gap: 0px 32px;
   width: 100%;
   min-height: 700px;
   box-sizing: border-box;
   grid-template-areas:
     "virality pie feature"
-    "sentiment heatmap chatbot";
+    "sentiment chatbot heatmap";
 }
 
 .dashboard-tile {
@@ -109,10 +70,16 @@ h1, h2, h3,
   height: 100%;
 }
 
-.dashboard-tile-pie {
+.dashboard-tile-pie,
+.dashboard-tile-chatbot,
+.dashboard-tile-heatmap {
   min-width: 0;
   max-width: 320px;
   padding: 0 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 1200px) {
@@ -124,16 +91,20 @@ h1, h2, h3,
       "pie"
       "feature"
       "sentiment"
-      "heatmap"
-      "chatbot";
+      "chatbot"
+      "heatmap";
     gap: 18px;
   }
   .dashboard-tile-virality,
   .dashboard-tile-pie,
-  .dashboard-tile-feature-sentiment {
+  .dashboard-tile-feature-sentiment,
+  .dashboard-tile-chatbot,
+  .dashboard-tile-heatmap {
     min-height: unset;
     max-height: unset;
     height: auto;
+    max-width: unset;
+    padding: 0;
   }
 }
 
