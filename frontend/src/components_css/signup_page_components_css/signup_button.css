@@ -1,0 +1,31 @@
+.signup-button {
+  background-color: var(--tropical-indigo);
+  color: var(--white);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.signup-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.signup-button:disabled {
+  background-color: var(--cool-gray);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

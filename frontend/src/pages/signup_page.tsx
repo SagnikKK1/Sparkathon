@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { LoginCard } from '../components/login_page_components/login_card';
+import { SignupCard } from '../components/signup_page_components/signup_card';
 import { authService } from '../utils/auth';
-import '.././pages_css/login_page.css';
+import '.././pages_css/signup_page.css';
 
-interface LoginPageProps {}
+interface SignupPageProps {}
 
-export const LoginPage: React.FC<LoginPageProps> = () => {
+export const SignupPage: React.FC<SignupPageProps> = () => {
   useEffect(() => {
     // Check if user is already authenticated
     if (authService.isAuthenticated()) {
@@ -14,9 +14,9 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
     }
   }, []);
 
-  const handleLoginSuccess = () => {
-    // You can add any post-login logic here
-    console.log('Login successful, redirecting to dashboard...');
+  const handleSignupSuccess = () => {
+    // You can add any post-signup logic here
+    console.log('Signup successful, redirecting to dashboard...');
     
     // Example: If using React Router, you would use navigate
     // const navigate = useNavigate();
@@ -40,12 +40,12 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
   if (authService.isAuthenticated()) {
     const user = authService.getUser();
     return (
-      <div className="login-page-wrapper">
+      <div className="signup-page-wrapper">
         <div className="blurred-ellipse"></div>
-        <div className="login-page-container">
-          <div className="login-card">
-            <h2 className="login-card-title">Welcome Back!</h2>
-            <p className="login-card-subtitle">You are already logged in</p>
+        <div className="signup-page-container">
+          <div className="signup-card">
+            <h2 className="signup-card-title">Welcome!</h2>
+            <p className="signup-card-subtitle">You are already logged in</p>
             
             {user && (
               <div className="user-info">
@@ -54,16 +54,16 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
               </div>
             )}
             
-            <div className="login-actions">
+            <div className="signup-actions">
               <button 
                 onClick={() => window.location.href = '/dashboard'}
-                className="login-button"
+                className="signup-button"
               >
                 Go to Dashboard
               </button>
               <button 
                 onClick={handleLogout}
-                className="login-button logout-button"
+                className="signup-button logout-button"
               >
                 Logout
               </button>
@@ -75,10 +75,10 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
   }
 
   return (
-    <div className="login-page-wrapper">
+    <div className="signup-page-wrapper">
       <div className="blurred-ellipse"></div>
-      <div className="login-page-container">
-        <LoginCard onLoginSuccess={handleLoginSuccess} />
+      <div className="signup-page-container">
+        <SignupCard onSignupSuccess={handleSignupSuccess} />
       </div>
     </div>
   );

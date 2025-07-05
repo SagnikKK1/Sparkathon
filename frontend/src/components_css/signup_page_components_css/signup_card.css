@@ -1,10 +1,10 @@
-.login-card {
+.signup-card {
   background-color: rgba(4, 1, 40, 0.8);
   border: 1px solid rgba(151, 125, 255, 0.3);
   border-radius: 15px;
   width: 445px;
   height: auto;
-  min-height: 642px;
+  min-height: 720px;
   padding: 40px;
   box-sizing: border-box;
   display: flex;
@@ -14,7 +14,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.login-card-title {
+.signup-card-title {
   color: var(--white);
   font-family: "Montserrat-Regular", Helvetica;
   font-size: 48px;
@@ -23,7 +23,7 @@
   margin-top: 0px;
 }
 
-.login-card-subtitle {
+.signup-card-subtitle {
   color: var(--tropical-indigo);
   font-family: "Montserrat-Regular", Helvetica;
   font-size: 20px;
@@ -71,7 +71,7 @@
 
 .input-group {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -94,7 +94,7 @@
   margin-top: 8px;
 }
 
-.login-input {
+.signup-input {
   width: 100%;
   padding: 15px 20px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -108,35 +108,21 @@
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.login-input::placeholder {
+.signup-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.login-input:focus {
+.signup-input:focus {
   border-color: var(--tropical-indigo);
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.login-input:disabled {
+.signup-input:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.forgot-password-link {
-  color: var(--cool-gray);
-  font-family: "Montserrat-Regular", Helvetica;
-  font-size: 16px;
-  text-decoration: none;
-  align-self: flex-end;
-  margin-bottom: 30px;
-  transition: color 0.3s ease;
-}
-
-.forgot-password-link:hover {
-  color: var(--white);
-}
-
-.login-actions {
+.signup-actions {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -145,20 +131,20 @@
   margin-top: auto;
 }
 
-.no-account-text {
+.have-account-text {
   color: var(--cool-gray);
   font-family: "Montserrat-Regular", Helvetica;
   font-size: 16px;
   margin: 0;
 }
 
-.signup-link {
+.login-link {
   color: var(--tropical-indigo);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.signup-link:hover {
+.login-link:hover {
   color: var(--white);
 }
