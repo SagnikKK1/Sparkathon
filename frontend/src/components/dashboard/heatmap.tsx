@@ -7,23 +7,33 @@ const MONTHS = [
 ];
 
 export const BuzzHeatmap: React.FC = () => {
-  // 12 months × 4 weeks = 48 cells
-  const rows = 12, cols = 4;
+  // 4 rows (months per row), 12 columns (weeks per column)
+  const rows = 4, cols = 12;
+  // Example data: random values between 0 and 1
   const data = React.useMemo(
     () => Array.from({ length: rows }, () =>
       Array.from({ length: cols }, () => Math.random())
     ),
     []
   );
-  const [hover, setHover] = React.useState<{ row: number, col: number } | null>(null);
+  const [hover, setHover] = useState<{ row: number, col: number } | null>(null);
+
+  // Assign months to each row
+  const monthsPerRow = 3;
+  const rowMonthLabels = [
+    MONTHS.slice(0, 3).join(' / '),
+    MONTHS.slice(3, 6).join(' / '),
+    MONTHS.slice(6, 9).join(' / '),
+    MONTHS.slice(9, 12).join(' / ')
+  ];
 
   return (
     <div className="buzz-heatmap-card">
       <div className="buzz-heatmap-title">Buzz Heatmap</div>
-      <div className="buzz-heatmap-grid-4x12">
+      <div className="buzz-heatmap-grid-12x4">
         {data.map((row, i) => (
           <React.Fragment key={i}>
-            <div className="buzz-heatmap-month-label">{MONTHS[i]}</div>
+            <div className="buzz-heatmap-month-label">{rowMonthLabels[i]}</div>
             {row.map((val, j) => (
               <div
                 key={`${i}-${j}`}
