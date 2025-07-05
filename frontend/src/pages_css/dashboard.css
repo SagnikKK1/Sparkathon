@@ -21,8 +21,8 @@
 .dashboard-grid-6 {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 1.2fr;
-  grid-template-rows: 0.9fr 1fr; /* Increased top row height for better fit */
-  gap: 0px 32px; /* 18px row gap (reduced), 32px column gap */
+  grid-template-rows: 1.1fr 1fr; /* Top row height increased for better fit */
+  gap: 0px 32px; /* No row gap, 32px column gap */
   width: 100%;
   min-height: 700px;
   box-sizing: border-box;
@@ -103,112 +103,4 @@
   border-radius: 50%;
   filter: blur(400px);
   z-index: -1;
-}
-
-/* --- Buzz Heatmap Card --- */
-.buzz-heatmap-card {
-  width: 100%;
-  padding: 18px 12px 12px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: transparent;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.buzz-heatmap-title {
-  font-size: 1.2rem;
-  color: var(--tropical-indigo);
-  font-weight: 600;
-  margin-bottom: 6px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.buzz-heatmap-grid-4x13 {
-  display: grid;
-  grid-template-columns: 60px repeat(4, 1fr);
-  grid-template-rows: repeat(13, 1fr);
-  gap: 5px 0; /* 5px row gap, 0px column gap for tight columns */
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto 10px auto;
-  align-items: center;
-}
-
-.buzz-heatmap-month-label {
-  font-size: 0.98rem;
-  color: var(--cool-gray);
-  font-weight: 500;
-  text-align: right;
-  align-self: center;
-  padding-right: 6px;
-  user-select: none;
-  white-space: nowrap;
-}
-
-.buzz-heatmap-cell {
-  width: 22px;
-  height: 22px;
-  border-radius: 5px;
-  position: relative;
-  transition: border 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-  background: rgba(151,125,255,0.15);
-  box-sizing: border-box;
-}
-
-.buzz-heatmap-cell:hover {
-  box-shadow: 0 0 8px 2px rgba(151,125,255,0.25);
-  z-index: 2;
-}
-
-.buzz-heatmap-tooltip {
-  position: absolute;
-  top: -34px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #23234a;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(151,125,255,0.18);
-  pointer-events: none;
-  z-index: 10;
-}
-
-.buzz-heatmap-legend {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 6px;
-  color: var(--cool-gray);
-  font-size: 1rem;
-}
-
-.buzz-heatmap-legend-bar {
-  width: 80px;
-  height: 10px;
-  border-radius: 5px;
-  background: linear-gradient(90deg, rgba(151,125,255,0.15) 0%, rgba(151,125,255,0.9) 100%);
-}
-
-@media (max-width: 700px) {
-  .buzz-heatmap-card {
-    padding: 10px 2px 10px 2px;
-  }
-  .buzz-heatmap-grid-4x13 {
-    max-width: 98vw;
-    gap: 3px 0;
-  }
-  .buzz-heatmap-cell {
-    width: 15px;
-    height: 15px;
-  }
-  .buzz-heatmap-month-label {
-    font-size: 0.8rem;
-  }
 }
