@@ -14,7 +14,7 @@
   font-size: 1.15rem;
   color: var(--tropical-indigo);
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
   width: 150px;
   height: 135px;
   display: block;
-  margin: 0 auto 8px auto;
+  margin: 0 auto 10px auto;
 }
 
 .feature-pie-legend {
