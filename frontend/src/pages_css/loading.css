@@ -1,18 +1,48 @@
-.loading-content {
+:root {
+  --cool-gray: rgba(155, 155, 189, 1);
+  --eerie-black: rgba(34, 34, 34, 1);
+  --oxford-blue: rgba(4, 1, 40, 1);
+  --tropical-indigo: rgba(151, 125, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Gotham', 'Commerce', Arial, sans-serif;
+  background-color: var(--oxford-blue);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.loading-page {
+  min-height: 100vh;
+  background: var(--oxford-blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-header-wrapper {
+  max-width: 1260px;
+  margin: 48px auto 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Center everything except the header */
+.loading-main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 56px 32px 40px 32px;
-  background: rgba(34, 34, 34, 0.92);
-  border-radius: 18px;
-  box-shadow: 0 6px 36px rgba(151,125,255,0.13);
-  border: 2.5px solid rgba(151, 125, 255, 0.3);
-  position: relative;
-  z-index: 2;
+  min-height: 60vh;
+  width: 100%;
 }
 
 .loading-title {
@@ -54,23 +84,6 @@
   justify-content: center;
 }
 
-.progress-bar-container {
-  width: 100%;
-  margin: 36px 0 18px 0;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.progress-bar-label {
-  font-family: 'Gotham', Arial, sans-serif;
-  font-size: 1.3rem;
-  color: var(--white);
-  font-weight: 700;
-  min-width: 44px;
-  text-align: right;
-}
-
 .loading-message {
   font-family: 'Commerce', 'Gotham', Arial, sans-serif;
   font-size: 1.25rem;
@@ -82,9 +95,6 @@
 }
 
 @media (max-width: 768px) {
-  .loading-content {
-    padding: 32px 10px 24px 10px;
-  }
   .loading-title {
     font-size: 2rem;
   }
