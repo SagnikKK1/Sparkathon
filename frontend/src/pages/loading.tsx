@@ -79,11 +79,11 @@ export const Loading: React.FC = () => {
       </div>
       <div className="loading-main-content">
         <h1 className="loading-title">Preparing Your Dashboard</h1>
-        <CircularLoader progress={progress} size={140} strokeWidth={11} />
         <div className="pipeline-single-step">
           <Step.Visual glow={glow} />
-          <div className="pipeline-label">{Step.label}</div>
         </div>
+        <CircularLoader progress={progress} size={80} strokeWidth={8} />
+        <div className="pipeline-label">{Step.label}</div>
         <div className="loading-message">
           {Step.label}...
         </div>
