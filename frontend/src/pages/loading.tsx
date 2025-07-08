@@ -4,6 +4,7 @@ import './loading.css';
 import {
   RedditLogo, YoutubeLogo, NERSvg, SieveSvg, GroupSvg, MetricsSvg, DashboardSvg
 } from '../components/loading/pipeline';
+import '../components_css/loading_css/pipeline.css';
 
 const pipelineSteps = [
   {
