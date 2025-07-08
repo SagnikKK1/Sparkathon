@@ -1,74 +1,96 @@
 import React, { useEffect, useState } from 'react';
-import { DashboardHeader } from '.././components/dashboard/header';
-import '.././pages_css/loading.css';
+import { DashboardHeader } from '../components/dashboard/header';
+import './loading.css';
+import {
+  RedditLogo, YoutubeLogo, NERSvg, SieveSvg, GroupSvg, MetricsSvg, DashboardSvg
+} from '../components/loading/pipeline';
 
 const pipelineSteps = [
-  { label: "Scraping comments", icon: "📝" },
-  { label: "Analyzing sentiment", icon: "💡" },
-  { label: "Training ML models", icon: "🤖" },
-  { label: "Generating insights", icon: "📊" },
-  { label: "Finalizing dashboard", icon: "🚀" },
+  {
+    label: "Scraping Data from the Web",
+    Visual: ({ glow }: { glow?: boolean }) => (
+      <div className="logos-row">
+        <RedditLogo glow={glow} />
+        <YoutubeLogo glow={glow} />
+      </div>
+    ),
+  },
+  {
+    label: "Named Entity Recognition (NER)",
+    Visual: ({ glow }: { glow?: boolean }) => <NERSvg glow={glow} />,
+  },
+  {
+    label: "Filtering of Entities",
+    Visual: ({ glow }: { glow?: boolean }) => <SieveSvg glow={glow} />,
+  },
+  {
+    label: "Grouping of Relevant Entities",
+    Visual: ({ glow }: { glow?: boolean }) => <GroupSvg glow={glow} />,
+  },
+  {
+    label: "Calculating Important Metrics/Sentiments",
+    Visual: ({ glow }: { glow?: boolean }) => <MetricsSvg glow={glow} />,
+  },
+  {
+    label: "Preparing Your Outputs/Dashboard",
+    Visual: ({ glow }: { glow?: boolean }) => <DashboardSvg glow={glow} />,
+  },
 ];
 
 export const Loading: React.FC = () => {
-  const [progress, setProgress] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
+  const [glow, setGlow] = useState(false);
 
   useEffect(() => {
-    if (progress < 100) {
-      const timeout = setTimeout(() => {
-        setProgress(p => Math.min(p + Math.random() * 12 + 6, 100));
-      }, 650);
-      return () => clearTimeout(timeout);
-    } else {
+    setGlow(false);
+    const glowTimeout = setTimeout(() => setGlow(true), 1800); // Glow after ~1.8s
+    const stepTimeout = setTimeout(() => {
+      setCurrentStep((step) => step + 1);
+    }, 3000);
+
+    return () => {
+      clearTimeout(stepTimeout);
+      clearTimeout(glowTimeout);
+    };
+  }, [currentStep]);
+
+  useEffect(() => {
+    if (currentStep >= pipelineSteps.length) {
       setTimeout(() => {
         window.location.href = '/dashboard';
       }, 1200);
     }
-  }, [progress]);
+  }, [currentStep]);
 
-  useEffect(() => {
-    const step = Math.min(
-      Math.floor((progress / 100) * pipelineSteps.length),
-      pipelineSteps.length - 1
-    );
-    setCurrentStep(step);
-  }, [progress]);
+  if (currentStep >= pipelineSteps.length) return null;
+
+  const Step = pipelineSteps[currentStep];
 
   return (
     <div className="loading-page">
-      <div className="blurred-ellipse"></div> 
-
+      <div className="blurred-ellipse"></div>
       <div className="loading-header-wrapper">
         <DashboardHeader onBack={() => {}} onLogout={() => window.location.href = '/login'} />
       </div>
       <div className="loading-content">
         <h1 className="loading-title">Preparing Your Dashboard</h1>
-        <div className="pipeline-container">
-          {pipelineSteps.map((step, idx) => (
-            <div
-              key={step.label}
-              className={`pipeline-step${idx < currentStep ? " done" : idx === currentStep ? " active" : ""}`}
-            >
-              <div className="pipeline-icon">{step.icon}</div>
-              <div className="pipeline-label">{step.label}</div>
-              {idx < pipelineSteps.length - 1 && (
-                <div className="pipeline-arrow" />
-              )}
-            </div>
-          ))}
+        <div className="pipeline-single-step">
+          <Step.Visual glow={glow} />
+          <div className="pipeline-label">{Step.label}</div>
         </div>
         <div className="progress-bar-container">
           <div className="progress-bar-bg">
             <div
               className="progress-bar-fg"
-              style={{ width: `${progress}%` }}
+              style={{ width: `${((currentStep + 1) / pipelineSteps.length) * 100}%` }}
             />
           </div>
-          <div className="progress-bar-label">{Math.floor(progress)}%</div>
+          <div className="progress-bar-label">
+            {Math.round(((currentStep + 1) / pipelineSteps.length) * 100)}%
+          </div>
         </div>
         <div className="loading-message">
-          {pipelineSteps[currentStep].label}...
+          {Step.label}...
         </div>
       </div>
     </div>
