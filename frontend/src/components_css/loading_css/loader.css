@@ -1,0 +1,37 @@
+.circular-loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto 32px auto;
+}
+
+.circular-loader-svg {
+  display: block;
+}
+
+.circular-loader-arc {
+  transition: stroke-dashoffset 0.7s cubic-bezier(.4,0,.2,1);
+  /* Rotating animation for the arc */
+  animation: loader-rotate 1.5s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes loader-rotate {
+  100% { transform: rotate(360deg); }
+}
+
+.circular-loader-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Gotham', 'Commerce', Arial, sans-serif;
+  font-size: 2.2rem;
+  color: var(--tropical-indigo);
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+}
