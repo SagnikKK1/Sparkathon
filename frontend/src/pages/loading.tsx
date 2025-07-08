@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { DashboardHeader } from '../components/dashboard/header';
-import './loading.css';
+import '../pages_css/loading.css';
 import {
   RedditLogo, YoutubeLogo, NERSvg, SieveSvg, GroupSvg, MetricsSvg, DashboardSvg
 } from '../components/loading/pipeline';
