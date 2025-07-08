@@ -1,14 +1,13 @@
-/* Glow Effects for SVGs */
 .pipeline-glow-red {
-  filter: drop-shadow(0 0 16px #FF4500);
+  filter: drop-shadow(0 0 32px #FF4500);
   transition: filter 0.5s;
 }
 .pipeline-glow-yt {
-  filter: drop-shadow(0 0 16px #FF0000);
+  filter: drop-shadow(0 0 32px #FF0000);
   transition: filter 0.5s;
 }
 .pipeline-glow-indigo {
-  filter: drop-shadow(0 0 18px #977dff);
+  filter: drop-shadow(0 0 36px #977dff);
   transition: filter 0.5s;
 }
 
@@ -28,6 +27,6 @@
 }
 @keyframes sieve-dot-fall {
   0% { transform: translateY(0); opacity: 0.7; }
-  50% { transform: translateY(16px); opacity: 1; }
+  50% { transform: translateY(32px); opacity: 1; }
   100% { transform: translateY(0); opacity: 0.7; }
 }
