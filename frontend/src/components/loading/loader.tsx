@@ -2,14 +2,14 @@ import React from 'react';
 
 interface CircularLoaderProps {
   progress: number; // 0 to 100
-  size?: number;    // px, default 120
-  strokeWidth?: number; // px, default 10
+  size?: number;    // px, default 80
+  strokeWidth?: number; // px, default 8
 }
 
 export const CircularLoader: React.FC<CircularLoaderProps> = ({
   progress,
-  size = 120,
-  strokeWidth = 10,
+  size = 80,
+  strokeWidth = 8,
 }) => {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -52,7 +52,6 @@ export const CircularLoader: React.FC<CircularLoaderProps> = ({
           </linearGradient>
         </defs>
       </svg>
-      {/* Centered Percentage */}
       <div className="circular-loader-label">
         {Math.floor(progress)}%
       </div>
