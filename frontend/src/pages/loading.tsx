@@ -5,6 +5,8 @@ import {
   RedditLogo, YoutubeLogo, NERSvg, SieveSvg, GroupSvg, MetricsSvg, DashboardSvg
 } from '../components/loading/pipeline';
 import '../components_css/loading_css/pipeline.css';
+import { CircularLoader } from '../components/loading/loader';
+import '../components_css/loading_css/loader.css';
 
 const pipelineSteps = [
   {
@@ -41,10 +43,12 @@ const pipelineSteps = [
 export const Loading: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [glow, setGlow] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     setGlow(false);
-    const glowTimeout = setTimeout(() => setGlow(true), 1800); // Glow after ~1.8s
+    setProgress(Math.round(((currentStep + 1) / pipelineSteps.length) * 100));
+    const glowTimeout = setTimeout(() => setGlow(true), 1800);
     const stepTimeout = setTimeout(() => {
       setCurrentStep((step) => step + 1);
     }, 3000);
@@ -73,22 +77,12 @@ export const Loading: React.FC = () => {
       <div className="loading-header-wrapper">
         <DashboardHeader onBack={() => {}} onLogout={() => window.location.href = '/login'} />
       </div>
-      <div className="loading-content">
+      <div className="loading-main-content">
         <h1 className="loading-title">Preparing Your Dashboard</h1>
+        <CircularLoader progress={progress} size={140} strokeWidth={11} />
         <div className="pipeline-single-step">
           <Step.Visual glow={glow} />
           <div className="pipeline-label">{Step.label}</div>
-        </div>
-        <div className="progress-bar-container">
-          <div className="progress-bar-bg">
-            <div
-              className="progress-bar-fg"
-              style={{ width: `${((currentStep + 1) / pipelineSteps.length) * 100}%` }}
-            />
-          </div>
-          <div className="progress-bar-label">
-            {Math.round(((currentStep + 1) / pipelineSteps.length) * 100)}%
-          </div>
         </div>
         <div className="loading-message">
           {Step.label}...
