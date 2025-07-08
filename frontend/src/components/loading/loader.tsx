@@ -23,7 +23,6 @@ export const CircularLoader: React.FC<CircularLoaderProps> = ({
         className="circular-loader-svg"
         style={{ transform: 'rotate(-90deg)' }}
       >
-        {/* Background Circle */}
         <circle
           cx={size / 2}
           cy={size / 2}
@@ -32,7 +31,6 @@ export const CircularLoader: React.FC<CircularLoaderProps> = ({
           strokeWidth={strokeWidth}
           fill="none"
         />
-        {/* Animated Progress Arc */}
         <circle
           cx={size / 2}
           cy={size / 2}
