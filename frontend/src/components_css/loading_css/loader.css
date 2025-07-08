@@ -3,7 +3,9 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 0 auto 32px auto;
+  margin: 24px auto 0 auto;
+  width: 80px !important;
+  height: 80px !important;
 }
 
 .circular-loader-svg {
@@ -12,7 +14,6 @@
 
 .circular-loader-arc {
   transition: stroke-dashoffset 0.7s cubic-bezier(.4,0,.2,1);
-  /* Rotating animation for the arc */
   animation: loader-rotate 1.5s linear infinite;
   transform-origin: 50% 50%;
 }
@@ -27,7 +28,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Gotham', 'Commerce', Arial, sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   color: var(--tropical-indigo);
   font-weight: bold;
   letter-spacing: 0.01em;
