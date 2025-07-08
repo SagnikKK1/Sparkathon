@@ -1,5 +1,3 @@
-import React from "react";
-
 // 1. Scraping Data: Reddit Logo
 export const RedditLogo = ({ glow }: { glow?: boolean }) => (
   <svg width="64" height="64" viewBox="0 0 64 64" className={glow ? "pipeline-glow-red" : ""}>
