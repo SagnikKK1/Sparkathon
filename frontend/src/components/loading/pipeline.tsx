@@ -1,85 +1,90 @@
-// 1. Scraping Data: Reddit Logo
+import React from "react";
+
+// All SVGs use a wide aspect ratio for clarity: viewBox="0 0 260 180"
+// All are enlarged for prominence
+
 export const RedditLogo = ({ glow }: { glow?: boolean }) => (
-  <svg width="64" height="64" viewBox="0 0 64 64" className={glow ? "pipeline-glow-red" : ""}>
-    <circle cx="32" cy="32" r="28" fill="#fff" stroke="#FF4500" strokeWidth="4" />
-    <ellipse cx="32" cy="40" rx="15" ry="10" fill="#FF4500" />
-    <circle cx="24" cy="38" r="2.2" fill="#fff" />
-    <circle cx="40" cy="38" r="2.2" fill="#fff" />
-    <ellipse cx="32" cy="44" rx="7" ry="2" fill="#fff" />
-    <line x1="32" y1="18" x2="38" y2="10" stroke="#FF4500" strokeWidth="2" />
-    <circle cx="39.5" cy="8.5" r="2" fill="#FF4500" />
+  <svg width="260" height="180" viewBox="0 0 260 180" className={glow ? "pipeline-glow-red" : ""}>
+    <circle cx="130" cy="90" r="80" fill="#fff" stroke="#FF4500" strokeWidth="12" />
+    <ellipse cx="130" cy="120" rx="60" ry="40" fill="#FF4500" />
+    <circle cx="90" cy="110" r="11" fill="#fff" />
+    <circle cx="170" cy="110" r="11" fill="#fff" />
+    <ellipse cx="130" cy="140" rx="28" ry="8" fill="#fff" />
+    {/* Antenna */}
+    <line x1="130" y1="50" x2="155" y2="25" stroke="#FF4500" strokeWidth="5" />
+    <circle cx="162" cy="18" r="7" fill="#FF4500" />
   </svg>
 );
 
-// 2. Scraping Data: YouTube Logo
 export const YoutubeLogo = ({ glow }: { glow?: boolean }) => (
-  <svg width="64" height="64" viewBox="0 0 64 64" className={glow ? "pipeline-glow-yt" : ""}>
-    <rect x="8" y="20" rx="12" ry="12" width="48" height="24" fill="#fff" stroke="#FF0000" strokeWidth="4" />
-    <polygon points="30,28 44,32 30,36" fill="#FF0000" />
+  <svg width="260" height="180" viewBox="0 0 260 180" className={glow ? "pipeline-glow-yt" : ""}>
+    <rect x="40" y="60" rx="36" ry="36" width="180" height="60" fill="#fff" stroke="#FF0000" strokeWidth="12" />
+    <polygon points="120,85 180,90 120,95" fill="#FF0000" />
   </svg>
 );
 
-// 3. NER Neural Net
 export const NERSvg = ({ glow }: { glow?: boolean }) => (
-  <svg width="80" height="64" viewBox="0 0 80 64" className={glow ? "pipeline-glow-indigo" : ""}>
-    <circle cx="16" cy="32" r="10" fill="#977dff" opacity={glow ? 1 : 0.6} />
-    <circle cx="40" cy="16" r="10" fill="#b8aaff" opacity={glow ? 1 : 0.6} />
-    <circle cx="40" cy="48" r="10" fill="#b8aaff" opacity={glow ? 1 : 0.6} />
-    <circle cx="64" cy="32" r="10" fill="#977dff" opacity={glow ? 1 : 0.6} />
-    <line x1="16" y1="32" x2="40" y2="16" stroke="#b8aaff" strokeWidth="2" />
-    <line x1="16" y1="32" x2="40" y2="48" stroke="#b8aaff" strokeWidth="2" />
-    <line x1="40" y1="16" x2="64" y2="32" stroke="#977dff" strokeWidth="2" />
-    <line x1="40" y1="48" x2="64" y2="32" stroke="#977dff" strokeWidth="2" />
+  <svg width="260" height="180" viewBox="0 0 260 180" className={glow ? "pipeline-glow-indigo" : ""}>
+    <circle cx="50" cy="90" r="32" fill="#977dff" opacity={glow ? 1 : 0.6} />
+    <circle cx="130" cy="50" r="32" fill="#b8aaff" opacity={glow ? 1 : 0.6} />
+    <circle cx="130" cy="130" r="32" fill="#b8aaff" opacity={glow ? 1 : 0.6} />
+    <circle cx="210" cy="90" r="32" fill="#977dff" opacity={glow ? 1 : 0.6} />
+    {/* Connections */}
+    <line x1="50" y1="90" x2="130" y2="50" stroke="#b8aaff" strokeWidth="8" />
+    <line x1="50" y1="90" x2="130" y2="130" stroke="#b8aaff" strokeWidth="8" />
+    <line x1="130" y1="50" x2="210" y2="90" stroke="#977dff" strokeWidth="8" />
+    <line x1="130" y1="130" x2="210" y2="90" stroke="#977dff" strokeWidth="8" />
   </svg>
 );
 
-// 4. Sieve / Filtering
 export const SieveSvg = ({ glow }: { glow?: boolean }) => (
-  <svg width="80" height="64" viewBox="0 0 80 64">
-    <ellipse cx="40" cy="32" rx="30" ry="12" fill="#222" stroke="#977dff" strokeWidth="3"
+  <svg width="260" height="180" viewBox="0 0 260 180">
+    <ellipse cx="130" cy="90" rx="100" ry="40" fill="#222" stroke="#977dff" strokeWidth="9"
       className={glow ? "pipeline-glow-indigo" : ""} />
-    <circle cx="30" cy="32" r="2" fill="#b8aaff" opacity="0.5" />
-    <circle cx="40" cy="32" r="2" fill="#b8aaff" opacity="0.5" />
-    <circle cx="50" cy="32" r="2" fill="#b8aaff" opacity="0.5" />
+    {/* Holes */}
+    <circle cx="90" cy="90" r="7" fill="#b8aaff" opacity="0.5" />
+    <circle cx="130" cy="90" r="7" fill="#b8aaff" opacity="0.5" />
+    <circle cx="170" cy="90" r="7" fill="#b8aaff" opacity="0.5" />
     {/* Falling dots */}
-    <circle className={glow ? "sieve-dot sieve-dot-1" : "sieve-dot"} cx="30" cy="34" r="1.5" fill="#977dff" />
-    <circle className={glow ? "sieve-dot sieve-dot-2" : "sieve-dot"} cx="40" cy="34" r="1.5" fill="#b8aaff" />
-    <circle className={glow ? "sieve-dot sieve-dot-3" : "sieve-dot"} cx="50" cy="34" r="1.5" fill="#977dff" />
+    <circle className={glow ? "sieve-dot sieve-dot-1" : "sieve-dot"} cx="90" cy="105" r="5" fill="#977dff" />
+    <circle className={glow ? "sieve-dot sieve-dot-2" : "sieve-dot"} cx="130" cy="105" r="5" fill="#b8aaff" />
+    <circle className={glow ? "sieve-dot sieve-dot-3" : "sieve-dot"} cx="170" cy="105" r="5" fill="#977dff" />
   </svg>
 );
 
-// 5. Grouping Entities
 export const GroupSvg = ({ glow }: { glow?: boolean }) => (
-  <svg width="80" height="64" viewBox="0 0 80 64" className={glow ? "pipeline-glow-indigo" : ""}>
-    <circle cx="20" cy="32" r="6" fill="#977dff" opacity={glow ? 1 : 0.5} />
-    <circle cx="30" cy="36" r="5" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
-    <circle cx="28" cy="26" r="4" fill="#977dff" opacity={glow ? 1 : 0.5} />
-    <circle cx="60" cy="32" r="10" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
-    <circle cx="68" cy="36" r="6" fill="#977dff" opacity={glow ? 1 : 0.5} />
+  <svg width="260" height="180" viewBox="0 0 260 180" className={glow ? "pipeline-glow-indigo" : ""}>
+    <circle cx="60" cy="90" r="22" fill="#977dff" opacity={glow ? 1 : 0.5} />
+    <circle cx="90" cy="120" r="18" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
+    <circle cx="85" cy="60" r="14" fill="#977dff" opacity={glow ? 1 : 0.5} />
+    {/* Clustered group */}
+    <circle cx="200" cy="100" r="36" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
+    <circle cx="230" cy="140" r="22" fill="#977dff" opacity={glow ? 1 : 0.5} />
   </svg>
 );
 
-// 6. Metrics/Chart
 export const MetricsSvg = ({ glow }: { glow?: boolean }) => (
-  <svg width="80" height="64" viewBox="0 0 80 64" className={glow ? "pipeline-glow-indigo" : ""}>
-    <rect x="10" y="20" width="60" height="32" rx="8" fill="#222"
-      stroke="#b8aaff" strokeWidth="2" />
-    <polyline points="18,48 30,40 42,44 54,28 66,36" fill="none" stroke="#977dff" strokeWidth="3" />
-    <circle cx="18" cy="48" r="2" fill="#b8aaff" />
-    <circle cx="30" cy="40" r="2" fill="#b8aaff" />
-    <circle cx="42" cy="44" r="2" fill="#b8aaff" />
-    <circle cx="54" cy="28" r="2" fill="#b8aaff" />
-    <circle cx="66" cy="36" r="2" fill="#b8aaff" />
+  <svg width="260" height="180" viewBox="0 0 260 180" className={glow ? "pipeline-glow-indigo" : ""}>
+    <rect x="40" y="60" width="180" height="60" rx="20" fill="#222"
+      stroke="#b8aaff" strokeWidth="6" />
+    <polyline points="58,110 90,90 130,100 170,70 202,90"
+      fill="none" stroke="#977dff" strokeWidth="10" />
+    {/* Chart dots */}
+    <circle cx="58" cy="110" r="7" fill="#b8aaff" />
+    <circle cx="90" cy="90" r="7" fill="#b8aaff" />
+    <circle cx="130" cy="100" r="7" fill="#b8aaff" />
+    <circle cx="170" cy="70" r="7" fill="#b8aaff" />
+    <circle cx="202" cy="90" r="7" fill="#b8aaff" />
   </svg>
 );
 
-// 7. Dashboard/Output
 export const DashboardSvg = ({ glow }: { glow?: boolean }) => (
-  <svg width="80" height="64" viewBox="0 0 80 64" className={glow ? "pipeline-glow-indigo" : ""}>
-    <rect x="12" y="16" width="56" height="32" rx="8" fill="#222"
-      stroke="#977dff" strokeWidth="3" />
-    <rect x="20" y="24" width="16" height="8" rx="2" fill="#977dff" opacity={glow ? 1 : 0.5} />
-    <rect x="44" y="24" width="16" height="8" rx="2" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
-    <rect x="20" y="36" width="40" height="6" rx="2" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
+  <svg width="260" height="180" viewBox="0 0 260 180" className={glow ? "pipeline-glow-indigo" : ""}>
+    <rect x="40" y="40" width="180" height="100" rx="20" fill="#222"
+      stroke="#977dff" strokeWidth="9" />
+    {/* Widgets */}
+    <rect x="60" y="60" width="50" height="25" rx="6" fill="#977dff" opacity={glow ? 1 : 0.5} />
+    <rect x="150" y="60" width="50" height="25" rx="6" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
+    <rect x="60" y="105" width="140" height="18" rx="6" fill="#b8aaff" opacity={glow ? 1 : 0.5} />
   </svg>
 );
