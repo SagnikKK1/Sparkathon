@@ -2,7 +2,7 @@ import Lottie from "lottie-react";
 
 // Import your Lottie JSON files
 import redditAnim from "../../assets/pipeline/reddit.json";
-import youtubeAnim from "../../assets/pipeline/youube.json";
+import youtubeAnim from "../../assets/pipeline/youtube.json";
 import nerAnim from "../../assets/pipeline/ner.json";
 import sieveAnim from "../../assets/pipeline/sieve.json";
 import groupAnim from "../../assets/pipeline/group.json";
