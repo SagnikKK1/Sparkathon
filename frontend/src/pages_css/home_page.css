@@ -207,3 +207,23 @@
 .homepage-generate-btn:active {
   transform: scale(0.98);
 }
+
+.date-input-empty {
+  color: var(--cool-gray);
+}
+
+.date-input-filled {
+  color: var(--white);
+}
+
+/* Style the placeholder for cool gray when empty */
+.date-input-empty::placeholder {
+  color: var(--cool-gray);
+  opacity: 1;
+}
+
+/* Optional: Style the placeholder for white when filled (not always needed) */
+.date-input-filled::placeholder {
+  color: var(--white);
+  opacity: 1;
+}

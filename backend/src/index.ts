@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth/auth_routes';
 import userRoutes from './routes/user/user_routes';
 import activityRoutes from './routes/user/activity_routes';
+import runAllRoutes from './routes/scraping_and_ner_pipeline/run_all_routes';
 
 dotenv.config();
 
@@ -33,6 +34,7 @@ app.get('/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/activity', activityRoutes);
+app.use('/api/pipeline', runAllRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ 
@@ -57,6 +59,7 @@ app.listen(PORT, () => {
   console.log(`🔐 Auth endpoints: http://localhost:${PORT}/api/auth`);
   console.log(`👤 User endpoints: http://localhost:${PORT}/api/user`);
   console.log(`📊 Activity endpoints: http://localhost:${PORT}/api/activity`);
+  console.log(`🔗 Pipeline endpoints: http://localhost:${PORT}/api/pipeline`); // Add this line
   console.log(`🌐 Root endpoint: http://localhost:${PORT}/`);
 });
 

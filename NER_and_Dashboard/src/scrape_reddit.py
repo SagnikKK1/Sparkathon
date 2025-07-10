@@ -50,8 +50,13 @@ def write_comments(comments: List[Tuple[str, str]], outfile: Path):
 def infer_subreddits(product: str, reddit, limit: int = 5) -> str:
     """Return a '+'-joined string of top subreddits relevant to product."""
     hits = list(reddit.subreddits.search(query=product, limit=limit * 5))
-    hits = sorted(hits, key=lambda s: s.subscribers, reverse=True)
-
+    
+    # Filter out subreddits with None subscribers before sorting
+    hits = [s for s in hits if s.subscribers is not None]
+    
+    # Sort by subscriber count (with additional safety check)
+    hits = sorted(hits, key=lambda s: s.subscribers or 0, reverse=True)
+    
     chosen = []
     for sub in hits:
         if sub.over18:                # skip NSFW
@@ -63,8 +68,10 @@ def infer_subreddits(product: str, reddit, limit: int = 5) -> str:
         chosen.append(sub.display_name)
         if len(chosen) >= limit:
             break
+    
     if not chosen:
         return "all"
+    
     print(f"🔎  Auto-selected subreddits: {', '.join(chosen)}")
     return "+".join(chosen)
 

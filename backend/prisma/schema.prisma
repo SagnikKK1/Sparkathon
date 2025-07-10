@@ -33,3 +33,43 @@ model UserStatus {
   @@index([lastOnline])
   @@map("user_statuses")
 }
+
+model PipelineStatus {
+  id              String   @id @default(uuid()) @map("id")
+  pipelineSuccess Boolean? @map("pipeline_success")
+  pipelineMessage String?  @map("pipeline_message")
+  card1           Json?    @map("card1")
+  card2           Json?    @map("card2")
+  card3           Json?    @map("card3")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("pipeline_statuses")
+}
+
+model Card1 {
+  id        String   @id @default(uuid()) @map("id")
+  data      Json     @map("data")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("card1")
+}
+
+model Card2 {
+  id        String   @id @default(uuid()) @map("id")
+  data      Json     @map("data")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("card2")
+}
+
+model Card3 {
+  id        String   @id @default(uuid()) @map("id")
+  data      Json     @map("data")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("card3")
+}
