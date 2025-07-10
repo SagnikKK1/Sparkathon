@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 scrape_youtube.py  -  Fetch YouTube comments into a txt file.
+
+Output files are now written to ../txt_dumps/ by default, relative to the src/ directory.
 """
 
 import argparse, datetime as dt, os, re, sys, time, subprocess
@@ -75,7 +77,8 @@ def main():
     since_ts=parse_since(args.since)
     since_iso=dt.datetime.utcfromtimestamp(since_ts).isoformat("T")+"Z"
     clean=re.sub(r"\W+","",args.product.lower())
-    outfile=Path(args.outfile or f"{clean}_youtube_comments.txt").resolve()
+    # Default output path is now ../txt_dumps/<cleanproduct>_youtube_comments.txt
+    outfile=Path(args.outfile or f"../txt_dumps/{clean}_youtube_comments.txt").resolve()
 
     print(f"🔍 YouTube search '{args.product}' (since {since_iso}) …")
     search=yt.search().list(q=args.product, type="video", part="id",

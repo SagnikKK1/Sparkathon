@@ -25,7 +25,7 @@ load_dotenv()
 def main() -> None:
     # ---------------- CLI ----------------
     cli = argparse.ArgumentParser()
-    cli.add_argument("--comments",        required=True, help="txt file of comments")
+    cli.add_argument("--comments",        required=True, help="txt file of comments (relative to ../txt_dumps/ if not absolute)")
     cli.add_argument("--product",         required=True, help="Exact product name")
     cli.add_argument("--product_type",    required=True, help="Human category (phone, shampoo…)")
 
@@ -38,10 +38,15 @@ def main() -> None:
     cli.add_argument("--api_key", default=os.getenv("LLM_API_KEY"),
                      help="Optional override (else env var like GROQ_API_KEY)")
 
-    cli.add_argument("--raw_output",      default="clustered.json")
-    cli.add_argument("--entities_output", default="entities_clustered.json")
-    cli.add_argument("--features_output", default="features_clustered.json")
+    cli.add_argument("--raw_output",      default="../json_dumps/clustered.json")
+    cli.add_argument("--entities_output", default="../json_dumps/entities_clustered.json")
+    cli.add_argument("--features_output", default="../json_dumps/features_clustered.json")
     args = cli.parse_args()
+
+    # Ensure output directories exist
+    Path(args.raw_output).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.entities_output).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.features_output).parent.mkdir(parents=True, exist_ok=True)
 
     # ---------------- 1️⃣  Read + extract noun phrases ----------------
     comments: List[str] = fe.read_comments(args.comments)
@@ -133,7 +138,8 @@ def main() -> None:
     Path(args.entities_output ).write_text(json.dumps(final_entities, indent=4), encoding="utf-8")
     Path(args.features_output ).write_text(json.dumps(final_features, indent=4), encoding="utf-8")
 
-    rename_path = Path(args.entities_output).with_name("cluster_renames.json")
+    # Save cluster_renames.json in the same directory as entities_output
+    rename_path = Path(args.entities_output).parent / "cluster_renames.json"
     Path(rename_path).write_text(json.dumps(rename_map, indent=4), encoding="utf-8")
 
     print(f"✅  {len(final_entities)} merged entity clusters  → {args.entities_output}")

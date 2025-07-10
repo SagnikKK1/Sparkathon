@@ -3,6 +3,9 @@ venv/
 env/
 ENV/
 
+json_dumps/
+txt_dumps/
+
 # Environment Variables
 .env
 

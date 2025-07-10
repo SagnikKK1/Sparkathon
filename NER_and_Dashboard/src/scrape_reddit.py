@@ -4,6 +4,8 @@ scrape_reddit.py
 ----------------
 Fetch Reddit comments mentioning a product.
 Subreddits are auto-discovered (top-5 most relevant) unless you pass --subreddits.
+
+Output files are now written to ../txt_dumps/ by default, relative to the src/ directory.
 """
 
 import argparse, datetime as dt, os, re, sys, time
@@ -78,12 +80,13 @@ def main():
     p.add_argument("--min_len", type=int, default=20)
     p.add_argument("--since", default="30d")
     p.add_argument("--outfile", default=None,
-                   help="Path for comments txt (default <cleanproduct>_reddit.txt)")
+                   help="Path for comments txt (default ../txt_dumps/<cleanproduct>_reddit_comments.txt)")
     args = p.parse_args()
 
     since_ts = parse_since(args.since)
     clean = re.sub(r"\W+", "", args.product.lower())
-    outfile = Path(args.outfile or f"{clean}_reddit_comments.txt").resolve()
+    # Default output path is now ../txt_dumps/<cleanproduct>_reddit_comments.txt
+    outfile = Path(args.outfile or f"../txt_dumps/{clean}_reddit_comments.txt").resolve()
 
     reddit = praw.Reddit(client_id=CLIENT_ID,
                          client_secret=CLIENT_SECRET,

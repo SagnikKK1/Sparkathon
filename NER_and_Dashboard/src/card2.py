@@ -119,9 +119,13 @@ def main():
     ap.add_argument("--youtube",        required=True)
     ap.add_argument("--comments",       required=True)
     ap.add_argument("--features_json",  required=True)
-    ap.add_argument("--summary_out",    default="summary_card.json")
-    ap.add_argument("--pie_out",        default="buzz_pie.json")
+    ap.add_argument("--summary_out",    default="../json_dumps/summary_card.json")
+    ap.add_argument("--pie_out",        default="../json_dumps/buzz_pie.json")
     args = ap.parse_args()
+
+    # Ensure output directory exists
+    Path(args.summary_out).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.pie_out).parent.mkdir(parents=True, exist_ok=True)
 
     summary = build_summary_card(
         args.product, args.reddit, args.youtube, args.comments, args.features_json

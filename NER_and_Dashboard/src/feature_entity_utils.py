@@ -2,6 +2,11 @@
 feature_entity_utils.py
 -----------------------
 Shared helper functions for ft1.py
+
+This version assumes:
+- .txt files are in ../txt_dumps/
+- .json files are in ../json_dumps/
+relative to the src/ directory.
 """
 
 from __future__ import annotations
@@ -36,7 +41,14 @@ NON_MEANINGFUL_RE = re.compile(
 )
 
 def read_comments(path: str | Path) -> List[str]:
-    with open(path, "r", encoding="utf-8") as f:
+    """
+    Reads comments from a .txt file. If a relative path is provided and the file does not exist,
+    it is assumed to be in ../txt_dumps/ relative to the script's location.
+    """
+    p = Path(path)
+    if not p.is_absolute() and not p.exists():
+        p = Path("../txt_dumps") / p
+    with open(p, "r", encoding="utf-8") as f:
         return [c.strip() for c in f.read().split("\n\n") if c.strip()]
 
 def clean_phrase(p: str) -> str | None:
@@ -97,81 +109,13 @@ def aggregate_clusters(
         }
     return out
 
-
-
-# def classify_clusters_with_llm(
-#     clusters: List[List[str]],
-#     product: str,
-#     product_type: str,
-#     model: str,
-#     api_key: str | None,
-# ) -> Tuple[Dict[str, str], Dict[str, str]]:
-#     """
-#     Returns two maps:
-#     1. label_map  = { cluster_str → 'entity' | 'feature' | 'ignore' }
-#     2. rename_map = { cluster_str → better name string }
-#     """
-#     import litellm, os, json, re
-
-#     # ── 1. Pick API key ──
-#     provider_key = api_key or os.getenv("GROQ_API_KEY") or os.getenv("OPENAI_API_KEY")
-
-#     # ── 2. Prompt Setup ──
-#     system_prompt = (
-#         "You are a domain-specific product analyst with deep knowledge of product reviews and "
-#         "customer feedback. You will be given a list of CLUSTERS, where each cluster is a group of phrases "
-#         "extracted from real user comments about a product. These clusters may represent entities (e.g., brands), "
-#         "features (e.g., specs or qualities), or irrelevant information (e.g., numeric data or vague language).\n\n"
-
-#         "For EACH cluster, respond with a JSON object that contains:\n"
-#         "  • label  : one of 'entity', 'feature', or 'ignore'\n"
-#         "  • rename : a clearer, human-friendly version of the cluster (e.g.,\n"
-#         "             'battery' → 'battery performance', 'camera' → 'camera quality').\n"
-#         "             If the label is 'ignore', just reuse the original cluster as rename.\n\n"
-
-#         "Definitions:\n"
-#         "  ENTITY   → brand name, model name, company name, or competing product\n"
-#         "  FEATURE  → specific attribute, specification, quality, part, or user-experience element\n"
-#         "  IGNORE   → anything else (e.g., raw numbers, vague words, or generic praise/complaints)\n\n"
-
-#         "Respond ONLY with a single valid JSON object mapping each cluster string to its classification + rename."
-#     )
-
-#     instructions = f"Product: '{product}' (category: '{product_type}')"
-#     cluster_strings = [" / ".join(c) for c in clusters]
-#     user_input = json.dumps(cluster_strings, indent=2)
-
-#     # ── 3. Make LLM Call ──
-#     response = litellm.completion(
-#         model=model,
-#         api_key=provider_key,
-#         messages=[
-#             {"role": "system", "content": system_prompt},
-#             {"role": "user", "content": f"{instructions}\n\nClusters:\n{user_input}"},
-#         ],
-#         max_tokens=2048,
-#         temperature=0.0,
-#     ).choices[0].message.content.strip()
-
-#     print("🔍 LLM RAW RESPONSE:", repr(response)[:500] + ("…" if len(response) > 500 else ""))
-
-#     # ── 4. Parse JSON ──
-#     try:
-#         # Look for code block or inline JSON
-#         match = re.search(r"```(?:json)?\s*({.*?})\s*```", response, re.S)
-#         data = json.loads(match.group(1) if match else re.search(r"{.*}", response, re.S).group())
-
-#         label_map = {}
-#         rename_map = {}
-#         for k, v in data.items():
-#             label_map[k.lower()]  = v["label"].strip().lower()
-#             rename_map[k.lower()] = v["rename"].strip()
-#         return label_map, rename_map
-
-#     except Exception as e:
-#         print("⚠️  LLM JSON parse fail → fallback to 'ignore'. Error:", e)
-#         fallback = {s.lower(): "ignore" for s in cluster_strings}
-#         return fallback, {s.lower(): s for s in cluster_strings}
+def save_json(data: dict, filename: str):
+    """
+    Saves a dictionary as a JSON file in ../json_dumps/.
+    """
+    out_path = Path("../json_dumps") / filename
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 def classify_clusters_with_llm(
     clusters: List[List[str]],
@@ -211,7 +155,6 @@ def classify_clusters_with_llm(
         "• Do not wrap your response in markdown or include explanatory text — only return the raw JSON object."
     )
 
-
     header = f"Product: '{product}'  (category: '{product_type}')"
     cluster_strings = [" / ".join(c) for c in clusters]
     user_payload = json.dumps(cluster_strings, indent=2)
@@ -229,7 +172,7 @@ def classify_clusters_with_llm(
 
     # ------- parse -------
     try:
-        m = re.search(r"```(?:json)?\s*({.*?})\s*```", rsp, re.S)
+        m = re.search(r"``````", rsp, re.S)
         data = json.loads(m.group(1) if m else re.search(r"{.*}", rsp, re.S).group())
         label_map, rename_map, rel_map = {}, {}, {}
         for k, v in data.items():
