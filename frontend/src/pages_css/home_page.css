@@ -61,6 +61,12 @@ body {
   margin: 0 auto 48px auto;
   width: 100%;
   max-width: 1300px;
+  border: 3.5px solid rgba(151, 125, 255, 1);                /* Tropical Indigo border */
+  border-radius: 38px;                                        /* Extra round corners */
+  box-shadow: 0 0 48px 0 rgba(151, 125, 255, 0.30);           /* 30% glow */
+  background: rgba(151, 125, 255, 0.04);                      /* Optional: subtle background tint */
+  padding: 40px 32px;                                         /* Space inside the box */
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 .benefit-item {
