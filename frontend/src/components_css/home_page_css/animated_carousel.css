@@ -1,0 +1,54 @@
+.lottie-carousel-wrapper {
+  position: relative;
+  height: 240px; /* Adjust for your animation size + label */
+  overflow: hidden;
+  width: 100%;
+  min-width: 200px;
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-lottie-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1), opacity 0.6s;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-lottie-slide.is-active {
+  opacity: 1;
+  transform: translateY(0%);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.carousel-lottie-slide.is-above {
+  opacity: 0;
+  transform: translateY(-100%);
+  z-index: 1;
+}
+
+.carousel-lottie-slide.is-below {
+  opacity: 0;
+  transform: translateY(100%);
+  z-index: 1;
+}
+
+.carousel-lottie-label {
+  margin-top: 12px;
+  font-family: 'Commerce', 'Gotham', Arial, sans-serif;
+  font-size: 1.15rem;
+  color: var(--tropical-indigo);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
