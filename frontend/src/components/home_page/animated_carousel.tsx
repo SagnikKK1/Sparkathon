@@ -42,7 +42,7 @@ export const AnimatedCarousel: React.FC = () => {
             <Lottie
               animationData={item.animation}
               loop
-              style={{ width: 180, height: 180, margin: '0 auto' }}
+              style={{ width: 300, height: 300, margin: '0 auto' }}
             />
             <div className="carousel-animated-label">{item.label}</div>
           </div>
