@@ -4,9 +4,9 @@ import '../../components_css/home_page_css/lottie_carousel.css';
 
 // Import your Lottie JSONs
 import opinionsAnim from '../../assets/homepage/opinions.json';
-import dashboardAnim from '../../assets/homepage/dashboard.json';
+import dashboardAnim from '../../assets/homepage/dashboards.json';
 import chatbotAnim from '../../assets/homepage/chatbot.json';
-import reportAnim from '../../assets/homepage/report.json';
+import reportAnim from '../../assets/homepage/reports.json';
 
 const lotties = [
   { animation: opinionsAnim, label: "See what real users say" },
