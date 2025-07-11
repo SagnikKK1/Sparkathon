@@ -78,7 +78,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
       <Header />
 
       <div className="homepage-hero">
-        <h1 className="homepage-title">echoDash</h1>
+        <h1 className="homepage-title">EchoDash</h1>
         <h2 className="homepage-tagline">Hear the buzz. Understand the story.</h2>
         <Benefits />
       </div>
