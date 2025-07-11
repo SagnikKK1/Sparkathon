@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
-import '../../components_css/home_page_css/lottie_carousel.css';
+import '../../components_css/home_page_css/animated_carousel.css';
 
 // Import your Lottie JSONs
 import opinionsAnim from '../../assets/homepage/opinions.json';
