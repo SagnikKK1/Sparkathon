@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
-import '../../components_css/home_page_css/lottie_benefit_row.css';
+import '../../components_css/home_page_css/benefits.css';
 
 import opinionsAnim from '../../assets/homepage/opinions.json';
 import dashboardAnim from '../../assets/homepage/dashboards.json';
