@@ -15,7 +15,7 @@ const lotties = [
   { animation: reportAnim, label: "Download Comprehensive Reports" },
 ];
 
-export const LottieCarousel: React.FC = () => {
+export const AnimatedCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const LottieCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="lottie-carousel-wrapper">
+    <div className="animated-carousel-wrapper">
       {lotties.map((item, index) => {
         let positionClass = '';
         if (index === currentIndex) {
@@ -38,13 +38,13 @@ export const LottieCarousel: React.FC = () => {
           positionClass = 'is-below';
         }
         return (
-          <div key={index} className={`carousel-lottie-slide ${positionClass}`}>
+          <div key={index} className={`carousel-animated-slide ${positionClass}`}>
             <Lottie
               animationData={item.animation}
               loop
               style={{ width: 180, height: 180, margin: '0 auto' }}
             />
-            <div className="carousel-lottie-label">{item.label}</div>
+            <div className="carousel-animated-label">{item.label}</div>
           </div>
         );
       })}
