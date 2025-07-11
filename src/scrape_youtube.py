@@ -75,7 +75,7 @@ def main():
     since_ts=parse_since(args.since)
     since_iso=dt.datetime.utcfromtimestamp(since_ts).isoformat("T")+"Z"
     clean=re.sub(r"\W+","",args.product.lower())
-    outfile=Path(args.outfile or f"{clean}_youtube_comments.txt").resolve()
+    outfile=Path(args.outfile or f"txt_dumps/{clean}_youtube_comments.txt").resolve()
 
     print(f"🔍 YouTube search '{args.product}' (since {since_iso}) …")
     search=yt.search().list(q=args.product, type="video", part="id",

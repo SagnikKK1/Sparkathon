@@ -1,0 +1,124 @@
+{
+    "Reliability": {
+        "count": 61,
+        "avg_sentiment": 0.18,
+        "example": "And this seems to be an issue with most Moto devices. My edge 40 and G84 died the same way, When I went to the service centre they told me it would take 14500 for the edge 40 and 8500 for G84.",
+        "original_clusters": [
+            "issues / an issue",
+            "any issues",
+            "bugs",
+            "this issue"
+        ],
+        "relevance": 0.6
+    },
+    "Battery": {
+        "count": 87,
+        "avg_sentiment": 0.3907,
+        "example": "So i just went to a local reputed repair shop he charged me 2k and told me that only a few ICS were burnt because of the Power surge and one connector with the battery was broken, Also water vapour was inside both the phone even though they are IP68 rated and it was peak summer season; all that took around 3 hours to him while the moto service doesn't even check and change the whole motherboard.",
+        "original_clusters": [
+            "the battery / battery",
+            "battery life"
+        ],
+        "relevance": 0.8
+    },
+    "Software Updates": {
+        "count": 164,
+        "avg_sentiment": 0.1205,
+        "example": "2025-06-20T09:06:21Z\nIf updates are a necessity for you, don't switch to edge 50 fusion. For all the other requirements I would have definitely switched to edge 50 fusion.",
+        "original_clusters": [
+            "updates / the update / the updates",
+            "an update / update"
+        ],
+        "relevance": 0.4
+    },
+    "Operating System": {
+        "count": 75,
+        "avg_sentiment": 0.1227,
+        "example": "2025-07-07T02:36:23Z\nI updated to Android 15 and although in its first versions it did have some problems with battery life, it currently behaves very well and is very stable with the May 2025 security patch. I have not had to do a factory reset.",
+        "original_clusters": [
+            "android"
+        ],
+        "relevance": 0.5
+    },
+    "Camera": {
+        "count": 44,
+        "avg_sentiment": 0.2684,
+        "example": "2025-06-14T21:03:05Z\nWell just to start out no one ever buys a Motorola for their camera performance",
+        "original_clusters": [
+            "the camera / camera"
+        ],
+        "relevance": 0.9
+    },
+    "Display": {
+        "count": 9,
+        "avg_sentiment": 0.2611,
+        "example": "2025-06-26T11:46:38Z\nMy 2 cents on the curved screens, and maybe someone can convince me they are good now. I had a 2021 edge plus and currently have a 2022 edge plus (US naming, I know we are different from everyone else). I did like the 21' but the screen seemed cumbersome, I disliked when content goes past the curve, and cases did not fully enclosed it due to the edge (only phone screen I have broken in the last 10-15 years, due to a 1ft fall into a wooden bedframe corner, case did not help because of how it landed and no glass screen protector because only the film type was available for this phone). Overall not a fan. Mostly love the 22', only gripe is the stylus needs a specific case that falls apart quick, already have gone through 2 of the them and gave up.",
+        "original_clusters": [
+            "the screen"
+        ],
+        "relevance": 0.7
+    },
+    "Build Quality": {
+        "count": 3,
+        "avg_sentiment": 0.3333,
+        "example": "2025-06-26T15:32:04Z\nWhat a shame this company is! With all the problems users are experiencing, lack of tracking and updating continue to release new models. It costs them less to release new models rather than paying a good developer for software updates and monitoring... It proves the quality of their products which even in the ads show waterproofing problems while they sell this same model as ip69 lol. I've never seen that in my life",
+        "original_clusters": [
+            "the quality"
+        ],
+        "relevance": 0.7
+    },
+    "Customization Options": {
+        "count": 18,
+        "avg_sentiment": 0.1618,
+        "example": "2025-07-09T06:43:46Z\nTurn off Ram boost, and the live caption feature. I don't know what its exact name is, but when you control the volume it appears below it, and this ugly. I turned it off.   \nDisable and delete the new 1Weather/Weather app, because then the real Moto weather will appear which is the best.    \nDelete disable Live lock screen app, and also Moto app manager. this downloads random games for you.   \nI also disabled hidden Meta apps.    \nYou can turn off your Motorola from collecting datas about you. for example for ads. or to improve Moto phones, if there is anything. or Idk, but I turned off spying.    \nYou can use private DNS in your Wifi settings, and there will be no ads in the apps. (there will still be ads on Youtube)",
+        "original_clusters": [
+            "settings"
+        ],
+        "relevance": 0.3
+    },
+    "App Support": {
+        "count": 19,
+        "avg_sentiment": 0.1071,
+        "example": "2025-07-09T06:43:46Z\nTurn off Ram boost, and the live caption feature. I don't know what its exact name is, but when you control the volume it appears below it, and this ugly. I turned it off.   \nDisable and delete the new 1Weather/Weather app, because then the real Moto weather will appear which is the best.    \nDelete disable Live lock screen app, and also Moto app manager. this downloads random games for you.   \nI also disabled hidden Meta apps.    \nYou can turn off your Motorola from collecting datas about you. for example for ads. or to improve Moto phones, if there is anything. or Idk, but I turned off spying.    \nYou can use private DNS in your Wifi settings, and there will be no ads in the apps. (there will still be ads on Youtube)",
+        "original_clusters": [
+            "apps"
+        ],
+        "relevance": 0.5
+    },
+    "Performance": {
+        "count": 5,
+        "avg_sentiment": 0.4217,
+        "example": "I've had it for about a year and the performance has stated consistent.",
+        "original_clusters": [
+            "the performance"
+        ],
+        "relevance": 0.8
+    },
+    "Lock Screen": {
+        "count": 5,
+        "avg_sentiment": 0.0079,
+        "example": "2025-07-09T06:28:57Z\nBro, in the lock screen why don't you change the clock style to the nice kind?",
+        "original_clusters": [
+            "the lock screen"
+        ],
+        "relevance": 0.4
+    },
+    "Bluetooth": {
+        "count": 13,
+        "avg_sentiment": 0.103,
+        "example": "2025-07-03T10:24:27Z\nNeed to tap two times to activate and disable Bluetooth now...that sucks!",
+        "original_clusters": [
+            "bluetooth"
+        ],
+        "relevance": 0.4
+    },
+    "Price": {
+        "count": 7,
+        "avg_sentiment": 0.4451,
+        "example": "But 2 things seperate them. 50 ultra has 64mp telephoto lens vs 60 pro has 8mp. Ultra can record better video vs pro. But pro 60 haa better battery life with 6000mah and ultra has 4500. So you choose what's more important to you while the price difference is nearly 17k.",
+        "original_clusters": [
+            "the price"
+        ],
+        "relevance": 0.8
+    }
+}

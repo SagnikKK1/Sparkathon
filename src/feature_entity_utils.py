@@ -36,7 +36,11 @@ NON_MEANINGFUL_RE = re.compile(
 )
 
 def read_comments(path: str | Path) -> List[str]:
-    with open(path, "r", encoding="utf-8") as f:
+    # If only a filename is given, look in txt_dumps/
+    p = Path(path)
+    if not p.is_absolute() and not p.parent.name == 'txt_dumps':
+        p = Path('txt_dumps') / p
+    with open(p, "r", encoding="utf-8") as f:
         return [c.strip() for c in f.read().split("\n\n") if c.strip()]
 
 def clean_phrase(p: str) -> str | None:

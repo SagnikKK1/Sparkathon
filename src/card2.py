@@ -119,8 +119,8 @@ def main():
     ap.add_argument("--youtube",        required=True)
     ap.add_argument("--comments",       required=True)
     ap.add_argument("--features_json",  required=True)
-    ap.add_argument("--summary_out",    default="summary_card.json")
-    ap.add_argument("--pie_out",        default="buzz_pie.json")
+    ap.add_argument("--summary_out",    default="json_dumps/summary_card.json")
+    ap.add_argument("--pie_out",        default="json_dumps/buzz_pie.json")
     args = ap.parse_args()
 
     summary = build_summary_card(

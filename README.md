@@ -47,22 +47,22 @@ SIMILARITY_THRESHOLD=0.75
 
 ### Run Sentiment Analysis
 ```bash
-python ft1.py
+python src/ft1.py
 ```
 
 ### Scrape Reddit Data
 ```bash
-python scrape_reddit.py
+python src/scrape_reddit.py
 ```
 
 ### Scrape YouTube Data
 ```bash
-python scrape_youtube.py
+python src/scrape_youtube.py
 ```
 
 ### Run All (if you want to run all steps in sequence)
 ```bash
-python run_all.py
+python src/run_all.py
 ```
 
 ---
@@ -101,12 +101,13 @@ git merge main
 ---
 
 ## Project Structure
-- `ft1.py`: Main script for sentiment analysis
-- `feature_entity_utils.py`: Utility functions for feature/entity extraction
-- `reddit_api.py`: Reddit API integration
-- `scrape_reddit.py`: Script to scrape Reddit data
-- `scrape_youtube.py`: Script to scrape YouTube data
-- `run_all.py`: Run all main steps in sequence
+- `src/ft1.py`: Main script for sentiment analysis
+- `src/feature_entity_utils.py`: Utility functions for feature/entity extraction
+- `src/scrape_reddit.py`: Script to scrape Reddit data
+- `src/scrape_youtube.py`: Script to scrape YouTube data
+- `src/run_all.py`: Run all main steps in sequence
+- `json_dumps/`: All generated .json files
+- `txt_dumps/`: All generated .txt files
 - `requirements.txt`: Project dependencies
 - `.env`: Environment variables (not tracked in git)
 - `venv/`: Virtual environment directory (not tracked in git)

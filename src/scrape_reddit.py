@@ -83,7 +83,7 @@ def main():
 
     since_ts = parse_since(args.since)
     clean = re.sub(r"\W+", "", args.product.lower())
-    outfile = Path(args.outfile or f"{clean}_reddit_comments.txt").resolve()
+    outfile = Path(args.outfile or f"txt_dumps/{clean}_reddit_comments.txt").resolve()
 
     reddit = praw.Reddit(client_id=CLIENT_ID,
                          client_secret=CLIENT_SECRET,

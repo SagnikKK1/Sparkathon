@@ -35,10 +35,10 @@ def weighted_product_sent(clustered: dict) -> float:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--product", required=True)
-    ap.add_argument("--clustered_json",  default="clustered.json")
-    ap.add_argument("--features_json",   default="features_clustered.json")
+    ap.add_argument("--clustered_json",  default="json_dumps/clustered.json")
+    ap.add_argument("--features_json",   default="json_dumps/features_clustered.json")
     ap.add_argument("--top", type=int,   default=5)
-    ap.add_argument("--output",          default="card_overview.json")
+    ap.add_argument("--output",          default="json_dumps/card_overview.json")
     args = ap.parse_args()
 
     clustered = json.loads(pathlib.Path(args.clustered_json).read_text(encoding="utf-8"))

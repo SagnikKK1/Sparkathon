@@ -88,13 +88,13 @@ def main():
     args = ap.parse_args()
 
     clean = "".join(c for c in args.product.lower() if c.isalnum())
-    reddit_file  = Path(f"{clean}_reddit_comments.txt")
-    yt_file      = Path(f"{clean}_youtube_comments.txt")
-    combined     = Path(f"{clean}_comments.txt")
+    reddit_file  = Path(f"txt_dumps/{clean}_reddit_comments.txt")
+    yt_file      = Path(f"txt_dumps/{clean}_youtube_comments.txt")
+    combined     = Path(f"txt_dumps/{clean}_comments.txt")
 
     # Build commands
     reddit_cmd = [
-        PY, "scrape_reddit.py",
+        PY, "src/scrape_reddit.py",
         "--product", args.product,
         "--product_type", args.product_type,
         "--post_limit", str(args.post_limit),
@@ -103,7 +103,7 @@ def main():
         "--outfile", str(reddit_file),
     ]
     yt_cmd = [
-        PY, "scrape_youtube.py",
+        PY, "src/scrape_youtube.py",
         "--product", args.product,
         "--product_type", args.product_type,
         "--video_limit", str(args.video_limit),
@@ -136,39 +136,51 @@ def main():
 
     # 4️⃣  Run ft1.py with real-time output
     ft1_cmd = [
-        PY, args.ft1_path,
+        PY, "src/ft1.py",
         "--comments", str(combined),
         "--product", args.product,
         "--product_type", args.product_type,
+        "--raw_output", f"json_dumps/clustered.json",
+        "--entities_output", f"json_dumps/entities_clustered.json",
+        "--features_output", f"json_dumps/features_clustered.json",
     ]
     print("🚀  Running ft1.py …")
     ft1_process = launch(ft1_cmd, "ft1.py")
     wait_process(ft1_process, "ft1.py")
 
 
-    card_out = f"{clean}_overview.json"
-    card_cmd = [PY, args.card_path,
+    card_out = f"json_dumps/{clean}_overview.json"
+    card_cmd = [PY, "src/card1.py",
                 "--product", args.product,
-                "--clustered_json", "clustered.json",
-                "--features_json",  "features_clustered.json",
+                "--clustered_json", "json_dumps/clustered.json",
+                "--features_json",  "json_dumps/features_clustered.json",
                 "--output", card_out]
     
     print("🚀  Running card1.py …")
     card_process = launch(card_cmd, "card1.py")
     wait_process(card_process, "card1.py")
 
-    buzz_cmd = [PY, "card2.py",
+    buzz_cmd = [PY, "src/card2.py",
             "--product", args.product,
             "--reddit", str(reddit_file),
             "--youtube", str(yt_file),
             "--comments", str(combined),
-            "--features_json", "features_clustered.json",
-            "--summary_out", f"{clean}_summary.json",
-            "--pie_out", f"{clean}_buzz_pie.json"]
+            "--features_json", "json_dumps/features_clustered.json",
+            "--summary_out", f"json_dumps/{clean}_summary.json",
+            "--pie_out", f"json_dumps/{clean}_buzz_pie.json"]
     
     print("🚀  Running card2.py …")
     buzz_process = launch(buzz_cmd, "card2.py")
     wait_process(buzz_process, "card2.py")
+
+    graph_cmd = [PY, "src/card4.py",
+            "--comments", str(combined),
+            "--since", args.since,
+            "--output", f"json_dumps/{clean}_sentiment_timeline.json"]
+    
+    print("🚀  Running card4.py …")
+    graph_process = launch(graph_cmd, "card4.py")
+    wait_process(graph_process, "card4.py")
 
     print("🎉  All done!")
 

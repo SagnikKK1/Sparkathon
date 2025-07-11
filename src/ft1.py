@@ -38,9 +38,9 @@ def main() -> None:
     cli.add_argument("--api_key", default=os.getenv("LLM_API_KEY"),
                      help="Optional override (else env var like GROQ_API_KEY)")
 
-    cli.add_argument("--raw_output",      default="clustered.json")
-    cli.add_argument("--entities_output", default="entities_clustered.json")
-    cli.add_argument("--features_output", default="features_clustered.json")
+    cli.add_argument("--raw_output",      default="json_dumps/clustered.json")
+    cli.add_argument("--entities_output", default="json_dumps/entities_clustered.json")
+    cli.add_argument("--features_output", default="json_dumps/features_clustered.json")
     args = cli.parse_args()
 
     # ---------------- 1️⃣  Read + extract noun phrases ----------------
