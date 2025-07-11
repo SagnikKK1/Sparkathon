@@ -12,6 +12,7 @@
 }
 
 .carousel-animated-slide {
+  margin-top: 40px;
   position: absolute;
   top: 0;
   left: 0;
