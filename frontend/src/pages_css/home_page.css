@@ -42,7 +42,7 @@ body {
 }
 
 .homepage-tagline {
-  font-family: 'Gotham', Arial, sans-serif;
+  font-family: 'Commerce', Arial, sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--cool-gray);
@@ -151,7 +151,7 @@ body {
 
 .workflow-text {
   color: var(--white);
-  font-size: 3.2rem;
+  font-size: 4rem;
   font-family: 'Gotham', Arial, sans-serif;
   font-weight: bold;
   margin: 0 0 18px 0;
