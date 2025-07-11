@@ -3,7 +3,7 @@ import { Header } from '../components/home_page/home_header';
 import { TextCarousel } from '../components/home_page/carousel';
 import '.././pages_css/home_page.css';
 import { useNavigate } from 'react-router-dom';
-import DashboardIllustration from '../components/home_page/homepage.png';
+import { AnimatedCarousel } from '../components/home_page/animated_carousel';
 
 interface HomePageProps { }
 
@@ -173,17 +173,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
           </div>
         </div>
         <div className="right-content-section">
-          <img
-            src={DashboardIllustration}
-            alt="Dashboard Illustration"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'contain',
-              borderRadius: '15px',
-              display: 'block',
-            }}
-          />
+          <AnimatedCarousel/>
         </div>
       </div>
 
