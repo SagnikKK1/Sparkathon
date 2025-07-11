@@ -1,11 +1,34 @@
-/* src/pages_css/home_page.css */
+:root {
+  --cool-gray: rgba(155, 155, 189, 1);
+  --eerie-black: rgba(34, 34, 34, 1);
+  --oxford-blue: rgba(4, 1, 40, 1);
+  --tropical-indigo: rgba(151, 125, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}
 
+/* --- GLOBAL --- */
+body {
+  margin: 0;
+  font-family: 'Commerce', Arial, sans-serif;
+  background-color: var(--oxford-blue);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* --- HERO SECTION --- */
 .homepage-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 32px;
   margin-bottom: 48px;
+  width: 100%;
 }
 
 .homepage-title {
@@ -28,6 +51,95 @@
   letter-spacing: 0.01em;
 }
 
+/* --- LOTTIE BENEFIT ROW --- */
+.lottie-benefit-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 44px;
+  margin: 0 auto 32px auto;
+  width: 100%;
+  max-width: 980px;
+}
+
+.lottie-benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: filter 0.4s, transform 0.4s;
+  filter: brightness(0.7) blur(0.5px);
+  cursor: pointer;
+}
+
+.lottie-benefit-item.highlighted {
+  filter: drop-shadow(0 0 32px #977dff) brightness(1.1);
+  transform: scale(1.10);
+  z-index: 2;
+}
+
+.lottie-benefit-animation {
+  width: 170px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lottie-benefit-label {
+  margin-top: 16px;
+  font-family: 'Commerce', Arial, sans-serif;
+  font-size: 1.12rem;
+  color: var(--tropical-indigo);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+  min-height: 36px;
+}
+
+/* --- MAIN LAYOUT --- */
+.content-sections-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+  min-height: 60vh;
+}
+
+.left-content-section,
+.right-content-section {
+  flex: 1;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.left-content-section {
+  text-align: left;
+}
+
+.right-content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 600px;
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  overflow: visible !important;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+  height: auto;
+}
+
+/* --- WORKFLOW SECTION --- */
 .workflow-section {
   margin: 0 auto 32px auto;
   max-width: 900px;
@@ -37,19 +149,60 @@
 .workflow-text {
   color: var(--white);
   font-size: 2.6rem;
+  font-family: 'Gotham', Arial, sans-serif;
   font-weight: bold;
   margin: 0 0 12px 0;
-  font-family: 'Gotham', Arial, sans-serif;
+  padding: 0;
 }
 
 .description-text {
   color: var(--cool-gray);
+  font-family: 'Commerce', Arial, sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
   margin-top: 18px;
   text-align: justify;
 }
 
+/* --- CAROUSEL (TEXT) --- */
+.text-carousel-wrapper {
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.carousel-text {
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  color: var(--tropical-indigo);
+  font-size: 48px;
+  font-family: 'Commerce', Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-text.is-active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.carousel-text.is-above {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.carousel-text.is-below {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* --- FORM SECTION --- */
 .homepage-form-section {
   margin: 38px auto 0 auto;
   padding: 0;
@@ -61,4 +214,180 @@
   box-sizing: border-box;
 }
 
-/* ...rest of your form/input/button styles as before... */
+.homepage-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.homepage-form-label {
+  color: var(--tropical-indigo);
+  font-family: 'Commerce', Arial, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* --- GLOWING INPUTS --- */
+.homepage-form-input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: #181820;
+  color: var(--white);
+  font-family: 'Commerce', Arial, sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+}
+
+.homepage-form-input:focus {
+  border-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.35);
+}
+
+/* --- GLOWING CHECKBOXES --- */
+.homepage-form-checkboxes input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 5px;
+  background: #181820;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  margin-right: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.homepage-form-checkboxes input[type="checkbox"]:focus,
+.homepage-form-checkboxes input[type="checkbox"]:hover {
+  border-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.35);
+}
+
+.homepage-form-checkboxes input[type="checkbox"]:checked {
+  background: var(--tropical-indigo);
+  border-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.35);
+}
+
+.homepage-form-checkboxes {
+  display: flex;
+  gap: 24px;
+  margin-top: 6px;
+}
+
+.homepage-checkbox-label {
+  color: var(--cool-gray);
+  font-family: 'Commerce', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* --- GENERATE BUTTON --- */
+.homepage-generate-btn {
+  margin-top: 18px;
+  padding: 12px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.15rem;
+  font-family: 'Commerce', Arial, sans-serif;
+  font-weight: bold;
+  background: #3a375a;
+  color: #bdbde3;
+  cursor: not-allowed;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px 1px rgba(151,125,255,0.10);
+}
+
+.homepage-generate-btn.active {
+  background: linear-gradient(90deg, #977dff 0%, #b8aaff 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 18px 2px rgba(151,125,255,0.18);
+}
+
+.homepage-generate-btn:active {
+  transform: scale(0.98);
+}
+
+.date-input-empty {
+  color: var(--cool-gray);
+}
+
+.date-input-filled {
+  color: var(--white);
+}
+
+.date-input-empty::placeholder {
+  color: var(--cool-gray);
+  opacity: 1;
+}
+
+.date-input-filled::placeholder {
+  color: var(--white);
+  opacity: 1;
+}
+
+/* --- FOOTER --- */
+.home-page-footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--cool-gray);
+  font-family: 'Commerce', Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* --- BLURRED ELLIPSE BG --- */
+.blurred-ellipse {
+  position: absolute;
+  width: 180vw;
+  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -177px;
+  background: radial-gradient(circle, rgba(151, 125, 255, 0.3) 0%, rgba(4, 1, 40, 0) 100%);
+  border-radius: 50%;
+  filter: blur(400px);
+  z-index: -1;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .content-sections-container {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .right-content-section,
+  .left-content-section {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 8px;
+  }
+  .lottie-benefit-row {
+    flex-direction: column;
+    gap: 36px;
+    max-width: 100vw;
+  }
+  .lottie-benefit-animation {
+    width: 120px;
+    height: 120px;
+  }
+  .homepage-title {
+    font-size: 2.1rem;
+  }
+  .workflow-text {
+    font-size: 1.6rem;
+  }
+  .description-text {
+    font-size: 1rem;
+  }
+}
