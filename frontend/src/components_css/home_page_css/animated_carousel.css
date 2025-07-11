@@ -1,55 +1,45 @@
-.animated-carousel-wrapper {
-  position: relative;
-  height: 440px; /* Adjust for your animation size + label */
-  overflow: hidden;
+/* src/components_css/home_page_css/lottie_benefit_row.css */
+
+.lottie-benefit-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 44px;
+  margin: 0 auto 32px auto;
   width: 100%;
-  min-width: 200px;
-  max-width: 340px;
-  margin: 0 auto;
+  max-width: 880px;
+}
+
+.lottie-benefit-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: filter 0.4s, transform 0.4s;
+  filter: brightness(0.7) blur(0.5px);
+  cursor: pointer;
 }
 
-.carousel-animated-slide {
-  margin-top: 40px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: transform 0.6s cubic-bezier(.4,0,.2,1), opacity 0.6s;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.carousel-animated-slide.is-active {
-  opacity: 1;
-  transform: translateY(0%);
+.lottie-benefit-item.highlighted {
+  filter: drop-shadow(0 0 32px #977dff) brightness(1.1);
+  transform: scale(1.08);
   z-index: 2;
-  pointer-events: auto;
 }
 
-.carousel-animated-slide.is-above {
-  opacity: 0;
-  transform: translateY(-100%);
-  z-index: 1;
+.lottie-benefit-animation {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel-animated-slide.is-below {
-  opacity: 0;
-  transform: translateY(100%);
-  z-index: 1;
-}
-
-.carousel-animated-label {
-  margin-top: 12px;
-  font-family: 'Commerce', 'Gotham', Arial, sans-serif;
-  font-size: 1.15rem;
+.lottie-benefit-label {
+  margin-top: 16px;
+  font-family: 'Gotham', Arial, sans-serif;
+  font-size: 1.12rem;
   color: var(--tropical-indigo);
   font-weight: 600;
   letter-spacing: 0.01em;
   text-align: center;
+  min-height: 36px;
 }
