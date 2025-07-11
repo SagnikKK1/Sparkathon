@@ -1,6 +1,6 @@
 /* src/components_css/home_page_css/lottie_benefit_row.css */
 
-.lottie-benefit-row {
+.benefits-row {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -10,7 +10,7 @@
   max-width: 880px;
 }
 
-.lottie-benefit-item {
+.benefits-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,13 +19,13 @@
   cursor: pointer;
 }
 
-.lottie-benefit-item.highlighted {
+.benefits-item.highlighted {
   filter: drop-shadow(0 0 32px #977dff) brightness(1.1);
   transform: scale(1.08);
   z-index: 2;
 }
 
-.lottie-benefit-animation {
+.benefits-animation {
   width: 140px;
   height: 140px;
   display: flex;
@@ -33,7 +33,7 @@
   justify-content: center;
 }
 
-.lottie-benefit-label {
+.benefits-label {
   margin-top: 16px;
   font-family: 'Gotham', Arial, sans-serif;
   font-size: 1.12rem;
