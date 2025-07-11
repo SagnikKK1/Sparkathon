@@ -1,4 +1,4 @@
-.lottie-carousel-wrapper {
+.animated-carousel-wrapper {
   position: relative;
   height: 240px; /* Adjust for your animation size + label */
   overflow: hidden;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.carousel-lottie-slide {
+.carousel-animated-slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,26 +24,26 @@
   pointer-events: none;
 }
 
-.carousel-lottie-slide.is-active {
+.carousel-animated-slide.is-active {
   opacity: 1;
   transform: translateY(0%);
   z-index: 2;
   pointer-events: auto;
 }
 
-.carousel-lottie-slide.is-above {
+.carousel-animated-slide.is-above {
   opacity: 0;
   transform: translateY(-100%);
   z-index: 1;
 }
 
-.carousel-lottie-slide.is-below {
+.carousel-animated-slide.is-below {
   opacity: 0;
   transform: translateY(100%);
   z-index: 1;
 }
 
-.carousel-lottie-label {
+.carousel-animated-label {
   margin-top: 12px;
   font-family: 'Commerce', 'Gotham', Arial, sans-serif;
   font-size: 1.15rem;
