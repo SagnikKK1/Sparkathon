@@ -27,21 +27,21 @@ export const Benefits: React.FC = () => {
   }, []);
 
   return (
-    <div className="lottie-benefit-row">
+    <div className="benefits-row">
       {lotties.map((item, idx) => (
         <div
           key={idx}
-          className={`lottie-benefit-item${highlighted === idx ? ' highlighted' : ''}`}
+          className={`benefits-item${highlighted === idx ? ' highlighted' : ''}`}
           onMouseEnter={() => setHighlighted(idx)}
         >
-          <div className="lottie-benefit-animation">
+          <div className="benefits-animation">
             <Lottie
               animationData={item.animation}
               loop
               style={{ width: 140, height: 140 }}
             />
           </div>
-          <div className="lottie-benefit-label">{item.label}</div>
+          <div className="benefits-label">{item.label}</div>
         </div>
       ))}
     </div>
