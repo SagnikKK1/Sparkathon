@@ -1,6 +1,6 @@
 .animated-carousel-wrapper {
   position: relative;
-  height: 240px; /* Adjust for your animation size + label */
+  height: 440px; /* Adjust for your animation size + label */
   overflow: hidden;
   width: 100%;
   min-width: 200px;
