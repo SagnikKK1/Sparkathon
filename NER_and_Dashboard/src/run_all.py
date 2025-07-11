@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
 run_all.py  -  concurrent orchestrator
-Runs scrape_reddit.py & scrape_youtube.py in parallel, then ft1.py.
+Runs scrape_reddit.py & scrape_youtube.py in parallel, then ft1.py, card1.py, and card2.py.
 """
-import argparse, os, subprocess, sys, shutil, time, codecs, threading
+import argparse, os, subprocess, sys, time, codecs, threading
 from pathlib import Path
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
 
 PY = sys.executable
 
 def stream_output(pipe, prefix: str):
-    """Stream output from a pipe with a prefix"""
     for line in iter(pipe.readline, ''):
         if line:
             print(f"{prefix}: {line.rstrip()}", flush=True)
@@ -49,17 +48,12 @@ def wait_process(p: subprocess.Popen, title: str):
     print(f"✅  {title} completed successfully")
 
 def launch_in_new_terminal(cmd: list, title: str):
-    """Launch a command in a new terminal window (Windows only)."""
     if sys.platform == "win32":
-        # Properly quote each argument if it contains spaces
         cmd_str = " ".join(f'"{c}"' if ' ' in c or c.endswith('.py') else c for c in cmd)
-        # Wrap the full command in quotes for cmd /k
         full_cmd = f'start "{title}" cmd /k "{cmd_str}"'
         return subprocess.Popen(full_cmd, shell=True)
     else:
-        # Fallback for Unix-like systems
         return subprocess.Popen(['xterm', '-T', title, '-e'] + cmd)
-
 
 def main():
     ap = argparse.ArgumentParser()
@@ -78,7 +72,6 @@ def main():
     yt_file      = Path(f"../txt_dumps/{clean}_youtube_comments.txt")
     combined     = Path(f"../txt_dumps/{clean}_comments.txt")
 
-    # Build commands
     reddit_cmd = [
         PY, "scrape_reddit.py",
         "--product", args.product,
@@ -98,20 +91,17 @@ def main():
         "--outfile", str(yt_file),
     ]
 
-    # 1️⃣  Launch both scrapers in separate terminals (Windows only)
     print("▶️  Launching Reddit scraper in new terminal…", flush=True)
     p_reddit = launch_in_new_terminal(reddit_cmd, "Reddit scraper")
     print("▶️  Launching YouTube scraper in new terminal…", flush=True)
     p_yt     = launch_in_new_terminal(yt_cmd,     "YouTube scraper")
 
-    # 2️⃣  Wait for both marker files to be created (polling)
     reddit_done = str(reddit_file)
     yt_done     = str(yt_file)
     print("⏳  Waiting for both scrapers to finish…", flush=True)
     while not (os.path.exists(reddit_done) and os.path.exists(yt_done)):
         time.sleep(2)
 
-    # 3️⃣  Merge files
     print("📝  Merging comment files …")
     combined.parent.mkdir(parents=True, exist_ok=True)
     with combined.open("w", encoding="utf-8") as out:
@@ -121,7 +111,6 @@ def main():
                 out.write("\n")
     print(f"✅  Combined comments → {combined}")
 
-    # 4️⃣  Run ft1.py with real-time output
     ft1_cmd = [
         PY, args.ft1_path,
         "--comments", str(combined),
@@ -132,29 +121,29 @@ def main():
     ft1_process = launch(ft1_cmd, "ft1.py")
     wait_process(ft1_process, "ft1.py")
 
-    # 5️⃣  Run card1.py (overview card)
-    card_out = f"../json_dumps/{clean}_overview.json"
-    card_cmd = [PY, args.card_path,
-                "--product", args.product,
-                "--clustered_json", "../json_dumps/clustered.json",
-                "--features_json",  "../json_dumps/features_clustered.json",
-                "--output", card_out]
+    # 5️⃣  Run card1.py (summary and pie to DB only)
+    card1_cmd = [
+        PY, args.card_path,
+        "--product", args.product,
+        "--reddit", str(reddit_file),
+        "--youtube", str(yt_file),
+        "--comments", str(combined),
+        "--features_json", "../json_dumps/features_clustered.json"
+    ]
     print("🚀  Running card1.py …")
-    card_process = launch(card_cmd, "card1.py")
-    wait_process(card_process, "card1.py")
+    card1_process = launch(card1_cmd, "card1.py")
+    wait_process(card1_process, "card1.py")
 
-    # 6️⃣  Run card2.py (buzz summary)
-    buzz_cmd = [PY, "card2.py",
-            "--product", args.product,
-            "--reddit", str(reddit_file),
-            "--youtube", str(yt_file),
-            "--comments", str(combined),
-            "--features_json", "../json_dumps/features_clustered.json",
-            "--summary_out", f"../json_dumps/{clean}_summary.json",
-            "--pie_out", f"../json_dumps/{clean}_buzz_pie.json"]
+    # 6️⃣  Run card2.py (overview to DB only)
+    card2_cmd = [
+        PY, "card2.py",
+        "--product", args.product,
+        "--clustered_json", "../json_dumps/clustered.json",
+        "--features_json", "../json_dumps/features_clustered.json"
+    ]
     print("🚀  Running card2.py …")
-    buzz_process = launch(buzz_cmd, "card2.py")
-    wait_process(buzz_process, "card2.py")
+    card2_process = launch(card2_cmd, "card2.py")
+    wait_process(card2_process, "card2.py")
 
     print("🎉  All done!")
 
