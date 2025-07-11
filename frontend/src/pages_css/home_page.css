@@ -26,24 +26,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 32px;
+  margin-top: 0px;
   margin-bottom: 48px;
   width: 100%;
 }
 
 .homepage-title {
   font-family: 'Gotham', Arial, sans-serif;
-  font-size: 3.2rem;
+  font-size: 6rem;
   font-weight: bold;
   color: var(--tropical-indigo);
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   letter-spacing: 0.04em;
   text-align: center;
 }
 
 .homepage-tagline {
   font-family: 'Commerce', Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 4rem;
   font-weight: 500;
   color: var(--cool-gray);
   margin-bottom: 36px;
