@@ -1,21 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../components_css/dashboard_css/contribution.css';
 
+type Feature = { name: string; value: number };
+
 export const FeatureContributionPieChart: React.FC = () => {
-  // Example data
-  const features = [
-    { name: "Battery", value: 40 },
-    { name: "Camera", value: 30 },
-    { name: "Display", value: 20 },
-    { name: "Performance", value: 10 }
-  ];
-  const total = features.reduce((a, b) => a + b.value, 0);
+  const [features, setFeatures] = useState<Feature[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/card2/latest')
+      .then(res => res.json())
+      .then(data => {
+        if (
+          data.success &&
+          data.data &&
+          data.data.content &&
+          data.data.content.content
+        ) {
+          const content = data.data.content.content;
+          const featureList = Object.entries(content).map(([name, value]) => ({
+            name,
+            value:
+              typeof value === 'number'
+                ? value
+                : typeof value === 'string'
+                  ? parseFloat(value)
+                  : 0
+          }));
+          setFeatures(featureList);
+        }
+      })
+      .catch(() => setFeatures([]))
+      .finally(() => setLoading(false));
+  }, []);
 
   // Pie chart rendering (SVG)
   const radius = 60;
   const cx = 75, cy = 75;
   let cumulative = 0;
-  const colors = ["#977dff", "#b8aaff", "#4be04b", "#ff5c5c"];
+  const colors = ["#977dff", "#b8aaff", "#4be04b", "#ff5c5c", "#ffa726", "#00bcd4"];
+  const total = features.reduce((a, b) => a + b.value, 0);
 
   const arcs = features.map((f, i) => {
     const startAngle = (cumulative / total) * 2 * Math.PI;
@@ -34,7 +58,9 @@ export const FeatureContributionPieChart: React.FC = () => {
     `;
     return (
       <path key={f.name} d={d} fill={colors[i % colors.length]} opacity="0.85">
-        <title>{f.name}: {((f.value/total)*100).toFixed(1)}%</title>
+        <title>
+          {f.name}: {((f.value / total) * 100).toFixed(1)}%
+        </title>
       </path>
     );
   });
@@ -43,15 +69,24 @@ export const FeatureContributionPieChart: React.FC = () => {
     <div className="feature-pie-card">
       <div className="feature-pie-title">Feature Contribution Chart</div>
       <svg width={150} height={150} className="feature-pie-svg">
-        {arcs}
+        {loading ? null : arcs}
       </svg>
       <div className="feature-pie-legend">
-        {features.map((f, i) => (
-          <div className="feature-pie-legend-item" key={f.name}>
-            <span className="feature-pie-legend-color" style={{ background: colors[i % colors.length] }} />
-            <span>{f.name} ({((f.value/total)*100).toFixed(1)}%)</span>
-          </div>
-        ))}
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          features.map((f, i) => (
+            <div className="feature-pie-legend-item" key={f.name}>
+              <span
+                className="feature-pie-legend-color"
+                style={{ background: colors[i % colors.length] }}
+              />
+              <span>
+                {f.name} ({((f.value / total) * 100).toFixed(1)}%)
+              </span>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
