@@ -43,6 +43,8 @@ model PipelineStatus {
   card3           Json?    @map("card3")
   createdAt       DateTime @default(now()) @map("created_at")
   updatedAt       DateTime @updatedAt @map("updated_at")
+  card4           Json?    @map("card4")
+  card6           Json?    @map("card6")
 
   @@map("pipeline_statuses")
 }
@@ -72,4 +74,22 @@ model Card3 {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("card3")
+}
+
+model Card4 {
+  id        String   @id @default(uuid()) @map("id")
+  data      Json     @map("data")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("card4")
+}
+
+model Card6 {
+  id        String   @id @default(uuid()) @map("id")
+  data      Json     @map("data")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("card6")
 }

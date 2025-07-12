@@ -145,6 +145,14 @@ def main():
     card2_process = launch(card2_cmd, "card2.py")
     wait_process(card2_process, "card2.py")
 
+    card4_cmd = [PY, "card4.py",
+            "--comments", str(combined),
+            "--since", args.since]
+    
+    print("🚀  Running card4.py …")
+    card4_process = launch(card4_cmd, "card4.py")
+    wait_process(card4_process, "card4.py")
+
     print("🎉  All done!")
 
 if __name__ == "__main__":

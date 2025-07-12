@@ -8,6 +8,7 @@ import runAllRoutes from './routes/scraping_and_ner_pipeline/run_all_routes';
 import card1Router from './routes/card1/card1_route';
 import card2Router from './routes/card2/card2_route';
 import card3Router from './routes/card3/card3_route';
+import card4Router from './routes/card4/card4_route';
 
 dotenv.config();
 
@@ -42,6 +43,7 @@ app.use('/api/pipeline', runAllRoutes);
 app.use('/api/card1', card1Router)
 app.use('/api/card2', card2Router)
 app.use('/api/card3', card3Router)
+app.use('/api/card4', card4Router)
 
 app.use((req, res) => {
   res.status(404).json({ 
