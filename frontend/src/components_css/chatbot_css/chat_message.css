@@ -1,0 +1,22 @@
+.rag-chat-message {
+  max-width: 70%;
+  padding: 16px 24px;
+  border-radius: 18px;
+  font-size: 1.18rem;
+  margin-bottom: 2px;
+  word-break: break-word;
+  box-shadow: 0 2px 10px 0 rgba(151, 125, 255, 0.10);
+  transition: background 0.2s;
+}
+
+.rag-chat-message.user {
+  align-self: flex-end;
+  background: var(--tropical-indigo);
+  color: var(--white);
+}
+
+.rag-chat-message.bot {
+  align-self: flex-start;
+  background: var(--eerie-black);
+  color: var(--white);
+}

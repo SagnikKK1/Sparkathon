@@ -1,0 +1,10 @@
+.chatbot-page-root {
+  min-height: 100vh;
+  background: var(--oxford-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
