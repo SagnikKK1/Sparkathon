@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = () => {
     <header className="app-header-wrapper">
       <div className="header-container">
         <nav className="header-nav">
-          <Link to="/about" className="about-us-link">About Us</Link>
+          <Link to="/aboutus" className="about-us-link">About Us</Link>
           <div className="button-group-box">
             {!isAuthenticated && (
               <>
