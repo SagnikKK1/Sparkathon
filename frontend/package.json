@@ -10,13 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "html-to-text": "^9.0.5",
+    "jspdf": "^3.0.1",
     "lottie-react": "^2.4.1",
+    "marked": "^16.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
+    "@types/html-to-text": "^9.0.4",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.5.2",
