@@ -10,6 +10,7 @@ import card2Router from './routes/card2/card2_route';
 import card3Router from './routes/card3/card3_route';
 import card4Router from './routes/card4/card4_route';
 import reportFetchRouter from './routes/report/report_fetch_route';
+import card6Router from './routes/card6/card6_route';
 
 dotenv.config();
 
@@ -45,6 +46,7 @@ app.use('/api/card1', card1Router)
 app.use('/api/card2', card2Router)
 app.use('/api/card3', card3Router)
 app.use('/api/card4', card4Router)
+app.use('/api/card6', card6Router)
 
 app.use('/api', reportFetchRouter)
 

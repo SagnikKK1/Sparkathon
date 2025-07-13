@@ -153,6 +153,15 @@ def main():
     card4_process = launch(card4_cmd, "card4.py")
     wait_process(card4_process, "card4.py")
 
+    # 7️⃣  Run card6.py (heatmap to DB only)
+    card6_cmd = [
+        PY, "card6.py",
+        "--comments", str(combined)
+    ]
+    print("🚀  Running card6.py …")
+    card6_process = launch(card6_cmd, "card6.py")
+    wait_process(card6_process, "card6.py")
+
     print("🎉  All done!")
 
 if __name__ == "__main__":
