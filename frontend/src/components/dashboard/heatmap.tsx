@@ -47,7 +47,7 @@ export const BuzzHeatmap: React.FC = () => {
           ))}
         </div>
         <div className="buzz-heatmap-months-row">
-          {MONTHS.map((month, idx) => (
+          {MONTHS.map((month) => (
             <span className="buzz-heatmap-month-col-label" key={month}>{month}</span>
           ))}
         </div>
