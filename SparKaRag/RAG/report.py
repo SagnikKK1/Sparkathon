@@ -1,13 +1,18 @@
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import traceback
 from getpass import getpass
 from RAG.my_workflow import create_workflow, run_workflow
 import requests
 
 # ---------- CONFIG ----------
-METADATA_FILE = 'C:\IITBBS\Projects\Walmart Sparkathon\Development\Sparkathon\SparKaRag\RAG\metadata.json'
-NER_CONTEXT_FILE = 'C:\IITBBS\Projects\Walmart Sparkathon\Development\Sparkathon\SparKaRag\RAG\extra_context\context_store.json'
-REPORT_FILE = 'product_report.txt'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+METADATA_FILE = os.path.join(current_dir, 'metadata.json')
+NER_CONTEXT_FILE = os.path.join(current_dir, 'extra_context', 'context_store.json')
+BEFORE_CLEANING_FILE = os.path.join(current_dir, 'before_cleaning_report.txt')
+REPORT_FILE = os.path.join(current_dir, 'product_report.txt')
 OPENROUTER_API_KEY = "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"
 # ----------------------------
 
@@ -41,8 +46,6 @@ def clean_report_with_openrouter(api_key, report_text):
     response.raise_for_status()
     return response.json()['choices'][0]['message']['content']
 
-
-
 def main():
     print("🤖 Advanced Product Analysis Report Generator")
     print("=" * 50)
@@ -64,10 +67,15 @@ def main():
         raw_report = result.get('final_report')
 
         if raw_report:
+            # Save before cleaning report
+            with open(BEFORE_CLEANING_FILE, 'w', encoding='utf-8') as f:
+                f.write(raw_report)
+            print(f"✅ Before cleaning report saved to: {BEFORE_CLEANING_FILE}")
+
             print("🧹 Cleaning the report with LLM (via OpenRouter)...")
             cleaned_report = clean_report_with_openrouter(api_key, raw_report)
 
-            with open(REPORT_FILE, 'w') as f:
+            with open(REPORT_FILE, 'w', encoding='utf-8') as f:
                 f.write(cleaned_report)
 
             print(f"✅ Cleaned report saved to: {REPORT_FILE}")

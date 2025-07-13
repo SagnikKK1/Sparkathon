@@ -54,11 +54,11 @@ export async function runReportPipeline(req: Request, res: Response): Promise<vo
 
   try {
     console.log('[INFO] Running report.py...');
-    await runPythonScript('report.py');
+    await runPythonScript('C:/IITBBS/Projects/Walmart Sparkathon/Development/Sparkathon/SparKaRag/RAG/report.py');
     console.log('[INFO] report.py finished successfully.');
 
     console.log('[INFO] Running report_backend.py...');
-    await runPythonScript('report_backend.py');
+    await runPythonScript('C:/IITBBS/Projects/Walmart Sparkathon/Development/Sparkathon/SparKaRag/RAG/report_backend.py');
     console.log('[INFO] report_backend.py finished successfully.');
 
     await prisma.pipelineStatus.update({
