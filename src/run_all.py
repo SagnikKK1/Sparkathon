@@ -182,6 +182,14 @@ def main():
     graph_process = launch(graph_cmd, "card4.py")
     wait_process(graph_process, "card4.py")
 
+    heatmap_cmd = [PY, "src/card5.py",
+            "--comments", str(combined),
+            "--output", f"json_dumps/{clean}_heatmap.json"]
+    
+    print("🚀  Running card5.py …")
+    heatmap_process = launch(heatmap_cmd, "card5.py")
+    wait_process(heatmap_process, "card5.py")
+
     print("🎉  All done!")
 
 if __name__ == "__main__":

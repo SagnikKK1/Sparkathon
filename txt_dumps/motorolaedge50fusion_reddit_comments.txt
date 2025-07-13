@@ -19,6 +19,18 @@ This happens all the time with appliances, computers, TV's, all cell phones,, et
 2025-07-01T21:44:53Z
 Move to Europe where phones die exactly two years and 20 days after purchase.
 
+2025-07-11T18:06:17Z
+Passei o mesmo pelo oque você passou agora em janeiro comprei e quebrou em aproximadamente 20 dias mais no meu caso ele perdeu a garantia porque desbloqueei o bootloader  e ele "quebrou" porque dei um hardbrick nele o celular morreu sem ter nenhuma peça quebrada todas novinhas levei em vários técnicos do centro da minha cidade todos falavam que tinha certeza que conseguiam consertar e no final entregavam sem conserto quando levei na autorizada ele disseram o mesmo que era problema na placa e me cobraram mais que o próprio celular pra concertar fui em reclame aqui liguei e sempre diziam que a única opção era pagar o valor que eu não tinha condições e a placa desse celular disseram que só vai aparecer em mercado pra concertar só no final desse ano por ser um aparelho muito novo muito difícil achar enfim vão te enrolar você vai correr atrás e só vai perder tempo igual eu fiz a solução é esperar chegar no mercado essa placa que vai demorar ou guardar dinheiro no banco pra comprar um novo que foi oque eu fiz e vender esse celular em algumas lojas online que vc confia porque vários técnicos querem as peças desse celular vende com a caixa e tudo eles vão se interessar fiz o mesmo vendi por 400 reais ele do jeito que estava
+
+2025-07-12T13:41:45Z
+Moto can never be trusted for software updates. But as far as promises go, Moto edge 50 meo comes with 5 Android updates and 6 years securities updates
+
+2025-07-12T14:40:17Z
+I believe Motorola will honor the amount of years promised. The timing and cohesiveness of said updates seems to be the biggest concern.
+
+2025-07-12T14:49:34Z
+Yes, but not on it comes to security updates.
+
 2025-06-20T09:06:21Z
 If updates are a necessity for you, don't switch to edge 50 fusion. For all the other requirements I would have definitely switched to edge 50 fusion.
 
@@ -212,6 +224,15 @@ Bro, in the lock screen why don't you change the clock style to the nice kind?
 
 2025-07-09T08:43:52Z
 What is your phone case for edge 50?
+
+2025-07-12T15:29:24Z
+So you're generally happy with Neo?
+
+I'm looking to replace my S22+ with something more compact so my choice is basically S24/25 but i need to drop like 600-700€ and I'm not sure if its worth it.
+
+I can get Neo 8/256 version for like 140€ cash, it seems like a very nice rounded midranger, I just want something  that works and if it lasts like 2 years i would be very happy.
+
+My only must have is wireless charging.
 
 2025-07-11T01:26:10Z
 Are you using a glass screen protector with the Edge 50 Neo? I've been trying to find one that doesn't reduce the screen sensitivity on the bottom part of the display. Otherwise, it seems a great phone for $300 AUD!
@@ -586,6 +607,19 @@ So far I'm good with my edge 60, can do daily task and just what I needed. I'm n
 2025-07-10T11:08:41Z
 It seems quite a few have charging issues with moto edge 40. In my case, the port seems to be damaged or not sure but it charges only when I connect it multiple times at different angles. It sometimes works properly with other cables but then again, it starts giving the same issue.
 
+2025-07-11T18:23:32Z
+Well is a good phone in my opinion at least in argentina i buy them for 150dlls and yes faced some of the problems that u mentioned here
+
+in may faced water on charging port issue it been solved and not need to change anything (for now....)
+
+yes got very poor SOT (3:50h of sot playing games) but is also caused by battery degradation
+
+for now in terms of notifications only faced it with bank apps and games important apps like WhatsApp telegram or discord worked fine for now
+
+well in terms of software you are correct most of companies are working in better update policies but motorola is motorola also non important regions like retar seems android 15 update is delayed to final july days also a15 is coming with a lot of missing features for a premiun mid range phone also the mediatek soc makes hard to do a custom rom to escape of stock buggy rom and give more lifetime for this (A15 last upgrade)
+
+ill buy again a motorola? maybe, next time ill go to a motorola with Qualcomm CPU sincerely i miss my G84 in terms of a custom rom was my best bet another competence companies doesn't offer the possibility of a bootloader unlock or S#### like samsung with knox but anyway my motto is the best phone is the one that best adapts to what the user needs.
+
 2025-07-09T19:03:52Z
 Now I understand why people were criticizing motorola before the edge 50 series was launched.
 
@@ -737,6 +771,62 @@ The Edge 50 ultra is a flagship and the Edge 60 Pro is a (good) mid-ranger. The 
 2025-07-07T00:44:46Z
 I had almost The same doubt, i was on S20fe and got Egde 50 Ultra, far good device
 
+2025-07-12T04:07:22Z
+Photo quality is basically the same but Neo has an extra lens (10 mp telephoto).
+
+2025-07-12T07:41:47Z
+Go for neo. It has that extra lens and it is quite handy. IMO the new form factor of edge 60 fusion ( along with its two elder brothers) feels like a tv remote.
+
+2025-07-12T07:12:54Z
+Since you don't prioritize battery, 50 Neo is clear:
+- telephoto lens more versatile with your frequent out-door captures.
+- longer software update.
+- flat display with LTPO technology, also supports AOD, which isn't on 60 fusion.
+
+-60 fusion has better speakers and battery.
+
+2025-07-12T12:22:52Z
+Many arguments for either, but for me most striking is compactness of the 50 neo.
+
+2025-07-12T04:07:28Z
+Well neo does have a telephoto lens
+
+2025-07-12T18:43:40Z
+I have Edge 50 Neo , after A15 update its laggy , camera app od laggy , phone sometines slowdown from no reason, battery life is worse than A14. But this all is software problem and Motorola is fixing nothing. This is my Last moto phone.
+
+2025-07-13T03:25:18Z
+Just forget about moto and get some other brand, lol. I'm never gonna buy a lenovo based product again, this was my 2nd mistake with edge 40 neo after buying G4 plus, though the latter was a decent piece which unexpectedly ran better games than other phones in the same price range with better processor.
+
+But now clearly there's no point in getting a Lenovo product cause their after sale service sucks. That's why their own brand phones are dead in Indian market and Moto is somewhat following the same path. Hopefully some other company acquires Moto.
+
+2025-07-12T08:32:33Z
+Maybe get the edge 60 ?
+
+2025-07-12T04:22:01Z
+Buddy don't feel bad...
+
+Neo is old and 60 is the trending then why go for that old thing?!
+
+2025-07-12T05:40:24Z
+Isn't fusion supposed to be better than neo? 
+
+Edge pro > edge > edge fusion > edge neo?
+
+2025-07-11T06:07:11Z
+Just keep holding just the power button it'll reboot
+
+2025-07-11T06:10:28Z
+That might be your best bet run it down dead. Plug it in for 15 minutes try to reboot it
+
+2025-07-11T06:44:29Z
+Lock button + volume up
+
+2025-07-11T12:16:52Z
+Hey try checking at the service center if nothing works , i feel this might be some bug that you're facing
+
+2025-07-12T05:57:14Z
+Broke boy buy an iphone
+
 2025-06-13T13:06:36Z
 When will edge 50pro will get AI update?
 
@@ -753,6 +843,32 @@ Does it comes with the new features like Image Studio, Next Move or the playlist
 
 2025-06-13T19:09:51Z
 Why is it 2.20 GB if it's just a security patch? It makes no sense. It's also V2.
+
+2025-07-07T11:28:03Z
+On seeing to the video you've posted here, I think the pins in the USB type C socket are shorting...
+
+The reasons may differ based upon usage sans the way that device is connected and disconnected...
+
+When the pins in the socket gets short due to accumulation of dust particles then there are chances that a false signal is sent to the system to think that it is connected.
+
+This shorting in the pins in there also results in battery draining and many more issues...
+
+You need to immediately get it replaced with a original one otherwise your device will be gone forever...
+
+2025-07-07T13:25:26Z
+Damn, I'm getting scared by the number of defects in these Motorola devices.
+
+2025-07-07T10:32:26Z
+Replace it if you can, there might be something wrong with the wiring of the battery
+
+2025-07-07T13:32:12Z
+I am facing the same issue. I went to the service center and told me they will have to open the phone and check the charging port but it is not that big an issue. If the phone is charging fine, i can continue using it.
+
+2025-07-08T05:17:11Z
+My phone gives a similar message but it says "OPs mom detected in the charging port, please remove within 5-10 business days"
+
+2025-07-12T06:29:19Z
+I have an edge 50 Pro and never got such issues.
 
 2025-06-13T14:34:12Z
 Wait for the edge 60 neo. If it has the same 5 years update, the most longevity. If you can't wait, then the edge 50 neo still has 4 years left.
@@ -776,18 +892,6 @@ The fingerprint reader works well on both, only the Edge 50 Neo has the fingerpr
 
 2025-06-14T13:10:52Z
 I have a point here. Don't mix Edge 50 Neo with other phones because it comes under the compact phone category and has different parameters for assessment.
-
-2025-07-11T06:07:11Z
-Just keep holding just the power button it'll reboot
-
-2025-07-11T06:10:28Z
-That might be your best bet run it down dead. Plug it in for 15 minutes try to reboot it
-
-2025-07-11T06:44:29Z
-Lock button + volume up
-
-2025-07-11T12:16:52Z
-Hey try checking at the service center if nothing works , i feel this might be some bug that you're facing
 
 2025-06-13T12:52:03Z
 So the protector is flat but the screen is curved?
@@ -819,37 +923,6 @@ Haven't use any ever since I purchased it.
 Okay, after I told the seller on Amazon, they refunded me. I just asked what I did wrong, not asked for a refund, but it's a good outcome.
 
 I'll buy another one lol. Thanks everyone.
-
-2025-07-07T11:28:03Z
-On seeing to the video you've posted here, I think the pins in the USB type C socket are shorting...
-
-The reasons may differ based upon usage sans the way that device is connected and disconnected...
-
-When the pins in the socket gets short due to accumulation of dust particles then there are chances that a false signal is sent to the system to think that it is connected.
-
-This shorting in the pins in there also results in battery draining and many more issues...
-
-You need to immediately get it replaced with a original one otherwise your device will be gone forever...
-
-2025-07-07T13:25:26Z
-Damn, I'm getting scared by the number of defects in these Motorola devices.
-
-2025-07-07T10:32:26Z
-Replace it if you can, there might be something wrong with the wiring of the battery
-
-2025-07-07T13:32:12Z
-I am facing the same issue. I went to the service center and told me they will have to open the phone and check the charging port but it is not that big an issue. If the phone is charging fine, i can continue using it.
-
-2025-07-07T17:08:12Z
-Whatever the problem is with the Motorola Edge 50 Pro 
-Don't Panic bro
-
-All problems have one solution 
-
-RESTART
-
-2025-07-08T05:17:11Z
-My phone gives a similar message but it says "OPs mom detected in the charging port, please remove within 5-10 business days"
 
 2025-06-15T15:37:08Z
 Don't ever think of buying the Edge 50 Neo unless you are a fan of compact size phones. See, the biggest USP of this phone is its size of 6.4". At a larger size base, 6.7" or more, there are plenty of options and many of them are better than this one. But if you want a compact phone and have a budget constraint, don't go anywhere other than Moto Edge 50 Neo. At this size and price range there is simply no competition.
@@ -992,6 +1065,9 @@ I went from an iPhone 12 to an Edge 2022, and currently an Edge 2024. While I've
 
 Really I think smartphones have evolved enough that anything half decent will work pretty well and anything beyond you can simply buy based on need vs buying as much as you can afford to have a decent experience with even everyday common use. Kinda like where computers were at years ago.
 
+2025-07-11T21:44:05Z
+The Edge 50U really is incredible but I don't think I would make the switch. The 13 Pro will have much more update longevity and system optimization. What's more, it's going to be a pretty even fight.
+
 2025-07-08T11:10:02Z
 I have used these kinds of cases although I found them for cheaper. But they lose the colour from edges with more ware.
 
@@ -1018,9 +1094,6 @@ Hi! I've already joined the beta program, accessed the app bit still hasnt got t
 
 Is there ay new functions? Thanks
 
-2025-07-04T07:43:44Z
-havent gotten that issue at all, i have the 60 pro, its a very nice one and battery life has been awsome, i dont use anything heavy or heavy gaming(only halls of torment). With my previous phone i had sometimes problems with calling but only when using wifi calling so i always disable that
-
 2025-06-20T03:46:12Z
 I have the edge 2024 (U.S variant of yours) and I'm still waiting on 15
 
@@ -1031,6 +1104,9 @@ Should I update my Motorola G72, or will it mess up my device like the last upda
 
 2025-06-23T18:41:12Z
 How can i avoid the updates
+
+2025-07-04T07:43:44Z
+havent gotten that issue at all, i have the 60 pro, its a very nice one and battery life has been awsome, i dont use anything heavy or heavy gaming(only halls of torment). With my previous phone i had sometimes problems with calling but only when using wifi calling so i always disable that
 
 2025-07-10T18:09:11Z
 Yep it supports LHDC.
@@ -1090,15 +1166,6 @@ Is this feature available in 50 neo?
 2025-07-06T12:12:33Z
 which app do you use for editing?
 
-2025-07-05T08:40:49Z
-I use my Android device as my fido 2fa key
-
-2025-07-07T10:14:13Z
-Where do you find the VolTE settings on your phone? I can't seem to find them.
-
-2025-07-05T08:00:36Z
-Using 2G is this huge security risk it opens the door to 2fa vulnerabilities  really weak encryption, it also Lacks authentication between your device and the cell tower. That's why it's usually only used for emergency services that's why most modern devices allow you to turn 2G off and there's usually a warning next to it that tells you that 2G is not safe
-
 2025-07-11T11:49:33Z
 Hey I recently purchased the edge 60 fusion and so far its working great considering the fact that I'm not a hardcore user I only use it for casual photography and calls mostly.
  Must say I've encountered a few bugs here and there in the UI itself.
@@ -1108,6 +1175,15 @@ You can checkout the reviews of the Oneplus Nord ce5 or the Vivo T4 too if you w
 
 2025-07-11T09:51:34Z
 Do NOT buy motorola phones. Trust me.
+
+2025-07-05T08:40:49Z
+I use my Android device as my fido 2fa key
+
+2025-07-07T10:14:13Z
+Where do you find the VolTE settings on your phone? I can't seem to find them.
+
+2025-07-05T08:00:36Z
+Using 2G is this huge security risk it opens the door to 2fa vulnerabilities  really weak encryption, it also Lacks authentication between your device and the cell tower. That's why it's usually only used for emergency services that's why most modern devices allow you to turn 2G off and there's usually a warning next to it that tells you that 2G is not safe
 
 2025-07-09T20:07:02Z
 The Moto AI isn't All that good. It's slow and it's not that capable. Gemini is way faster and can do way more things. When I turn Moto AI on the security center says a warning that this app has all permissions do you want to keep it that way
@@ -1132,6 +1208,12 @@ Do not use a fast charger all the time, it generally reduces battery health over
 
 I got the same version i typically go from 80 to 40% battery after a workday with these settings.
 Approximately 2 hours of spotify, 2 hours browsing and so me activity. Use mostly in public transport.
+
+2025-07-11T20:25:35Z
+For the price difference the Edge 60 Fusion isn't worth it if the storage and RAM variants are the same.
+
+2025-07-12T04:18:05Z
+Why not edge 50 fusion? Same price as g96 no?
 
 2025-06-27T15:00:49Z
 Have you tried cleaning the port?
@@ -1164,6 +1246,27 @@ Hi u/No-Type3891, thank you for posting. The Moto AI features will only be rolli
 
 2025-07-07T11:57:46Z
 So no Ai for moto edge 50 fusion...
+
+2025-06-12T15:55:38Z
+Sorry at first that I didn't read whole post but when you mentioned that flower was purple and moto was showing it as pink at that point I doubt the "pantone validated camera"
+
+2025-06-13T16:01:13Z
+Here on the Moto Edge 50 Neo, the best version for me that performed best was AGC 8.8, I didn't like this version 9.2.
+
+2025-07-12T12:35:38Z
+Problem with GCam is that you can rely on those config files, you need to adjust the settings yourself. You an probably fix Night Mode. On my G84 night was just as bad but now is good!
+But before that I had discovered that you usually don't even need Night Mode, Enhanced HDR+ works better on most low light situations. 
+
+
+Bro, trust me, search Denoise Settings and set Luma Revert and Luma Outlier Threshold to 0, than limit Chroma and Luma denoise to 0.5. 
+
+
+Limiting upper and lower range HDR to -1 and 6 also helps. And of course, lower contrast to around 0.33 low and 0.44 high. Test and just the results.
+
+2025-07-10T08:46:58Z
+Try restarting, try airplane mode, then try disabling the other sim for some time. Restarting worked for my case.
+
+It may also be an issue on their side so check with the support once.
 
 2025-06-24T21:17:35Z
 Hi u/r4wm3, Thank you for your detailed explanation, and I completely understand how frustrating this problem is, especially since your phone appears to have **functional mobile data**, but **calls (even basic 2G calls) fail consistently unless rebooted**. Let's try to narrow it down:
@@ -1210,10 +1313,28 @@ I have the LATAM version and got A15 like a week ago. So, in my case, I'm not ex
 2025-07-07T13:35:31Z
 The edge 50 pro and edge 50 fusion are already being tested for those who registered in the motorola community, and will be available to everyone by the end of the year
 
-2025-07-10T08:46:58Z
-Try restarting, try airplane mode, then try disabling the other sim for some time. Restarting worked for my case.
+2025-07-11T20:25:48Z
+Hi, u/AshleyWJ_, thank you for reaching out to us. It sounds frustrating to have your camera app crash or timeout after just a few minutes of idling, especially on a new Edge 50 Fusion after upgrading from the G30. To help narrow down the cause, here’s a question for you:
 
-It may also be an issue on their side so check with the support once.
+When the camera crashes or times out after idling, does it happen only when the phone is sitting still and unused in the camera app, or does it also crash if you’re actively using the camera for things like taking photos or videos?
+
+In the meantime, here's what you can try:
+
+* **Check for updates:**
+   * Make sure your phone’s system software and camera app are fully updated. Sometimes patches fix these stability issues.
+* **Battery Optimization Settings:**
+   * Go to Settings > Apps > Camera > Battery or Battery Optimization and set the camera app to **Not optimized** or **Allowed to run in the background**.
+   * Also, check if there’s a general battery saver mode active and try turning it off.
+* **Clear Camera App Cache/Data:**
+   * Go to Settings > Apps > Camera > Storage > Clear Cache (and optionally Clear Data).
+   * This can help if corrupted cache files are causing crashes.
+* **Test in Safe Mode:**
+   * Boot the phone into Safe Mode (usually by holding the power button, then long-pressing “Power off” and selecting Safe Mode).
+   * Test the camera app there. If it works fine, the problem is likely caused by a third-party app.
+* **Reset app preferences:**
+   * Go to Settings > Apps > Reset app preferences (this won’t delete app data but will reset defaults).
+
+Let me know if this works for you. -Carlos
 
 2025-06-27T11:41:54Z
 Bro instead of making a post about this issue which was covered many times here, just google : How to disable Motorola apps installing on their own and boom, you will find many Reddit posts addressing this issue and boom, there is the solution.
@@ -1254,12 +1375,6 @@ the edge 60 pro raw becomes slightly blurred even when focus is good , i compare
 
 2025-07-03T07:47:34Z
 Thoughts on edge 50 ultra? I’ll be changing my iPhone 13 for it next week. Amazing photos btw!!
-
-2025-06-12T15:55:38Z
-Sorry at first that I didn't read whole post but when you mentioned that flower was purple and moto was showing it as pink at that point I doubt the "pantone validated camera"
-
-2025-06-13T16:01:13Z
-Here on the Moto Edge 50 Neo, the best version for me that performed best was AGC 8.8, I didn't like this version 9.2.
 
 2025-07-10T04:34:13Z
 If possible replace it
@@ -1694,6 +1809,50 @@ I am myself a Edge 40 user,and recieved the A15 update on June 30th,and I did no
 2025-07-01T09:42:01Z
 Mention the battery percentage in each test, not the date because it's irrelevant for those of us reading your post. The CPU throttles under low battery conditions, which could be why you're seeing lower scores. When I ran the benchmarks I didn't see a difference.
 
+2025-07-10T16:31:09Z
+It's very sad that Motorola is forcing us to end up like this. I think we should try to raise the funds to do what Motorola "can't."
+
+2025-07-10T19:02:00Z
+I have to get rid of my team then 🥲🥲
+
+2025-07-11T07:59:08Z
+except the battery drain, I have encountered none of the issues you mentioned 🤔
+
+speaking of which, I have a suspicion it's some broken google service actually. the A15 allows you to see in detail the hour-by-hour breakdown
+
+2025-07-10T16:44:15Z
+I think we should just stop paying for motorola garbage devices cas of their cheap price.Wanna cheap phone - go for Xiaomi
+
+2025-07-10T20:11:16Z
+Considering Mediatek doesnt release all the drivers, how dev would develop this ROM?
+
+Btw, i would prefer a PixelOS type ROM rather a HelloUI one.
+
+2025-07-10T17:44:42Z
+the edge 40 neo won't have any rom, probably will suffer on a gsi, being boiling hot
+
+2025-07-10T18:53:42Z
+Wait bro, on YouTube I just noticed that they have sent error corrections by region
+
+2025-07-11T03:46:26Z
+Think about changing equipment, Motorola ruined our Mobil, accept it
+
+2025-07-11T05:48:15Z
+Most people are too scared to do this. Definitely bugs gonna be in there. Even the Custom ROMS we know and love have bugs.
+
+***Hiring a private programmer or whatever will certainly not have zero bugs. Accept and understand this.***
+
+Motorola ruins the phone? Get another one. Or accept that.
+Most issues you have are with the phone itself.
+
+TL;DR get a new phone
+
+2025-07-11T17:28:24Z
+I really think it's a very good idea
+
+2025-07-11T17:54:37Z
+This did not happen with my Edge 40,also why are you paying so much for a custom ROM on an older  mid range device ?
+
 2025-06-30T20:00:11Z
 📈 Benchmark Results
 
@@ -1751,44 +1910,6 @@ I'm not able to use my device because it keeps overheating, even though it's the
 2025-06-30T20:16:16Z
 I agree Android 15 did come with some gains I have basically the edge 40 pro I got a score of 8778 on the GPU OPEN CL score. crushed it a higher score when compared to other devices running the same chipset like the Galaxy s 23 plus.   But with the update to hello ui  some things and options are different then my edge 2024 that's on Android 14 that came with hello ui
 
-2025-07-10T16:31:09Z
-It's very sad that Motorola is forcing us to end up like this. I think we should try to raise the funds to do what Motorola "can't."
-
-2025-07-10T19:02:00Z
-I have to get rid of my team then 🥲🥲
-
-2025-07-10T16:44:15Z
-I think we should just stop paying for motorola garbage devices cas of their cheap price.Wanna cheap phone - go for Xiaomi
-
-2025-07-10T20:11:16Z
-Considering Mediatek doesnt release all the drivers, how dev would develop this ROM?
-
-Btw, i would prefer a PixelOS type ROM rather a HelloUI one.
-
-2025-07-10T17:44:42Z
-the edge 40 neo won't have any rom, probably will suffer on a gsi, being boiling hot
-
-2025-07-10T18:53:42Z
-Wait bro, on YouTube I just noticed that they have sent error corrections by region
-
-2025-07-11T03:46:26Z
-Think about changing equipment, Motorola ruined our Mobil, accept it
-
-2025-07-11T05:48:15Z
-Most people are too scared to do this. Definitely bugs gonna be in there. Even the Custom ROMS we know and love have bugs.
-
-***Hiring a private programmer or whatever will certainly not have zero bugs. Accept and understand this.***
-
-Motorola ruins the phone? Get another one. Or accept that.
-Most issues you have are with the phone itself.
-
-TL;DR get a new phone
-
-2025-07-11T07:59:08Z
-except the battery drain, I have encountered none of the issues you mentioned 🤔
-
-speaking of which, I have a suspicion it's some broken google service actually. the A15 allows you to see in detail the hour-by-hour breakdown
-
 2025-06-23T08:01:15Z
 Edge 50 neo or Edge 60 Stylus
 
@@ -1803,6 +1924,68 @@ https://www.reddit.com/r/motorola/s/XhdPWCQH75
 2025-06-23T10:40:01Z
 If the time is not problem, wait the 60 Neo. It will probably be released in early September. and maybe the price of 50 Neo will be cheaper too      
 Btw if you buy 50 Neo choose the mocha mousse color, this was released later, and so maybe there are fewer errors
+
+2025-07-12T23:05:13Z
+Wanted to give up Samsung and move to Motorola. Seemed like solid phones, but then reading reviews and had unexpected bad experience with customer support i gave up.
+I literally wanted to buy Motoral edge 60 pro in UK - clicked buy with card details, but can't because free charger is the issues. Got on chat with Motorola customer adviser and he liked said to try different browsers and so on. I told him I tried that.
+He said he will take it to higher level - got reply back on email that they already knew about the issue (could tell me on chat directly and not waste my time) and to buy without the free charger 🤣
+Seems like it was a sign not to buy the phone
+
+2025-07-12T09:51:43Z
+There is no hope in this garbage,uhahahahbahah!
+
+2025-07-12T09:52:27Z
+Completely agree and as a long time motorola user in the market for a new phone, share your disappointment :\_(
+
+Your post is very well documented/written BTW
+
+2025-07-12T10:45:22Z
+Well articulated yes. 
+Infact, the cost of repair for moto also seems lower than its peers.
+Downsides being poor software support and lower processing power relative to its competition.
+
+And in all honesty, it doesn't seem like things will change. Moto has carved it's niche by doing some stuff great and just dropping the ball on others to maintain market position.
+
+2025-07-12T11:25:37Z
+I sympathize with your frustration. For the US market they haven't given us a new edge+ since 2023. It seems everything else in their lineup uses mediatek chips, which have always been garbage. I love my edge+ 2023 and will hang on to it until there's a suitable replacement, but sadly it's probably not going to come from Motorola.
+
+2025-07-12T12:56:13Z
+Motorola had a transition during their edge 40 series, repositioning themselves further inside the premium midrange instead of the usual budget/midrange/flagship lineup they had. Which is understandable, because the midrange sees a lot more profit than the flagship devices in a developing economy like India. Apparently there was a pro version of the edge 40 that never even released in India 
+
+Compare the specs of the edge 30 pro and edge 50 pro, you'll notice that it has shifted significantly towards upper midrange internals (SD8g1 vs SD7g3) and that trend has continued with the 60 series as well (D8350, markedly better choice but still not flagship). 
+
+Also they have redefined the fusion sub brand. What was supposed to be a refresh of last year's model with better design and internals is now just another device that is more or less equal to their base offering. It's still awkwardly positioned (correct me if I'm wrong)
+
+Whatever they are doing is clearly working for them in the sense I'm now seeing a lot more moto phones than before. Sad for US users because I think they are just going to be ignored 
+
+I wanted my next flagship to be a motorola, but I'm not going to be left with much of a choice other than foldables I guess
+
+2025-07-12T13:37:33Z
+Motorola phones hardly last over 2 years in my experience. Lack of service centres, unreliable update policy and phones not lasting long enough are big issues in Indian market where Vivo and Oppo are more long lasting
+
+2025-07-12T13:46:38Z
+Good things --- Dolby Atmos, design 
+Bad things --- many , performance, ram management, camera lag , missing basic features.
+
+2025-07-13T03:05:20Z
+I have a moto edge 30 neo, i previously had 2 other motorolas and i think my moto x was the Motorola that provided me with the best photos.
+My wife has a samsung, super low end samsung and that has a better camera than my Motorola.
+I'm considering moving to samsung due to the quality of the photos in Motorola 😔
+
+2025-07-13T05:50:47Z
+Hey moto are you listening??
+
+Just go through this post...
+
+It is not only him but many of them out there are made to suffer like that...
+
+You give all but you fail to support thereafter...
+
+Why?!
+
+After all, what does it make to you??
+
+Do you have any sense in that regard?
 
 2025-07-04T13:57:48Z
 I have an Edge 40 Pro and the same thing happens to me when updating to A15, they don't provide any solution.
@@ -1930,14 +2113,6 @@ Imo go for deals rather than models.
 2025-07-06T01:32:40Z
 Any edge 60 it's gonna be ok
 
-2025-07-06T11:27:41Z
-Buy Moto 
-
-if you are ready to sacrifice some features you familiar with samsung 
-Also ready to accept Motorola bugs in the name of software update....
-
-Better Don't switch because your phone feel laggy just perform factory reset then everything fix.. unless if you have plenty of money don't know what to do then buy moto
-
 2025-06-18T01:09:33Z
 It's an Android bug, not even Motorola specifically
 
@@ -1996,6 +2171,9 @@ concrete fall from under 5ft every time.
 
 2025-07-11T15:45:52Z
 It's foldable phone, what did you expect?
+
+2025-07-11T17:30:07Z
+Mine edge 50 neo is the least durable phone I owned
 
 2025-06-24T16:21:47Z
 Very good price.  
@@ -2067,6 +2245,16 @@ You can download it here: https://www.apkmirror.com/apk/motorola-mobility-llc/mo
 
 But the Google keep is the best notes
 
+2025-07-12T08:24:46Z
+Ofc the screen is a bit more fragile, especially if u drop your phones a lot but it's NOT weak in any way....just needs a bit more care
+
+2025-07-12T10:05:23Z
+The screen is durable and high quality in terms of its display as it gives 1.5k resolution which no other brand is providing in this price bracket . But on the other side its also true that quad curved screen (be it from any brand) have the drawback of being prone to cracks if dropped accidentally.
+I personally own the same mobile and the back cover/case which i use protects the curved screen (as it has bumps on the top and bottom ) from accidental drops.
+
+2025-07-11T17:24:31Z
+Never seen a beetle with white tires, horrible
+
 2025-07-02T00:39:05Z
 Where are you from, if you are in the US/Canada, there is a seperate range of phones sold. Global phones are sold everywhere else.
 
@@ -2103,6 +2291,9 @@ When I went on the Motorola website it linked me to Amazon, this is where I boug
 
 Motorola TurboPower 125W GaN Charger with 6.5A e-Marked USB-C to USB-C Cable for Moto Edge 30 Ultra, High Powered Type C Laptops https://a.co/d/aOnrUui
 
+2025-07-12T09:45:12Z
+NEVERMIND. IT STARTED WORKING. SOMEHOW MY PC IS ABLE TO SEE MOTOROLA AND SETTINGS ARE NOT GREYED OUT. MAYBE I CONNECTED CABLE NOT HARD/GOOD ENOUGH. BUT THIS WAS ODD. GREYED OUT SETTINGS WHILE NOT CONNECTED? KEEP TRYING WITH XABLE IF I HAVE THE SAME ISSUE. GL.
+
 2025-06-25T17:18:33Z
 It does it automatically (100%) or is should but some claim their stops working.
 
@@ -2127,9 +2318,6 @@ Bro it's a rebranded Edge 50 fusion. Leaked price for G96 is 20999. It's a POS, 
 
 2025-07-04T16:58:24Z
 You'll not get it probably .
-
-2025-07-11T17:24:31Z
-Never seen a beetle with white tires, horrible
 
 2025-06-26T03:31:40Z
 Neo is better in my opinion cause I'm using it day to day and only issues is some minor UI bugs. My opinion is to go with Neo 😁

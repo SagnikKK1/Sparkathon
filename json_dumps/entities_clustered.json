@@ -1,107 +1,104 @@
 {
     "Samsung": {
-        "count": 17,
-        "avg_sentiment": 0.1797,
+        "count": 203,
+        "avg_sentiment": 0.3124,
         "example": "2025-06-13T11:54:12Z\n7s gen 2 is made by samsung so yrah heating issue \ud83e\udd21",
         "original_clusters": [
             "samsung"
         ]
     },
     "Phone": {
-        "count": 72,
-        "avg_sentiment": 0.0504,
+        "count": 2125,
+        "avg_sentiment": 0.2098,
         "example": "2025-07-01T20:11:07Z\nWell cant say much about legal and social as they are within their policy and the consent you tick at the phone startup about warranty policy.",
         "original_clusters": [
-            "the phone / your phone / my phone",
-            "this phone"
-        ]
-    },
-    "Motorola Edge": {
-        "count": 209,
-        "avg_sentiment": 0.1968,
-        "example": "And this seems to be an issue with most Moto devices. My edge 40 and G84 died the same way, When I went to the service centre they told me it would take 14500 for the edge 40 and 8500 for G84.",
-        "original_clusters": [
-            "the edge / edge / my edge / an edge"
-        ]
-    },
-    "Moto": {
-        "count": 219,
-        "avg_sentiment": 0.1275,
-        "example": "And this seems to be an issue with most Moto devices. My edge 40 and G84 died the same way, When I went to the service centre they told me it would take 14500 for the edge 40 and 8500 for G84.",
-        "original_clusters": [
-            "moto / moto edge / the moto / my moto edge"
-        ]
-    },
-    "Motorola Edge 50 Fusion": {
-        "count": 50,
-        "avg_sentiment": 0.2497,
-        "example": "2025-06-20T09:06:21Z\nIf updates are a necessity for you, don't switch to edge 50 fusion. For all the other requirements I would have definitely switched to edge 50 fusion.",
-        "original_clusters": [
-            "50 fusion / 60 fusion"
-        ]
-    },
-    "Pro Model": {
-        "count": 149,
-        "avg_sentiment": 0.1525,
-        "example": "2025-06-21T05:32:12Z\nNeither, get 60 pro/60 fusion. Also wait for 60 neo.",
-        "original_clusters": [
-            "pro"
-        ]
-    },
-    "Motorola Edge 60 Pro": {
-        "count": 30,
-        "avg_sentiment": 0.3508,
-        "example": "2025-06-21T05:32:12Z\nNeither, get 60 pro/60 fusion. Also wait for 60 neo.",
-        "original_clusters": [
-            "60 pro"
+            "the phone / phone / phones / a phone",
+            "your phone / my phone",
+            "this phone / which phone",
+            "this mobile / mobile"
         ]
     },
     "Motorola": {
-        "count": 130,
-        "avg_sentiment": 0.1238,
-        "example": "2025-06-21T05:45:46Z\nThe 50 fusion is a good alternative, and although the G75 promises updates for a longer time, I don't think it is the most important feature, if you want many years of updates there are the Google Pixel or Samsung, plus Motorola can change plans from one moment to the next. And it is almost certain that custom ROMs will be released for the 50 Fusion, after all, Motorola's software is almost Stock. Vi que comentaste sobre la pantalla curva, en ese caso puedes ir por el Edge 50 neo si est\u00e1 a tu alcance..",
+        "count": 3178,
+        "avg_sentiment": 0.2204,
+        "example": "And this seems to be an issue with most Moto devices. My edge 40 and G84 died the same way, When I went to the service centre they told me it would take 14500 for the edge 40 and 8500 for G84.",
         "original_clusters": [
-            "motorola / a motorola"
+            "moto / moto edge / my moto / moto phones",
+            "motorola"
         ]
     },
-    "Motorola Edge 50 Neo": {
-        "count": 54,
-        "avg_sentiment": 0.3446,
-        "example": "2025-06-21T05:45:46Z\nThe 50 fusion is a good alternative, and although the G75 promises updates for a longer time, I don't think it is the most important feature, if you want many years of updates there are the Google Pixel or Samsung, plus Motorola can change plans from one moment to the next. And it is almost certain that custom ROMs will be released for the 50 Fusion, after all, Motorola's software is almost Stock. Vi que comentaste sobre la pantalla curva, en ese caso puedes ir por el Edge 50 neo si est\u00e1 a tu alcance..",
+    "Motorola Edge": {
+        "count": 1342,
+        "avg_sentiment": 0.216,
+        "example": "And this seems to be an issue with most Moto devices. My edge 40 and G84 died the same way, When I went to the service centre they told me it would take 14500 for the edge 40 and 8500 for G84.",
         "original_clusters": [
-            "50 neo / the 50 neo / the edge 50 neo"
+            "edge / the edge / my edge"
+        ]
+    },
+    "Motorola Edge 50 Fusion": {
+        "count": 1092,
+        "avg_sentiment": 0.2641,
+        "example": "2025-06-20T09:06:21Z\nIf updates are a necessity for you, don't switch to edge 50 fusion. For all the other requirements I would have definitely switched to edge 50 fusion.",
+        "original_clusters": [
+            "50 fusion",
+            "moto edge 50 fusion"
+        ]
+    },
+    "Neo Series": {
+        "count": 559,
+        "avg_sentiment": 0.2099,
+        "example": "2025-06-21T05:32:12Z\nNeither, get 60 pro/60 fusion. Also wait for 60 neo.",
+        "original_clusters": [
+            "neo",
+            "40 neo / 50 neo"
+        ]
+    },
+    "Motorola Edge 50 Pro": {
+        "count": 154,
+        "avg_sentiment": 0.2066,
+        "example": "2025-07-08T20:39:42Z\nHey there from another Motorola family! We have Motorola G85 for the teen, Edge 30 Neo for my partner, and I've got an Edge 50 Pro. They're all working well for us. I can't speak for the others but mine hasn't slowed down or anything, and it's had at least one major Android upgrade.",
+        "original_clusters": [
+            "50 pro"
         ]
     },
     "Motorola Edge 50 Ultra": {
-        "count": 26,
-        "avg_sentiment": 0.3301,
-        "example": "2025-06-26T21:08:43Z\nI hope it's the edge 60 ultra",
+        "count": 41,
+        "avg_sentiment": 0.2232,
+        "example": "2025-06-15T23:14:39Z\nIn Mexico they advertised the Edge 40 as a flagship phone when it's not, the Edge 40 is getting Hello Ui Lite like other low end devices phone. On the Argentinian website they keep selling the Edge 50 Ultra as a phone \"ranked\" by dxomark. So don't take it personally, Motorola does that all the time.",
         "original_clusters": [
-            "50 ultra / ultra"
+            "50 ultra"
         ]
     },
-    "Device": {
-        "count": 8,
-        "avg_sentiment": 0.2324,
-        "example": "2025-06-12T12:07:26Z\nThe list is worthless... Motorola didn't deliver Android 15 to half the devices they announced would get it.",
+    "OnePlus": {
+        "count": 80,
+        "avg_sentiment": 0.2445,
+        "example": "2025-07-09T19:02:14Z\nI'm sorry brother , but I don't have any issues with my edge 40, my previous phone was oneplus 7 and after that this phone, yes it's not better than that one, but still it's okay, I agree with you on battery thing, except that, I don't think I have any other problem",
         "original_clusters": [
-            "the device"
-        ]
-    },
-    "Xiaomi": {
-        "count": 6,
-        "avg_sentiment": 0.0179,
-        "example": "2025-06-30T02:56:29Z\nI did exactly the same you did (from Poco X5 Pro 5G to Moto Edge 50 Fusion), but mainly because of the annoying \"feature\" present in Xiaomi MIUI/HyperOS that makes all notifications disappear from the lock screen after unlocking your phone, and also didn't like the way notifications are handled in the status bar. Nevertheless, I never had any issues with ads because I debloated the phone.",
-        "original_clusters": [
-            "xiaomi"
+            "oneplus"
         ]
     },
     "iPhone": {
-        "count": 12,
-        "avg_sentiment": 0.3615,
-        "example": "2025-06-13T12:23:40Z\nWhat does the protector box look like? on mine writes \"5D glass\" or something like that, and there was an iPhone 7 picture in the box.   \nI have the same problem with the screen protector, 50 Neo.     \nI haven't tried any other protector yet.   \nMaybe the protector is crap, or the edges of the 50 Neo are like this",
+        "count": 45,
+        "avg_sentiment": 0.3856,
+        "example": "2025-07-12T05:57:14Z\nBroke boy buy an iphone",
         "original_clusters": [
             "iphone"
+        ]
+    },
+    "OnePlus Nord": {
+        "count": 129,
+        "avg_sentiment": 0.2663,
+        "example": "2025-07-11T11:49:33Z\nHey I recently purchased the edge 60 fusion and so far its working great considering the fact that I'm not a hardcore user I only use it for casual photography and calls mostly.\n Must say I've encountered a few bugs here and there in the UI itself.\n Cameras are great for the price, great details in the photos. Night shots are okayish. \nBattery capacity is less than its competitors being the Vivo T4 and the newly launched Oneplus Nord ce5 but so far as per my use case the battery backup is pretty good. Overall for the price its a good phone.\nYou can checkout the reviews of the Oneplus Nord ce5 or the Vivo T4 too if you want to consider other brands than Moto",
+        "original_clusters": [
+            "nord / nord ce4"
+        ]
+    },
+    "Realme": {
+        "count": 106,
+        "avg_sentiment": 0.3146,
+        "example": "In my g54 5g i face issues with media player, different types of video codec etc etc while my 6 year old REALME 3 PRO does everything better than the moto",
+        "original_clusters": [
+            "realme"
         ]
     }
 }

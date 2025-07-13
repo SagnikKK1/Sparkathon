@@ -20,7 +20,7 @@ from pathlib import Path
 
 # ── Conversion helpers ─────────────────────────────────────────────────────
 def sentiment_to_score(s: float) -> float:
-    """Map VADER compound −1..1 → 0..10 linear."""
+    """Map VADER compound -1..1 → 0..10 linear."""
     return round((s + 1) * 5, 2)
 
 # ── Sentiment stats on raw comments ────────────────────────────────────────

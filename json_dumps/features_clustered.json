@@ -1,124 +1,138 @@
 {
-    "Reliability": {
-        "count": 61,
-        "avg_sentiment": 0.18,
-        "example": "And this seems to be an issue with most Moto devices. My edge 40 and G84 died the same way, When I went to the service centre they told me it would take 14500 for the edge 40 and 8500 for G84.",
-        "original_clusters": [
-            "issues / an issue",
-            "any issues",
-            "bugs",
-            "this issue"
-        ],
-        "relevance": 0.6
-    },
-    "Battery": {
-        "count": 87,
-        "avg_sentiment": 0.3907,
+    "Battery Life": {
+        "count": 202,
+        "avg_sentiment": 0.1909,
         "example": "So i just went to a local reputed repair shop he charged me 2k and told me that only a few ICS were burnt because of the Power surge and one connector with the battery was broken, Also water vapour was inside both the phone even though they are IP68 rated and it was peak summer season; all that took around 3 hours to him while the moto service doesn't even check and change the whole motherboard.",
         "original_clusters": [
-            "the battery / battery",
-            "battery life"
+            "battery / the battery"
         ],
-        "relevance": 0.8
+        "relevance": 0.9
     },
-    "Software Updates": {
-        "count": 164,
-        "avg_sentiment": 0.1205,
-        "example": "2025-06-20T09:06:21Z\nIf updates are a necessity for you, don't switch to edge 50 fusion. For all the other requirements I would have definitely switched to edge 50 fusion.",
+    "Water Resistance": {
+        "count": 96,
+        "avg_sentiment": 0.1047,
+        "example": "So i just went to a local reputed repair shop he charged me 2k and told me that only a few ICS were burnt because of the Power surge and one connector with the battery was broken, Also water vapour was inside both the phone even though they are IP68 rated and it was peak summer season; all that took around 3 hours to him while the moto service doesn't even check and change the whole motherboard.",
         "original_clusters": [
-            "updates / the update / the updates",
-            "an update / update"
+            "water"
         ],
         "relevance": 0.4
     },
+    "Reliability": {
+        "count": 169,
+        "avg_sentiment": -0.2684,
+        "example": "2025-07-11T18:06:17Z\nPassei o mesmo pelo oque voc\u00ea passou agora em janeiro comprei e quebrou em aproximadamente 20 dias mais no meu caso ele perdeu a garantia porque desbloqueei o bootloader\u00a0 e ele \"quebrou\" porque dei um hardbrick nele o celular morreu sem ter nenhuma pe\u00e7a quebrada todas novinhas levei em v\u00e1rios t\u00e9cnicos do centro da minha cidade todos falavam que tinha certeza que conseguiam consertar e no final entregavam sem conserto quando levei na autorizada ele disseram o mesmo que era problema na placa e me cobraram mais que o pr\u00f3prio celular pra concertar fui em reclame aqui liguei e sempre diziam que a \u00fanica op\u00e7\u00e3o era pagar o valor que eu n\u00e3o tinha condi\u00e7\u00f5es e a placa desse celular disseram que s\u00f3 vai aparecer em mercado pra concertar s\u00f3 no final desse ano por ser um aparelho muito novo muito dif\u00edcil achar enfim v\u00e3o te enrolar voc\u00ea vai correr atr\u00e1s e s\u00f3 vai perder tempo igual eu fiz a solu\u00e7\u00e3o \u00e9 esperar chegar no mercado essa placa que vai demorar ou guardar dinheiro no banco pra comprar um novo que foi oque eu fiz e vender esse celular em algumas lojas online que vc confia porque v\u00e1rios t\u00e9cnicos querem as pe\u00e7as desse celular vende com a caixa e tudo eles v\u00e3o se interessar fiz o mesmo vendi por 400 reais ele do jeito que estava",
+        "original_clusters": [
+            "problem"
+        ],
+        "relevance": 0.5
+    },
     "Operating System": {
-        "count": 75,
-        "avg_sentiment": 0.1227,
-        "example": "2025-07-07T02:36:23Z\nI updated to Android 15 and although in its first versions it did have some problems with battery life, it currently behaves very well and is very stable with the May 2025 security patch. I have not had to do a factory reset.",
+        "count": 126,
+        "avg_sentiment": 0.2198,
+        "example": "2025-07-12T13:41:45Z\nMoto can never be trusted for software updates. But as far as promises go, Moto edge 50 meo comes with 5 Android updates and 6 years securities updates",
         "original_clusters": [
             "android"
         ],
         "relevance": 0.5
     },
-    "Camera": {
-        "count": 44,
-        "avg_sentiment": 0.2684,
-        "example": "2025-06-14T21:03:05Z\nWell just to start out no one ever buys a Motorola for their camera performance",
+    "Software Updates": {
+        "count": 94,
+        "avg_sentiment": 0.1635,
+        "example": "2025-07-12T13:41:45Z\nMoto can never be trusted for software updates. But as far as promises go, Moto edge 50 meo comes with 5 Android updates and 6 years securities updates",
         "original_clusters": [
-            "the camera / camera"
+            "updates"
         ],
-        "relevance": 0.9
+        "relevance": 0.6
+    },
+    "Stock Android": {
+        "count": 31,
+        "avg_sentiment": 0.1437,
+        "example": "2025-06-21T05:45:46Z\nThe 50 fusion is a good alternative, and although the G75 promises updates for a longer time, I don't think it is the most important feature, if you want many years of updates there are the Google Pixel or Samsung, plus Motorola can change plans from one moment to the next. And it is almost certain that custom ROMs will be released for the 50 Fusion, after all, Motorola's software is almost Stock. Vi que comentaste sobre la pantalla curva, en ese caso puedes ir por el Edge 50 neo si est\u00e1 a tu alcance..",
+        "original_clusters": [
+            "stock"
+        ],
+        "relevance": 0.5
     },
     "Display": {
-        "count": 9,
-        "avg_sentiment": 0.2611,
-        "example": "2025-06-26T11:46:38Z\nMy 2 cents on the curved screens, and maybe someone can convince me they are good now. I had a 2021 edge plus and currently have a 2022 edge plus (US naming, I know we are different from everyone else). I did like the 21' but the screen seemed cumbersome, I disliked when content goes past the curve, and cases did not fully enclosed it due to the edge (only phone screen I have broken in the last 10-15 years, due to a 1ft fall into a wooden bedframe corner, case did not help because of how it landed and no glass screen protector because only the film type was available for this phone). Overall not a fan. Mostly love the 22', only gripe is the stylus needs a specific case that falls apart quick, already have gone through 2 of the them and gave up.",
+        "count": 210,
+        "avg_sentiment": 0.1188,
+        "example": "2025-06-14T13:49:54Z\nCmf/Nothing phone are also good, but these are just huge giant sized.         \nThere are no ads on Motorola phones, there's just a new weather app that has ads, but this must be disabled. and you will automatically get the Moto weather back, which has no ads.   \nDon't forget that the 50 Neo has a smaller battery.  I don't like curved displays either, not practical.",
         "original_clusters": [
-            "the screen"
+            "display / the display"
         ],
-        "relevance": 0.7
+        "relevance": 0.8
     },
-    "Build Quality": {
-        "count": 3,
-        "avg_sentiment": 0.3333,
-        "example": "2025-06-26T15:32:04Z\nWhat a shame this company is! With all the problems users are experiencing, lack of tracking and updating continue to release new models. It costs them less to release new models rather than paying a good developer for software updates and monitoring... It proves the quality of their products which even in the ads show waterproofing problems while they sell this same model as ip69 lol. I've never seen that in my life",
+    "Camera": {
+        "count": 418,
+        "avg_sentiment": 0.2656,
+        "example": "2025-06-14T21:03:05Z\nWell just to start out no one ever buys a Motorola for their camera performance",
         "original_clusters": [
-            "the quality"
+            "camera / the camera"
         ],
-        "relevance": 0.7
+        "relevance": 0.8
+    },
+    "Performance": {
+        "count": 94,
+        "avg_sentiment": 0.2782,
+        "example": "2025-06-14T21:03:05Z\nWell just to start out no one ever buys a Motorola for their camera performance",
+        "original_clusters": [
+            "performance"
+        ],
+        "relevance": 0.8
+    },
+    "Video Recording": {
+        "count": 406,
+        "avg_sentiment": 0.2615,
+        "example": "2025-06-16T10:50:21Z\nCan anyone confirm if the edge 50 neo can switch lens while recording at 4k30? if it does can anyone dm me a video of it switching lenses in a video",
+        "original_clusters": [
+            "video / a video"
+        ],
+        "relevance": 0.4
     },
     "Customization Options": {
-        "count": 18,
-        "avg_sentiment": 0.1618,
+        "count": 30,
+        "avg_sentiment": 0.1752,
         "example": "2025-07-09T06:43:46Z\nTurn off Ram boost, and the live caption feature. I don't know what its exact name is, but when you control the volume it appears below it, and this ugly. I turned it off.   \nDisable and delete the new 1Weather/Weather app, because then the real Moto weather will appear which is the best.    \nDelete disable Live lock screen app, and also Moto app manager. this downloads random games for you.   \nI also disabled hidden Meta apps.    \nYou can turn off your Motorola from collecting datas about you. for example for ads. or to improve Moto phones, if there is anything. or Idk, but I turned off spying.    \nYou can use private DNS in your Wifi settings, and there will be no ads in the apps. (there will still be ads on Youtube)",
         "original_clusters": [
             "settings"
         ],
-        "relevance": 0.3
-    },
-    "App Support": {
-        "count": 19,
-        "avg_sentiment": 0.1071,
-        "example": "2025-07-09T06:43:46Z\nTurn off Ram boost, and the live caption feature. I don't know what its exact name is, but when you control the volume it appears below it, and this ugly. I turned it off.   \nDisable and delete the new 1Weather/Weather app, because then the real Moto weather will appear which is the best.    \nDelete disable Live lock screen app, and also Moto app manager. this downloads random games for you.   \nI also disabled hidden Meta apps.    \nYou can turn off your Motorola from collecting datas about you. for example for ads. or to improve Moto phones, if there is anything. or Idk, but I turned off spying.    \nYou can use private DNS in your Wifi settings, and there will be no ads in the apps. (there will still be ads on Youtube)",
-        "original_clusters": [
-            "apps"
-        ],
-        "relevance": 0.5
-    },
-    "Performance": {
-        "count": 5,
-        "avg_sentiment": 0.4217,
-        "example": "I've had it for about a year and the performance has stated consistent.",
-        "original_clusters": [
-            "the performance"
-        ],
-        "relevance": 0.8
-    },
-    "Lock Screen": {
-        "count": 5,
-        "avg_sentiment": 0.0079,
-        "example": "2025-07-09T06:28:57Z\nBro, in the lock screen why don't you change the clock style to the nice kind?",
-        "original_clusters": [
-            "the lock screen"
-        ],
-        "relevance": 0.4
-    },
-    "Bluetooth": {
-        "count": 13,
-        "avg_sentiment": 0.103,
-        "example": "2025-07-03T10:24:27Z\nNeed to tap two times to activate and disable Bluetooth now...that sucks!",
-        "original_clusters": [
-            "bluetooth"
-        ],
         "relevance": 0.4
     },
     "Price": {
-        "count": 7,
-        "avg_sentiment": 0.4451,
-        "example": "But 2 things seperate them. 50 ultra has 64mp telephoto lens vs 60 pro has 8mp. Ultra can record better video vs pro. But pro 60 haa better battery life with 6000mah and ultra has 4500. So you choose what's more important to you while the price difference is nearly 17k.",
+        "count": 71,
+        "avg_sentiment": 0.2982,
+        "example": "2025-07-09T21:28:00Z\nSame here, we have just switched to 2 50 Neo my wife and I and we have absolutely no regrets, they are great value for money, 249\u20ac in 12/512GB and with free Buds in addition..",
         "original_clusters": [
+            "money",
             "the price"
         ],
-        "relevance": 0.8
+        "relevance": 0.7
+    },
+    "Software Issues": {
+        "count": 29,
+        "avg_sentiment": 0.1482,
+        "example": "2025-07-09T02:09:17Z\nSoftware support is spotty\nEOL haste is.. well...\nBugs are indeed to come across \n\"Motorola service center\" visits are HELLA EXPENSIVE",
+        "original_clusters": [
+            "bugs"
+        ],
+        "relevance": 0.5
+    },
+    "Storage": {
+        "count": 30,
+        "avg_sentiment": 0.0641,
+        "example": "2025-07-09T05:35:35Z\nG04 and G14 were such great value with their ufs 2.2. It was alittle too good the G05 and G15 reverted it back to emmc",
+        "original_clusters": [
+            "ufs"
+        ],
+        "relevance": 0.5
+    },
+    "Gaming Performance": {
+        "count": 58,
+        "avg_sentiment": 0.4027,
+        "example": "2025-07-10T04:09:10Z\nHonestamente Android 15 es una porquer\u00eda me jodi\u00f3 el tel\u00e9fono. con Android 14 jugaba call of duty y me Hiba joya duraba hasta 5 horas seguidas y si se calentaba el tel\u00e9fono pero lo que me gusta que el procesador junto con Android 14 hac\u00edan un exelente trabajo lo que hac\u00eda el tel\u00e9fono baja un 20 % el rendimiento en el juego que no era mucho pero si se notaba pero despu\u00e9s de 20 a 30 minutos se enfriaba el tel\u00e9fono y regresaba al 100% de rendimiento ojo este tel\u00e9fono no lo pens\u00e9 para utilizarlo como tel\u00e9fono gaming pero me sorprendi\u00f3 la verdad volviendo al tema desde que se actualizo a Android 15 el rendimiento en call of duty me va de la mierda el medidor de temperatura de la aplicaci\u00f3n de motogame time me marca que est\u00e1 alos 54  grados cuando ni siquiera llevo 30 minutos jugando osea que mamada despu\u00e9s el tel\u00e9fono detecta una temperatura disque extrema autom\u00e1ticamente Android 15 detecta eso y baja el rendimiento del procesador un 80% entonces el juego se empieza a ver como si estuviera jugando un juego de la s\u00faper nintendo alguien tiene alguna soluci\u00f3n",
+        "original_clusters": [
+            "gaming"
+        ],
+        "relevance": 0.6
     }
 }
