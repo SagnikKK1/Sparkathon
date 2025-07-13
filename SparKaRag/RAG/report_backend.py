@@ -12,8 +12,16 @@ DB_URL = os.getenv('DATABASE_URL')
 
 def insert_report(file_path, table_name):
     """Insert the contents of a text file into the specified table."""
-    with open(file_path, 'r', encoding='utf-8') as file:
-        text_data = file.read()
+    if not os.path.exists(file_path):
+        print(f"Error: File not found - {file_path}")
+        return
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            text_data = file.read()
+    except Exception as e:
+        print(f"Error reading file {file_path}: {e}")
+        return
+
     try:
         conn = psycopg2.connect(DB_URL)
         cur = conn.cursor()
@@ -36,5 +44,12 @@ def insert_report(file_path, table_name):
         print(f"Error inserting data into {table_name}: {e}")
 
 if __name__ == "__main__":
-    insert_report('../before_cleaning_report.txt', 'prereport')
-    insert_report('../product_report.txt', 'cleanedreport')
+    # Get the absolute path of the current script
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Build absolute paths for the report files
+    before_cleaning_path = os.path.join(current_dir, 'before_cleaning_report.txt')
+    product_report_path = os.path.join(current_dir, 'product_report.txt')
+
+    insert_report(before_cleaning_path, 'prereport')
+    insert_report(product_report_path, 'cleanedreport')

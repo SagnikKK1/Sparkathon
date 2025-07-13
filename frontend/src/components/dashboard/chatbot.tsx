@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import jsPDF from 'jspdf';
 import { marked } from 'marked';
 import { convert } from 'html-to-text';
@@ -9,9 +9,27 @@ import PdfImage from '../dashboard/report.png';
 import RawDataImage from '../dashboard/rawdata.png';
 
 export const DashboardChatbotTile: React.FC = () => {
+  const [loading, setLoading] = useState(false);
+
   const handleReport = async () => {
     try {
-      // Fetch both markdown reports using fetch API
+      setLoading(true);
+
+      // 1. Trigger backend pipeline to run Python scripts
+      const pipelineRes = await fetch('http://localhost:3000/api/pipeline/report', {
+        method: 'POST',
+      });
+
+      if (!pipelineRes.ok) {
+        throw new Error('Failed to start report pipeline');
+      }
+
+      // 2. Optionally, poll for pipeline completion
+      //    Here, we simply wait a fixed interval, but you can implement polling for status
+      //    Adjust the timeout as per your backend pipeline duration
+      await new Promise((resolve) => setTimeout(resolve, 8000));
+
+      // 3. Fetch both markdown reports using fetch API
       const [prereportRes, cleanedreportRes] = await Promise.all([
         fetch('http://localhost:3000/api/prereport/latest'),
         fetch('http://localhost:3000/api/cleanedreport/latest'),
@@ -75,6 +93,8 @@ export const DashboardChatbotTile: React.FC = () => {
     } catch (error) {
       alert('Failed to generate report. Please try again.');
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -115,11 +135,18 @@ export const DashboardChatbotTile: React.FC = () => {
         className="chatbot-section chatbot-section-hover"
         onClick={handleReport}
         tabIndex={0}
+        style={{ position: 'relative' }}
       >
         <div className="chatbot-section-content">
           <img src={PdfImage} alt="PDF Report" className="chatbot-section-img" />
           <div className="chatbot-section-text">Download detailed report</div>
         </div>
+        {loading && (
+          <div className="chatbot-loading-overlay">
+            <div className="chatbot-spinner" />
+            <span className="chatbot-loading-text">Generating report...</span>
+          </div>
+        )}
       </div>
     </div>
   );
