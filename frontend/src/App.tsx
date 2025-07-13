@@ -4,6 +4,7 @@ import { LoginPage } from './pages/login_page';
 import { SignupPage } from './pages/signup_page';
 import { DashboardPage } from './pages/dashboard';
 import { Loading } from './pages/loading';
+import { AboutUs } from './pages/aboutus';
 import './App.css';
 import ChatbotPage from './pages/chatbot';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/loading" element={< Loading />} />
           <Route path="/chatbot" element={<ChatbotPage />} />
+          <Route path="/aboutus" element={<AboutUs/>}/>
           <Route path="/" element={<Navigate to="/home" replace />} />
         </Routes>
       </Router>
