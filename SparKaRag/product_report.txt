@@ -1,0 +1,66 @@
+Here's the cleaned report with only substantive sections retained:
+
+# Product Analysis Report (Condensed)
+
+## Executive Summary
+
+**Key Strengths and Weaknesses**
+-------------------------------
+Strengths:
+- Budget-friendly pricing
+- Durability and reliability
+- Good value for money
+
+Weaknesses:
+- Poor performance, battery life, and camera quality
+- Charging issues and liquid damage susceptibility
+- Subpar customer service experiences
+- Data privacy concerns
+
+**Actionable Recommendations**
+-------------------------------
+1. **Customer Service Overhaul**: Resolve warranty disputes and repair processes
+2. **Quality Improvements**: Enhance battery performance and camera capabilities
+3. **Transparency Initiatives**: Clarify data policies and product specifications
+4. **Feedback System Implementation**: Establish structured user review collection
+
+---
+
+## Trends & Patterns Analysis
+
+**Key Insights:**
+- Mixed consumer sentiment across product aspects
+- Strong value-for-money perception persists
+- Service quality directly impacts brand reputation
+- Software update delays threaten user retention
+
+**Strategic Opportunities:**
+- Capitalize on price competitiveness in marketing
+- Convert positive value perception into loyalty programs
+- Develop budget-conscious consumer targeting strategies
+
+**Critical Risks:**
+- Customer service failures may erode brand loyalty
+- Technical issues could increase product return rates
+
+---
+
+## Priority Action Items
+
+1. **Customer Experience**
+   - Implement service response time benchmarks
+   - Establish clear warranty fulfillment protocols
+
+2. **Product Development**
+   - Battery and camera hardware upgrades
+   - Accelerate software update delivery timeline
+
+3. **Marketing Strategy**
+   - Launch value-focused promotional campaigns
+   - Develop case studies highlighting durability
+
+4. **Data Collection**
+   - Implement quarterly user satisfaction surveys
+   - Create real-time feedback monitoring system
+
+This condensed version removes all sections that contained placeholder content, search failures, or empty data tables, while preserving actionable insights and substantive analysis. The retained content focuses on concrete findings and strategic recommendations supported by available evidence.

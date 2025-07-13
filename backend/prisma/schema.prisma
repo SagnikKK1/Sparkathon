@@ -93,3 +93,17 @@ model Card6 {
 
   @@map("card6")
 }
+
+model prereport {
+  id        String   @id @default(uuid()) @map("id")
+  data      String   @map("data")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @map("updated_at")
+}
+
+model cleanedreport {
+  id        String   @id @default(uuid()) @map("id")
+  data      String   @map("data")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @map("updated_at")
+}
