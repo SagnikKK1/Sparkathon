@@ -83,7 +83,7 @@ body {
 
 .dashboard-tile-heatmap {
   min-width: 0;
-  max-width: 520px; /* Increased width for heatmap */
+  max-width: 620px; /* Increased width for heatmap */
   padding: 0 8px;
   height: 100%;
   display: flex;
