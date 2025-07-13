@@ -57,6 +57,31 @@
   font-family: 'Gotham', Arial, sans-serif;
 }
 
-.back-btn {
+.premium-btn.back-btn {
   margin-right: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: filter 0.2s, box-shadow 0.2s;
+}
+
+.back-btn-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  box-shadow: 0 0 16px 4px rgba(151,125,255,0.30);
+  background: rgba(151,125,255,0.09);
+  transition: box-shadow 0.2s, filter 0.2s, background 0.2s;
+  display: block;
+}
+
+.premium-btn.back-btn:hover .back-btn-icon,
+.premium-btn.back-btn:focus .back-btn-icon {
+  box-shadow: 0 0 32px 8px rgba(151,125,255,0.55);
+  filter: brightness(1.15) drop-shadow(0 0 8px #977dff);
+  background: rgba(151,125,255,0.18);
 }
