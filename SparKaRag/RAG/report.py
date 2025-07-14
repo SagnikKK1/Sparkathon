@@ -13,7 +13,7 @@ METADATA_FILE = os.path.join(current_dir, 'metadata.json')
 NER_CONTEXT_FILE = os.path.join(current_dir, 'extra_context', 'context_store.json')
 BEFORE_CLEANING_FILE = os.path.join(current_dir, 'before_cleaning_report.txt')
 REPORT_FILE = os.path.join(current_dir, 'product_report.txt')
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 # ----------------------------
 
 def clean_report_with_openrouter(api_key, report_text):

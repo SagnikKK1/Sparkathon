@@ -48,7 +48,7 @@ export const Loading: React.FC = () => {
     setProgress(Math.round(((currentStep + 1) / pipelineSteps.length) * 100));
     const stepTimeout = setTimeout(() => {
       setCurrentStep((step) => step + 1);
-    }, 50000); // 50 seconds per step
+    }, 30000); // 30 seconds per step
 
     return () => {
       clearTimeout(stepTimeout);
