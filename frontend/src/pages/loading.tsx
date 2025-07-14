@@ -80,9 +80,9 @@ export const Loading: React.FC = () => {
         </div>
         <CircularLoader progress={progress} size={80} strokeWidth={8} />
         <div className="pipeline-label">{Step.label}</div>
-        <div className="loading-message">
+        {/* <div className="loading-message">
           {Step.label}...
-        </div>
+        </div> */}
       </div>
     </div>
   );
