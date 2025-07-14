@@ -33,6 +33,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
 
     setIsLoading(true);
     setError('');
+      navigate('/loading');
 
     try {
       const backendUrl = (window as any).env?.REACT_APP_BACKEND_URL || 'http://localhost:3000';

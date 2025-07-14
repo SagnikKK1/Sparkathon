@@ -92,9 +92,9 @@ def main():
     ]
 
     print("▶️  Launching Reddit scraper in new terminal…", flush=True)
-    p_reddit = launch_in_new_terminal(reddit_cmd, "Reddit scraper")
+    p_reddit = launch(reddit_cmd, "Reddit scraper")
     print("▶️  Launching YouTube scraper in new terminal…", flush=True)
-    p_yt     = launch_in_new_terminal(yt_cmd,     "YouTube scraper")
+    p_yt     = launch(yt_cmd,     "YouTube scraper")
 
     reddit_done = str(reddit_file)
     yt_done     = str(yt_file)
