@@ -107,3 +107,13 @@ model cleanedreport {
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @map("updated_at")
 }
+
+model ChatbotMessage {
+  id             String   @id @default(uuid()) @map("id")
+  userQuery      String   @map("user_query")
+  systemResponse String   @map("system_response")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("chatbot_messages")
+}

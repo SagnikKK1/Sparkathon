@@ -3,15 +3,24 @@ import faiss
 import os
 import re
 import requests
+import psycopg2
+from datetime import datetime
 from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+import sys
 
 # ---------- CONFIG ----------
 MODEL_NAME = 'all-MiniLM-L6-v2'
-INDEX_FILE = 'C:/IITBBS/Projects/Walmart Sparkathon/Development/Sparkathon/SparKaRag/RAG/faiss_index.index'
-METADATA_FILE = 'C:/IITBBS/Projects/Walmart Sparkathon/Development/Sparkathon/SparKaRag/RAG/metadata.json'
 TOP_K = 3
 OPENROUTER_MODEL = 'deepseek/deepseek-r1:free'
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "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")
+load_dotenv()
+DB_URL = os.getenv('DATABASE_URL')
+
+# Dynamically resolve file paths relative to this script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+INDEX_FILE = os.path.join(SCRIPT_DIR, 'faiss_index.index')
+METADATA_FILE = os.path.join(SCRIPT_DIR, 'metadata.json')
 # ----------------------------
 
 def embed_text(text, model):
@@ -38,7 +47,7 @@ def retrieve_with_sources(query, model, index, metadata, k=TOP_K):
     return sources
 
 def load_ner_context():
-    ner_file = "RAG/extra_context/context_store.json"
+    ner_file = os.path.join(SCRIPT_DIR, "RAG", "extra_context", "context_store.json")
     if os.path.exists(ner_file):
         with open(ner_file) as f:
             return json.load(f)
@@ -91,29 +100,50 @@ def openrouter_chat(prompt):
         raise RuntimeError(f"Request failed: {response.status_code}\n{response.text}")
     return response.json()['choices'][0]['message']['content'].strip()
 
-def main():
-    print("🔍 Query Mode: Ask me anything about the product.")
+def insert_chatbot_message(user_query: str, system_response: str):
+    try:
+        conn = psycopg2.connect(DB_URL)
+        cur = conn.cursor()
+        now = datetime.utcnow()
+        insert_query = '''
+            INSERT INTO chatbot_messages (id, user_query, system_response, created_at, updated_at)
+            VALUES (gen_random_uuid(), %s, %s, %s, %s)
+        '''
+        cur.execute(insert_query, (user_query, system_response, now, now))
+        conn.commit()
+        cur.close()
+        conn.close()
+        print("✅ ChatBotMessage inserted into database.")
+    except Exception as e:
+        print(f"❌ Failed to insert ChatBotMessage: {e}")
 
+def answer_query(user_query: str):
     index = load_faiss_index(INDEX_FILE)
     metadata = load_metadata(METADATA_FILE)
     model = SentenceTransformer(MODEL_NAME)
 
-    while True:
-        query = input("\n🔸 Your Question (or type 'exit'): ").strip()
-        if query.lower() == 'exit':
-            break
+    sources = retrieve_with_sources(user_query, model, index, metadata)
+    ner_context = load_ner_context()
+    prompt = build_prompt(user_query, sources, ner_context)
 
-        sources = retrieve_with_sources(query, model, index, metadata)
-        ner_context = load_ner_context()
-        prompt = build_prompt(query, sources, ner_context)
-
-        try:
-            raw_answer = openrouter_chat(prompt)
-            final_answer = expand_citations(raw_answer, sources)
-            print("\n🧠 Answer with Sources:")
-            print(final_answer)
-        except Exception as e:
-            print("❌ Failed to get a response:", e)
+    try:
+        raw_answer = openrouter_chat(prompt)
+        final_answer = expand_citations(raw_answer, sources)
+        insert_chatbot_message(user_query, final_answer)
+        return final_answer
+    except Exception as e:
+        print("❌ Failed to get a response:", e)
+        insert_chatbot_message(user_query, f"Error: {e}")
+        return f"Error: {e}"
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) >= 2:
+        user_query = sys.argv[1]
+    else:
+        user_query = input("\n🔸 Your Question: ").strip()
+    if not user_query:
+        print("No question entered. Exiting.")
+    else:
+        answer = answer_query(user_query)
+        print("\n🧠 Answer with Sources:")
+        print(answer)

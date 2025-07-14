@@ -11,6 +11,7 @@ import card3Router from './routes/card3/card3_route';
 import card4Router from './routes/card4/card4_route';
 import reportFetchRouter from './routes/report/report_fetch_route';
 import card6Router from './routes/card6/card6_route';
+import chatBotRouter from './routes/chatbot/chatbot_route';
 
 dotenv.config();
 
@@ -49,6 +50,7 @@ app.use('/api/card4', card4Router)
 app.use('/api/card6', card6Router)
 
 app.use('/api', reportFetchRouter)
+app.use('/api', chatBotRouter)
 
 app.use((req, res) => {
   res.status(404).json({ 
