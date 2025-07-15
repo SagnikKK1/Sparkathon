@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 import authRoutes from './routes/auth/auth_routes';
 import userRoutes from './routes/user/user_routes';
 import activityRoutes from './routes/user/activity_routes';
@@ -13,7 +14,7 @@ import reportFetchRouter from './routes/report/report_fetch_route';
 import card6Router from './routes/card6/card6_route';
 import chatBotRouter from './routes/chatbot/chatbot_route';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 const app = express();
 const PORT = process.env.PORT || 3000;

@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import { prisma } from '../../global_prisma/prisma';
 import { spawn } from 'child_process';
+import path from 'path';
+
 
 // Helper to run a Python script and return a promise that resolves when the script finishes
 function runPythonScript(scriptName: string): Promise<void> {
@@ -54,11 +56,13 @@ export async function runReportPipeline(req: Request, res: Response): Promise<vo
 
   try {
     console.log('[INFO] Running report.py...');
-    await runPythonScript('C:/Users/asing/OneDrive/Desktop/Coding/Sparkathon/SparKaRag/RAG/report.py');
+    const reportPyPath = path.resolve(__dirname, '../../../../SparKaRag/RAG/report.py');
+    await runPythonScript(reportPyPath);
     console.log('[INFO] report.py finished successfully.');
 
     console.log('[INFO] Running report_backend.py...');
-    await runPythonScript('C:/Users/asing/OneDrive/Desktop/Coding/Sparkathon/SparKaRag/RAG/report_backend.py');
+    const reportBackendPyPath = path.resolve(__dirname, '../../../../SparKaRag/RAG/report_backend.py');
+    await runPythonScript(reportBackendPyPath);
     console.log('[INFO] report_backend.py finished successfully.');
 
     await prisma.pipelineStatus.update({

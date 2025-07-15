@@ -53,17 +53,10 @@ export async function runAllPipeline(req: Request, res: Response): Promise<void>
     // Determine the .venv directory (assumes .venv is in the NER_and_Dashboard project)
     // Adjust this logic if your structure is different
     const scriptPath = path.resolve(__dirname, '../../../../NER_and_Dashboard/src/run_all.py');
-    let venvDir: string | undefined;
-    const parent = path.dirname(scriptPath);
-    const grandparent = path.dirname(parent);
-    const venvInParent = path.join(parent, '.venv');
-    const venvInGrandparent = path.join(grandparent, '.venv');
-    if (fs.existsSync(venvInParent)) venvDir = venvInParent;
-    else if (fs.existsSync(venvInGrandparent)) venvDir = venvInGrandparent;
-    else venvDir = undefined;
+    const venvDir = path.resolve(__dirname, '../../../../.venv');
 
-    if (!venvDir) {
-      throw new Error('No .venv directory found near script. Please ensure the correct virtual environment is present.');
+    if (!fs.existsSync(venvDir)) {
+      throw new Error('No .venv directory found. Please ensure the correct virtual environment is present.');
     }
 
     console.log('[INFO] 2. Spawning Python pipeline script with arguments:', { product, product_type, video_limit, since, min_len, post_limit, venvDir });

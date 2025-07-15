@@ -25,7 +25,7 @@ def main():
     print("=" * 50)
     
     # Get API key
-    api_key = os.getenv('OPENROUTER_API_KEY',"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")
+    api_key = os.environ.get('OPENROUTER_API_KEY')
     if not api_key:
         print("🔑 Please enter your OpenRouter API key:")
         api_key = getpass("API Key: ").strip()

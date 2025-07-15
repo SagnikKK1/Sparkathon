@@ -13,7 +13,9 @@ import torch
 # ---------- CONFIG ----------
 MODEL_NAME             = os.get('MODEL_NAME')
 OPENROUTER_MODEL       = os.getenv('OPENROUTER_MODEL')
-OPENROUTER_API_KEY     = os.getenv("OPENROUTER_API_KEY", "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")
+OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY')
+if not OPENROUTER_API_KEY:
+    raise RuntimeError('OPENROUTER_API_KEY environment variable is not set!')
 CLUSTER_DIR            = os.getenv("CLUSTER_DIR")
 INDEX_FILE             = os.getenv("INDEX_FILE")
 METADATA_FILE          = os.getenv("METADATA_FILE")

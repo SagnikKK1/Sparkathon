@@ -1,0 +1,292 @@
+{
+    "time / the time": {
+        "count": 372,
+        "avg_sentiment": 0.1634720430107527,
+        "example": "2025-06-24T15:47:21Z\nAh memories of the leak and the shitstorm around the Gizmodo story. Good times. Old internet times."
+    },
+    "iphone / the iphone / an iphone / iphones / a iphone": {
+        "count": 2871,
+        "avg_sentiment": 0.19379693486590038,
+        "example": "2025-06-24T15:40:15Z\nIMO, iPhone 4 was peak iPhone design."
+    },
+    "the phone / a phone / phones / phone": {
+        "count": 4753,
+        "avg_sentiment": 0.169562844519251,
+        "example": "2025-06-24T15:40:15Z\nIMO, iPhone 4 was peak iPhone design."
+    },
+    "the design / design": {
+        "count": 596,
+        "avg_sentiment": 0.2161518456375839,
+        "example": "2025-06-24T15:40:15Z\nIMO, iPhone 4 was peak iPhone design."
+    },
+    "that": {
+        "count": 1470,
+        "avg_sentiment": 0.18317680272108844,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me."
+    },
+    "apple": {
+        "count": 1294,
+        "avg_sentiment": 0.19574768160741887,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me."
+    },
+    "who": {
+        "count": 340,
+        "avg_sentiment": 0.1397120588235294,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me."
+    },
+    "all": {
+        "count": 1542,
+        "avg_sentiment": 0.20785771725032423,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me."
+    },
+    "nothing": {
+        "count": 207,
+        "avg_sentiment": 0.17034782608695653,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me."
+    },
+    "everyone": {
+        "count": 64,
+        "avg_sentiment": 0.15798281249999999,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me."
+    },
+    "years": {
+        "count": 348,
+        "avg_sentiment": 0.17875,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me."
+    },
+    "this": {
+        "count": 1233,
+        "avg_sentiment": 0.19361605839416057,
+        "example": "2025-06-24T15:51:29Z\nI think this was my GOAT phone. The Retina display, the form factor, the horsepower to run a jailbroken phone with almost no lag, I feel like it was also the first \u201cgood\u201d camera for the times, a big jump from the 3GS"
+    },
+    "the camera / camera / cameras / the cameras / a camera": {
+        "count": 990,
+        "avg_sentiment": 0.23060585858585858,
+        "example": "2025-06-24T15:51:29Z\nI think this was my GOAT phone. The Retina display, the form factor, the horsepower to run a jailbroken phone with almost no lag, I feel like it was also the first \u201cgood\u201d camera for the times, a big jump from the 3GS"
+    },
+    "they / them": {
+        "count": 881,
+        "avg_sentiment": 0.18183654937570942,
+        "example": "2025-06-24T16:01:54Z\nMan this is like the days I long for with Apple or just tech in general. Everything felt so new and exciting! I remember even then watching the keynotes or reading live blogs where I could find them. I drove to the Apple Store in Charleston just to stand in line with hundreds of other people all night to get this thing on launch day."
+    },
+    "people": {
+        "count": 331,
+        "avg_sentiment": 0.15318006042296073,
+        "example": "2025-06-24T16:01:54Z\nMan this is like the days I long for with Apple or just tech in general. Everything felt so new and exciting! I remember even then watching the keynotes or reading live blogs where I could find them. I drove to the Apple Store in Charleston just to stand in line with hundreds of other people all night to get this thing on launch day."
+    },
+    "everything": {
+        "count": 86,
+        "avg_sentiment": 0.18898604651162793,
+        "example": "2025-06-24T16:01:54Z\nMan this is like the days I long for with Apple or just tech in general. Everything felt so new and exciting! I remember even then watching the keynotes or reading live blogs where I could find them. I drove to the Apple Store in Charleston just to stand in line with hundreds of other people all night to get this thing on launch day."
+    },
+    "anything": {
+        "count": 105,
+        "avg_sentiment": 0.09949333333333334,
+        "example": "Even this phone in particular had so much new packed in it and the Gizmodo scandal along with antenna gate shortly afterwards. I feel like now I'm content to make an iPhone last 3+ years or so but back then I wanted to upgrade as soon as possible. Now it feels like we've just sort of plateaued on phones and tech in general to a certain degree that things don't feel as exciting or we all see the rumors way ahead of time and aren't surprised by anything anymore."
+    },
+    "this phone": {
+        "count": 40,
+        "avg_sentiment": 0.15207,
+        "example": "Even this phone in particular had so much new packed in it and the Gizmodo scandal along with antenna gate shortly afterwards. I feel like now I'm content to make an iPhone last 3+ years or so but back then I wanted to upgrade as soon as possible. Now it feels like we've just sort of plateaued on phones and tech in general to a certain degree that things don't feel as exciting or we all see the rumors way ahead of time and aren't surprised by anything anymore."
+    },
+    "things": {
+        "count": 93,
+        "avg_sentiment": 0.2897064516129032,
+        "example": "Even this phone in particular had so much new packed in it and the Gizmodo scandal along with antenna gate shortly afterwards. I feel like now I'm content to make an iPhone last 3+ years or so but back then I wanted to upgrade as soon as possible. Now it feels like we've just sort of plateaued on phones and tech in general to a certain degree that things don't feel as exciting or we all see the rumors way ahead of time and aren't surprised by anything anymore."
+    },
+    "my phone / your phone / my iphone": {
+        "count": 290,
+        "avg_sentiment": 0.16122379310344828,
+        "example": "2025-06-24T15:32:40Z\nStill have my iPhone 4! Still one of the prettiest iPhones Apple ever designed."
+    },
+    "fun": {
+        "count": 144,
+        "avg_sentiment": 0.38997638888888886,
+        "example": "I preordered the iPhone 4 and it was delivered 2 days before launch. My commute to work had me walking by the old downtown San Francisco Apple Store, so I took it out to take pics of the line. \nThe comments and looks I got from them were pretty funny."
+    },
+    "which": {
+        "count": 217,
+        "avg_sentiment": 0.22793640552995392,
+        "example": "2025-06-24T16:16:53Z\nMy first Apple device ever was an iPod Touch, essentially an iPhone 3G but without the calling and data abilities (which was already spectacular, I remember showing it off to my family who were in disbelief that such technology could exist). I remember vividly picking up my first iPhone shortly after, the 4, and MAN that was a game changer."
+    },
+    "the way": {
+        "count": 56,
+        "avg_sentiment": 0.48145535714285714,
+        "example": "2025-06-24T17:43:15Z\n\u201cand we're going to take it all the way. We're going to the standards bodies starting tomorrow, and we're going to make FaceTime an open industry standard.\""
+    },
+    "you": {
+        "count": 2181,
+        "avg_sentiment": 0.2268725813846859,
+        "example": "Just pulled out of his ass on stage. We miss you Steve."
+    },
+    "those / these": {
+        "count": 247,
+        "avg_sentiment": 0.1493097165991903,
+        "example": "2025-06-25T02:00:49Z\nI stood in line for 9 hours at the Victoria Gardens Apple Store for mine. I remember Apple employees bringing out drinks and sandwiches for those of us in line. That was the reservation line too."
+    },
+    "what": {
+        "count": 709,
+        "avg_sentiment": 0.17108787023977431,
+        "example": "2025-06-24T17:22:50Z\nI\u2019m very been with iPhones since the X, used FaceTime once to see what it was like."
+    },
+    "ios": {
+        "count": 175,
+        "avg_sentiment": 0.1818377142857143,
+        "example": "Also, maybe it\u2019s just me, but I miss the older iOS design."
+    },
+    "the battery / battery": {
+        "count": 401,
+        "avg_sentiment": 0.20313092269326682,
+        "example": "2025-07-02T22:25:03Z\n- **iPhone 17:** Larger display, improved selfie camera, and more.\n- **iPhone 17 Air:** Radically thin, futuristic look but some compromises.\n- **iPhone 17 Pro:** Upgraded camera system, memory, and A19 Pro chip.\n- **iPhone 17 Pro Max:** Thicker for even more battery than ever."
+    },
+    "ultra": {
+        "count": 489,
+        "avg_sentiment": 0.22401881390593045,
+        "example": "- **M5 MacBook Pro:** Same basic design, but with M5, M5 Pro, and M5 Max configs.\n- **M5 iPad Pro:** M5 chip and optimized for iPadOS 26\u2019s multitasking upgrades.\n- **New Mac Pro:** M3 Ultra like this year\u2019s Mac Studio, and slim chance of a redesigned case."
+    },
+    "the same design / same design": {
+        "count": 111,
+        "avg_sentiment": 0.2205936936936937,
+        "example": "- **Apple Watch Ultra 3:** 5G RedCap, hypertension sensors, satellite features.\n- **Apple Watch Series 11:** Same design, high blood pressure detection.\n- **Apple Watch SE 3:** Updated S-class chip, more modern than existing SE.\n- **AirPods Pro 3:** Upgraded noise cancellation, new H3 processor, might slip into 2026."
+    },
+    "apple intelligence": {
+        "count": 65,
+        "avg_sentiment": 0.5559938461538462,
+        "example": "- **New Apple TV 4K:** Likely Apple Intelligence capable, with upgraded A-class chip.\n- **HomePod mini 2:** New Wi-Fi modem, enhanced compatibility with other Home products.\n- **\u2018HomePad\u2019:** Smart home command center running homeOS, timing is TBD."
+    },
+    "something": {
+        "count": 140,
+        "avg_sentiment": 0.258055,
+        "example": "2025-07-02T23:37:15Z\nBegging for a \u201cone more thing\u201d apple fold reveal. My 14 pro max is still going flawlessly and I have no intent to upgrade to another slab phone. Itching for something unique in the apple system."
+    },
+    "android": {
+        "count": 305,
+        "avg_sentiment": 0.23122360655737706,
+        "example": "2025-07-03T09:09:23Z\n13pro here and taking a few concert photos recently with poor accuracy on zoom focus while others around me with androids happily with decent optical zoom able to focus easily means it\u2019s time for new cameras. Looking forward to September - although I also need replacement AirPods Pros and new Apple tv\u2026. Expensive!"
+    },
+    "a lot": {
+        "count": 90,
+        "avg_sentiment": 0.21458000000000002,
+        "example": "2025-07-03T16:48:36Z\nThis is a lot of bullshit bingo \u2026"
+    },
+    "the screen": {
+        "count": 32,
+        "avg_sentiment": 0.1614625,
+        "example": "2025-06-25T15:10:51Z\nIf you're well off or have Apple care, just get the screen replaced at the official service center."
+    },
+    "the same thing": {
+        "count": 89,
+        "avg_sentiment": 0.14893370786516855,
+        "example": "2025-06-26T03:42:08Z\nI had the same thing on the corner of my 16 Pro. Little semicircle. Took it in to Apple and they replaced the display free of charge under the limited warranty."
+    },
+    "no one": {
+        "count": 41,
+        "avg_sentiment": -0.03286097560975609,
+        "example": "2025-06-24T15:49:44Z\n15 years and still no one knows in Europe what FaceTime is besides hardcore Apple Fans."
+    },
+    "anyone": {
+        "count": 40,
+        "avg_sentiment": 0.2894225,
+        "example": "2025-06-24T18:42:59Z\nAnyone else feel old reading this?"
+    },
+    "someone": {
+        "count": 60,
+        "avg_sentiment": 0.2517566666666667,
+        "example": "2025-06-24T23:09:40Z\nI remember finding someone online to test it with. I think they were in NY and I\u2019m in CA. They asked to see the beach.. i was inland\u2026 they weren\u2019t impressed."
+    },
+    "this video / the video": {
+        "count": 100,
+        "avg_sentiment": 0.195607,
+        "example": "2025-06-22T12:50:20Z\nLEDs are fast flickering, you do not see this as the eyes cannot detect it, similar whz car lights are flickering on the video."
+    },
+    "google": {
+        "count": 219,
+        "avg_sentiment": 0.18579223744292236,
+        "example": "2025-06-22T18:32:03Z\nYou could have googled this bro."
+    },
+    "oneplus": {
+        "count": 137,
+        "avg_sentiment": 0.34523649635036496,
+        "example": "2025-06-18T00:39:53Z\nIt's kind of weird. Maybe it's just the people I'm talking to from China, but most Chinese students I know seem to start preferring Apple over China native brands like Huawei, Oneplus, etc. I think UI might be just too good compared to android."
+    },
+    "nokia": {
+        "count": 154,
+        "avg_sentiment": 0.12594675324675325,
+        "example": "2025-06-18T00:45:38Z\nWait I was told by wall st that Apple is going the path of Nokia and will be obsolete soon."
+    },
+    "samsung / the samsung / a samsung": {
+        "count": 2881,
+        "avg_sentiment": 0.19882592849704964,
+        "example": "2025-06-26T14:15:45Z\nMy wife wanted to update her phone, checked out my iPhone 14+ and rejected it because the camera has zero zoom. I rarely take pictures.  She let me buy her a Samsung S24 ultra because it was the superior camera at the time."
+    },
+    "both": {
+        "count": 181,
+        "avg_sentiment": 0.2113767955801105,
+        "example": "If camera bothers you then blindly go for 15 ."
+    },
+    "the price": {
+        "count": 107,
+        "avg_sentiment": 0.2778121495327103,
+        "example": "I bought an iPhone 15 same colour ans variant for 59k on Dec 2023. There's no way the price hasn't gone down."
+    },
+    "icloud": {
+        "count": 69,
+        "avg_sentiment": 0.19496811594202898,
+        "example": "3. You can. Especially if you already transfer your photos out of your device regularly anyway. iCloud+ is just kinda like Google One on Android, where it's needed if you just don't want to think about stuff like running out of photos storage."
+    },
+    "money": {
+        "count": 117,
+        "avg_sentiment": 0.2539923076923077,
+        "example": "3. Personally I would say you want to have iCloud+ for full-device backup. If you don't like monthly payments, buy a gift card with enough money for a few years and leave it."
+    },
+    "performance": {
+        "count": 82,
+        "avg_sentiment": 0.3819487804878049,
+        "example": "As someone who switched from ios (used for 10+ years) to android a month ago, I think you should reconsider the switch. Most manufacturers have been wholesale copying apple's superior ui/ux and doing it pretty well such that I really don't see any reason to pay a premium for it anymore, alongside problems like heating, poor battery life, poor performance/deprived features on non pro models"
+    },
+    "the s25": {
+        "count": 78,
+        "avg_sentiment": 0.10790641025641026,
+        "example": "2025-06-16T11:07:38Z\niPhone should be the way to go for you based on your requirements. The 15 Pro is arguably better than the S25 on all the 3 parameters mentioned. And since you don\u2019t need much customisation options, iOS would be great for you considering it gives a really nice experience overall minus the customisation and sideloading options. Also, the Samsung base S series phones have been witnessing a spurt in green line issues, so longevity may not be guaranteed."
+    },
+    "xiaomi": {
+        "count": 91,
+        "avg_sentiment": 0.27952857142857146,
+        "example": "2025-07-09T12:03:56Z\nHey OP, do one fot phones under 40k,  \nor if you can do for Xiaomi 14 Civi.  \nbtw really appreciate your work"
+    },
+    "the difference": {
+        "count": 47,
+        "avg_sentiment": 0.21275106382978723,
+        "example": "2025-06-25T01:29:50Z\nNot much of the difference except camera, just pick what you like"
+    },
+    "google pixel": {
+        "count": 86,
+        "avg_sentiment": 0.11154883720930232,
+        "example": "2025-06-24T06:13:59Z\nYou can get Google pixel 8a from official website :"
+    },
+    "uno": {
+        "count": 172,
+        "avg_sentiment": 0.2898720930232558,
+        "example": "2025-06-17T16:12:00Z\nRebooting your iPhone sometimes helps clear the unopened messages count. Try that."
+    },
+    "phone wars": {
+        "count": 133,
+        "avg_sentiment": -0.5069278195488722,
+        "example": "2025-05-10T08:53:58Z\nPhone wars im big 25 is crazy"
+    },
+    "about 200 times": {
+        "count": 1,
+        "avg_sentiment": 0.0,
+        "example": "2025-02-12T00:15:52Z\nWhat animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?"
+    },
+    "its axis": {
+        "count": 1,
+        "avg_sentiment": 0.0,
+        "example": "2025-02-12T00:15:52Z\nWhat animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?"
+    },
+    "dies?what animal": {
+        "count": 1,
+        "avg_sentiment": 0.0,
+        "example": "2025-02-12T00:15:52Z\nWhat animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?What animal turns about 200 times around its axis after it dies?"
+    }
+}

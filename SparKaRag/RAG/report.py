@@ -1,5 +1,6 @@
 import sys
 import os
+import codecs
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import traceback
@@ -7,13 +8,21 @@ from getpass import getpass
 from RAG.my_workflow import create_workflow, run_workflow
 import requests
 
+# Force UTF-8 encoding for stdout and stderr to avoid UnicodeEncodeError on Windows
+if sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
+if sys.stderr.encoding.lower() != 'utf-8':
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer)
+
 # ---------- CONFIG ----------
 current_dir = os.path.dirname(os.path.abspath(__file__))
 METADATA_FILE = os.path.join(current_dir, 'metadata.json')
 NER_CONTEXT_FILE = os.path.join(current_dir, 'extra_context', 'context_store.json')
 BEFORE_CLEANING_FILE = os.path.join(current_dir, 'before_cleaning_report.txt')
 REPORT_FILE = os.path.join(current_dir, 'product_report.txt')
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY')
+if not OPENROUTER_API_KEY:
+    raise RuntimeError('OPENROUTER_API_KEY environment variable is not set!')
 # ----------------------------
 
 def clean_report_with_openrouter(api_key, report_text):

@@ -1,0 +1,66 @@
+{
+    "Design": {
+        "count": 707,
+        "avg_sentiment": 0.2184,
+        "example": "2025-06-24T15:40:15Z\nIMO, iPhone 4 was peak iPhone design.",
+        "original_clusters": [
+            "the design / design",
+            "the same design / same design"
+        ],
+        "relevance": 0.7
+    },
+    "Camera": {
+        "count": 990,
+        "avg_sentiment": 0.2306,
+        "example": "2025-06-24T15:51:29Z\nI think this was my GOAT phone. The Retina display, the form factor, the horsepower to run a jailbroken phone with almost no lag, I feel like it was also the first \u201cgood\u201d camera for the times, a big jump from the 3GS",
+        "original_clusters": [
+            "the camera / camera / cameras / the cameras / a camera"
+        ],
+        "relevance": 0.8
+    },
+    "Battery Life": {
+        "count": 401,
+        "avg_sentiment": 0.2031,
+        "example": "2025-07-02T22:25:03Z\n- **iPhone 17:** Larger display, improved selfie camera, and more.\n- **iPhone 17 Air:** Radically thin, futuristic look but some compromises.\n- **iPhone 17 Pro:** Upgraded camera system, memory, and A19 Pro chip.\n- **iPhone 17 Pro Max:** Thicker for even more battery than ever.",
+        "original_clusters": [
+            "the battery / battery"
+        ],
+        "relevance": 0.8
+    },
+    "Ultra": {
+        "count": 489,
+        "avg_sentiment": 0.224,
+        "example": "- **M5 MacBook Pro:** Same basic design, but with M5, M5 Pro, and M5 Max configs.\n- **M5 iPad Pro:** M5 chip and optimized for iPadOS 26\u2019s multitasking upgrades.\n- **New Mac Pro:** M3 Ultra like this year\u2019s Mac Studio, and slim chance of a redesigned case.",
+        "original_clusters": [
+            "ultra"
+        ],
+        "relevance": 0.5
+    },
+    "Display": {
+        "count": 32,
+        "avg_sentiment": 0.1615,
+        "example": "2025-06-25T15:10:51Z\nIf you're well off or have Apple care, just get the screen replaced at the official service center.",
+        "original_clusters": [
+            "the screen"
+        ],
+        "relevance": 0.7
+    },
+    "Price": {
+        "count": 107,
+        "avg_sentiment": 0.2778,
+        "example": "I bought an iPhone 15 same colour ans variant for 59k on Dec 2023. There's no way the price hasn't gone down.",
+        "original_clusters": [
+            "the price"
+        ],
+        "relevance": 0.9
+    },
+    "Performance": {
+        "count": 82,
+        "avg_sentiment": 0.3819,
+        "example": "As someone who switched from ios (used for 10+ years) to android a month ago, I think you should reconsider the switch. Most manufacturers have been wholesale copying apple's superior ui/ux and doing it pretty well such that I really don't see any reason to pay a premium for it anymore, alongside problems like heating, poor battery life, poor performance/deprived features on non pro models",
+        "original_clusters": [
+            "performance"
+        ],
+        "relevance": 0.8
+    }
+}

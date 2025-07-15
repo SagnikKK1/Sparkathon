@@ -13,7 +13,9 @@ import sys
 MODEL_NAME = 'all-MiniLM-L6-v2'
 TOP_K = 3
 OPENROUTER_MODEL = 'deepseek/deepseek-r1:free'
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "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")
+OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY')
+if not OPENROUTER_API_KEY:
+    raise RuntimeError('OPENROUTER_API_KEY environment variable is not set!')
 load_dotenv()
 DB_URL = os.getenv('DATABASE_URL')
 

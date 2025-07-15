@@ -1,0 +1,115 @@
+{
+    "iPhone": {
+        "count": 2871,
+        "avg_sentiment": 0.1938,
+        "example": "2025-06-24T15:40:15Z\nIMO, iPhone 4 was peak iPhone design.",
+        "original_clusters": [
+            "iphone / the iphone / an iphone / iphones / a iphone"
+        ]
+    },
+    "Phone": {
+        "count": 5043,
+        "avg_sentiment": 0.1654,
+        "example": "2025-06-24T15:40:15Z\nIMO, iPhone 4 was peak iPhone design.",
+        "original_clusters": [
+            "the phone / a phone / phones / phone",
+            "my phone / your phone / my iphone"
+        ]
+    },
+    "Apple": {
+        "count": 1294,
+        "avg_sentiment": 0.1957,
+        "example": "2025-06-24T15:49:56Z\nBest iPhone I think. Way ahead of the previous gen, light years ahead of the competitors and set a whole new bar for product design in my opinion. I question up and got one on launch day. It\u2019s difficult to explain to a 20 year old how amazing it was. Literally everyone in the office wanted to see it, or hold it. Good memories. It could never maintain that pace of improvement so I don\u2019t begrudge Apple that, but nothing else has hit as hard for me.",
+        "original_clusters": [
+            "apple"
+        ]
+    },
+    "iOS": {
+        "count": 175,
+        "avg_sentiment": 0.1818,
+        "example": "Also, maybe it\u2019s just me, but I miss the older iOS design.",
+        "original_clusters": [
+            "ios"
+        ]
+    },
+    "Apple Intelligence": {
+        "count": 65,
+        "avg_sentiment": 0.556,
+        "example": "- **New Apple TV 4K:** Likely Apple Intelligence capable, with upgraded A-class chip.\n- **HomePod mini 2:** New Wi-Fi modem, enhanced compatibility with other Home products.\n- **\u2018HomePad\u2019:** Smart home command center running homeOS, timing is TBD.",
+        "original_clusters": [
+            "apple intelligence"
+        ]
+    },
+    "Android": {
+        "count": 305,
+        "avg_sentiment": 0.2312,
+        "example": "2025-07-03T09:09:23Z\n13pro here and taking a few concert photos recently with poor accuracy on zoom focus while others around me with androids happily with decent optical zoom able to focus easily means it\u2019s time for new cameras. Looking forward to September - although I also need replacement AirPods Pros and new Apple tv\u2026. Expensive!",
+        "original_clusters": [
+            "android"
+        ]
+    },
+    "Google": {
+        "count": 219,
+        "avg_sentiment": 0.1858,
+        "example": "2025-06-22T18:32:03Z\nYou could have googled this bro.",
+        "original_clusters": [
+            "google"
+        ]
+    },
+    "OnePlus": {
+        "count": 137,
+        "avg_sentiment": 0.3452,
+        "example": "2025-06-18T00:39:53Z\nIt's kind of weird. Maybe it's just the people I'm talking to from China, but most Chinese students I know seem to start preferring Apple over China native brands like Huawei, Oneplus, etc. I think UI might be just too good compared to android.",
+        "original_clusters": [
+            "oneplus"
+        ]
+    },
+    "Nokia": {
+        "count": 154,
+        "avg_sentiment": 0.1259,
+        "example": "2025-06-18T00:45:38Z\nWait I was told by wall st that Apple is going the path of Nokia and will be obsolete soon.",
+        "original_clusters": [
+            "nokia"
+        ]
+    },
+    "Samsung": {
+        "count": 2881,
+        "avg_sentiment": 0.1988,
+        "example": "2025-06-26T14:15:45Z\nMy wife wanted to update her phone, checked out my iPhone 14+ and rejected it because the camera has zero zoom. I rarely take pictures.  She let me buy her a Samsung S24 ultra because it was the superior camera at the time.",
+        "original_clusters": [
+            "samsung / the samsung / a samsung"
+        ]
+    },
+    "iCloud": {
+        "count": 69,
+        "avg_sentiment": 0.195,
+        "example": "3. You can. Especially if you already transfer your photos out of your device regularly anyway. iCloud+ is just kinda like Google One on Android, where it's needed if you just don't want to think about stuff like running out of photos storage.",
+        "original_clusters": [
+            "icloud"
+        ]
+    },
+    "S25": {
+        "count": 78,
+        "avg_sentiment": 0.1079,
+        "example": "2025-06-16T11:07:38Z\niPhone should be the way to go for you based on your requirements. The 15 Pro is arguably better than the S25 on all the 3 parameters mentioned. And since you don\u2019t need much customisation options, iOS would be great for you considering it gives a really nice experience overall minus the customisation and sideloading options. Also, the Samsung base S series phones have been witnessing a spurt in green line issues, so longevity may not be guaranteed.",
+        "original_clusters": [
+            "the s25"
+        ]
+    },
+    "Xiaomi": {
+        "count": 91,
+        "avg_sentiment": 0.2795,
+        "example": "2025-07-09T12:03:56Z\nHey OP, do one fot phones under 40k,  \nor if you can do for Xiaomi 14 Civi.  \nbtw really appreciate your work",
+        "original_clusters": [
+            "xiaomi"
+        ]
+    },
+    "Google Pixel": {
+        "count": 86,
+        "avg_sentiment": 0.1115,
+        "example": "2025-06-24T06:13:59Z\nYou can get Google pixel 8a from official website :",
+        "original_clusters": [
+            "google pixel"
+        ]
+    }
+}
