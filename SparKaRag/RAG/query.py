@@ -8,15 +8,14 @@ from datetime import datetime
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 import sys
-
+load_dotenv()
 # ---------- CONFIG ----------
 MODEL_NAME = 'all-MiniLM-L6-v2'
 TOP_K = 3
-OPENROUTER_MODEL = 'deepseek/deepseek-r1:free'
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL")
 OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY')
 if not OPENROUTER_API_KEY:
     raise RuntimeError('OPENROUTER_API_KEY environment variable is not set!')
-load_dotenv()
 DB_URL = os.getenv('DATABASE_URL')
 
 # Dynamically resolve file paths relative to this script

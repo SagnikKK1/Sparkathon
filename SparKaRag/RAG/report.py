@@ -7,7 +7,8 @@ import traceback
 from getpass import getpass
 from RAG.my_workflow import create_workflow, run_workflow
 import requests
-
+from dotenv import load_dotenv
+load_dotenv()
 # Force UTF-8 encoding for stdout and stderr to avoid UnicodeEncodeError on Windows
 if sys.stdout.encoding.lower() != 'utf-8':
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
@@ -16,7 +17,7 @@ if sys.stderr.encoding.lower() != 'utf-8':
 
 # ---------- CONFIG ----------
 current_dir = os.path.dirname(os.path.abspath(__file__))
-METADATA_FILE = os.path.join(current_dir, 'metadata.json')
+METADATA_FILE = os.path.join(current_dir, 'metadata1.json')
 NER_CONTEXT_FILE = os.path.join(current_dir, 'extra_context', 'context_store.json')
 BEFORE_CLEANING_FILE = os.path.join(current_dir, 'before_cleaning_report.txt')
 REPORT_FILE = os.path.join(current_dir, 'product_report.txt')

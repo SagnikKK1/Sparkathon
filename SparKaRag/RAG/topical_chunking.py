@@ -11,10 +11,12 @@ import hdbscan
 from concurrent.futures import ThreadPoolExecutor
 from keybert import KeyBERT
 
+from dotenv import load_dotenv
+load_dotenv()
 # ---------- CONFIG ----------
-INPUT_FILE = "/Users/sagnikdey/Desktop/Projects/Sparkathon/SparKaRag/RAG/motorolaedge50fusion_comments.txt"
-OUTPUT_DIR = "clusters"
-MODEL_NAME = 'all-MiniLM-L6-v2'
+INPUT_FILE = os.getenv("INPUT_FILE")
+OUTPUT_DIR = "SparKaRag/clusters"
+MODEL_NAME = os.getenv("MODEL_NAME_CLUSTERING")
 BATCH_SIZE = 64
 MAX_WORKERS = 4
 MIN_CLUSTER_SIZE = 10
@@ -83,7 +85,7 @@ def save_clusters(clusters, comments, output_dir, model, top_k=TOP_K_CLUSTERS):
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         executor.map(write_cluster, enumerate(clusters))
 
-    print(f"✅ Saved {len(clusters)} labeled topical chunks to: {output_dir}")
+    print(f"Saved {len(clusters)} labeled topical chunks to: {output_dir}")
 
 def main():
     parser = argparse.ArgumentParser(description='Topical chunking for product comments')
@@ -93,7 +95,7 @@ def main():
     print("[1] Reading comments...")
     comments = read_comments(args.input)
     if not comments:
-        print("❌ No comments found. Exiting.")
+        print("No comments found. Exiting.")
         return
 
     print("[2] Embedding comments...")
@@ -104,7 +106,7 @@ def main():
     clusters = cluster_with_hdbscan(embeddings)
 
     if not clusters:
-        print("❌ No clusters found. Exiting.")
+        print(" No clusters found. Exiting.")
         return
 
     print(f"[4] Saving top {TOP_K_CLUSTERS} clusters...")
