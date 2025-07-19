@@ -117,3 +117,17 @@ model ChatbotMessage {
 
   @@map("chatbot_messages")
 }
+
+model LoadingStatus {
+  id                      String   @id @default(uuid()) @map("id")
+  jobId                   String   @unique @map("job_id")
+  webScrapingStatus       Boolean  @default(false) @map("web_scraping_status")
+  NERStatus               Boolean  @default(false) @map("ner_status")
+  FilteringStatus         Boolean  @default(false) @map("filtering_status")
+  MetricCalculationStatus Boolean  @default(false) @map("metric_calculation_status")
+  DashboardStatus         Boolean  @default(false) @map("dashboard_status")
+  createdAt               DateTime @default(now()) @map("created_at")
+  updatedAt               DateTime @updatedAt @map("updated_at")
+
+  @@map("loading_statuses")
+}
